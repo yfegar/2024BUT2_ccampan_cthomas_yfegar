@@ -1,0 +1,23 @@
+.footer_categories {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_categories li {
+    list-style-type: none;
+}
+
+.footer_categories li a {
+    text-decoration: none;
+    color: #ffff;
+    margin: 1%;
+}
+
+.footer_categories div {
+    margin: 2%;
+}
+
+.footer_background {
+    background-image: url(/img/greenbg.png);
+    color: #ffff;
+}
