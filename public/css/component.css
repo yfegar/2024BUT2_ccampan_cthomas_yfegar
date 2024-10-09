@@ -20,4 +20,59 @@
 .footer_background {
     background-image: url(/img/greenbg.png);
     color: #ffff;
+a{
+    text-decoration : none;
+    color : black;
+}
+
+li a {
+    display: block;
+}
+
+ul li{
+    list-style-type : none;
+    padding-right : 2%;
+    float: left;
+}
+
+#menu_page{
+
+    padding-left : 1%;
+    padding-right : 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+
+}
+.right{
+    text-decoration: underline;
+    float : right ; 
+    z-index : 1;
+
+}
+
+.left{
+    text-decoration: underline;
+    z-index : 1;
+}
+
+.locfit{
+    margin-top : -2.5%;
+    left : 50%;
+    transform: translate(1600%);
+    padding : 0; 
+    z-index : 10;
+}
+
+nav{
+    width : 100%;
+}
+
+#logo{
+    text-decoration: none;
+}
+
+#position{
+    width : 50%;
 }
