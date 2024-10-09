@@ -61,9 +61,11 @@ ul li{
 .locfit{
     margin-top : -2.5%;
     left : 50%;
-    transform: translate(1600%);
+    transform: translate(1200%);
     padding : 0; 
     z-index : 10;
+    font-family: "Anton", sans-serif;
+    font-size: 1.5em;
 }
 
 nav{
