@@ -25,6 +25,8 @@ app.get('/faq', (req, res) => {
     res.render("faq");
 })
 
+
+
 app.use(function(req, res){
     res.status(404).render('404');
 })
