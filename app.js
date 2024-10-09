@@ -18,6 +18,12 @@ app.get('/', function(req, res){
 app.get('/catalogue', (req, res) => {
     res.render("catalogue");
 })
+app.get('/apropos', (req, res) => {
+    res.render("apropos");
+})
+app.get('/faq', (req, res) => {
+    res.render("faq");
+})
 
 app.use(function(req, res){
     res.status(404).render('404');
