@@ -11,11 +11,13 @@ app.get('/', function(req, res){
         personne1 : {
             nom: "bob"
         }
-        
     }
     res.render('index', {data});
 });
 
+app.get('/catalogue', (req, res) => {
+    res.render("catalogue");
+})
 
 app.use(function(req, res){
     res.status(404).render('404');
