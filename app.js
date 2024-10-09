@@ -7,7 +7,13 @@ app.use(express.static('public'));
 
 
 app.get('/', function(req, res){
-    res.render('index')
+    let data = {
+        personne1 : {
+            nom: "bob"
+        }
+        
+    }
+    res.render('index', {data});
 });
 
 
