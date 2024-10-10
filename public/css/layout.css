@@ -10,3 +10,7 @@ body {
     padding : 0;
     color : black;
 }
+
+.connect {
+  background-image: url(/public/img/greenbg.png);
+}
