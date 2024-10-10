@@ -27,7 +27,9 @@ app.get('/faq', (req, res) => {
 app.get('/connexion', (req, res) => {
     res.render("connexion");
 })
-
+app.get('/connexion', (req, res) => {
+    res.render("connexion.ejs");
+})
 app.use(function(req, res){
     res.status(404).render('404');
 })

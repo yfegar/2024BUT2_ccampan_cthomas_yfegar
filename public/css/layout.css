@@ -19,3 +19,9 @@ body {
   background-image: url(/img/accueil_fond.png);
   background-size:cover;
 }
+
+.footer_background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
