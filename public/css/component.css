@@ -167,6 +167,40 @@ main{
 }
 
 .images_accueil img{
-    width : 28%;
+    width : 100%;
+}
+.images_accueil{
+    display : flex; 
+    flex-direction: row;
+}
+
+#reseaux_sociaux{
+    display: flex ;
+    flex-direction: column;
+}
+
+#reseaux_sociaux img{
+    width : 60%;
+}
+
+#fonctionnement {
+    background-color: white;
+    border-radius : 10px;
+    justify-content : center; 
+}
+#fonctionnement ul li{
+padding-left: 5%;
+}
+
+#fonctionnement img {
+    width : 60%;
+    padding-left : 20%;
+    padding-bottom : 8%;
+}
+
+#fonctionnement p {
+    padding : 0;
+    margin : 0;
+    text-align: center;
 }
 
