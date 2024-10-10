@@ -9,6 +9,17 @@ body {
     font-family: "Inter";
     padding : 0;
     color : black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+body, html {
+  height: 100%; 
+}
+
+main {
+  flex: 1;
 }
 
 .connexion_body {
