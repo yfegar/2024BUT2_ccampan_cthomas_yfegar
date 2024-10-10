@@ -149,18 +149,17 @@ nav{
 }
 
 #text-accueil h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family :  "Inter";
-    font-weight: 400;
+    font-weight: 350;
+    letter-spacing: 1.3px;
     color : white;
     margin-left : 3%;
-    margin-top : 1%;
-    margin-bottom : 1%;
     padding-left : 0;
 }
 
 #text-accueil{
-    padding-top: 10%;
+    padding-top: 20%;
 }
 
 main{
