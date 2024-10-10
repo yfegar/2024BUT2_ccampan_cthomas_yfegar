@@ -9,7 +9,6 @@ body {
     font-family: "Inter";
     padding : 0;
     color : black;
-
 }
 
 .connexion_body {
@@ -18,4 +17,5 @@ body {
 
 .index_body {
   background-image: url(/img/accueil_fond.png);
+  background-size:cover;
 }
