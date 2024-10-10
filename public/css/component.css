@@ -1,6 +1,7 @@
 .footer_categories {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
 }
 
 .footer_categories li {
@@ -10,17 +11,39 @@
 .footer_categories li a {
     text-decoration: none;
     color: #ffff;
-    margin: 1%;
+    margin-bottom: 3%;
+    width: 200px;
 }
 
 .footer_categories div {
-    margin: 2%;
+    margin: 5%;
+    width: 70%;
+}
+
+.footer_categories ul {
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    flex-wrap: nowrap;
+    padding-left: 0;
 }
 
 .footer_background {
     color: #ffff;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: 300;
+}
+
+.footer_locfit {
+    font-family: "Anton";
+    font-weight: 300 ;
+}
+
+.footer_catalogue {
+    width: 300px;
 }
 
 a{
