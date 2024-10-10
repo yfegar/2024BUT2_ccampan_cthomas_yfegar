@@ -11,6 +11,10 @@ body {
     color : black;
 }
 
-.connexion_background {
+.connexion_body {
   background-image: url(/img/greenbg.png);
+}
+
+.index_body {
+  background-image: url(/img/accueil_fond.png);
 }
