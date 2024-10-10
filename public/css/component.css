@@ -99,3 +99,22 @@ nav{
 #login{
     padding-top: 1.5%;
 }
+
+
+
+#bouton_accueil{
+    display : flex; 
+    flex-direction: row;
+    background-color : white;
+    border : solid white ; 
+    border-radius: 30px;
+    font-size: 1.3em;
+    margin-left : 3%;
+}
+
+
+#bouton_accueil img{
+    padding-top : 17%;
+    padding-left : 6%;
+    width :20%;
+}
