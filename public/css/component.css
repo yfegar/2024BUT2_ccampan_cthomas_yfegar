@@ -105,19 +105,41 @@ nav{
 
 
 
-#bouton_accueil{
+#bouton_accueil {
     display : flex; 
     flex-direction: row;
     background-color : white;
     border : solid white ; 
-    border-radius: 30px;
+    border-radius: 18px;
     font-size: 1.3em;
     margin-left : 3%;
+    padding: 0.8%;
+    padding-left : 2%;
+    padding-right : 1%;
 }
 
 
 #bouton_accueil img{
-    padding-top : 17%;
-    padding-left : 6%;
-    width :20%;
+    padding-top : 6%;
+    padding-left : 8%;
+    width :15%;
+}
+
+#text-accueil h1{
+    font-size: 2rem;
+    font-family :  "Inter";
+    font-weight: 400;
+    color : white;
+    margin-left : 3%;
+    margin-top : 1%;
+    margin-bottom : 1%;
+    padding-left : 0;
+}
+
+#text-accueil{
+    padding-top: 10%;
+}
+
+main{
+    margin-bottom: 10%;
 }
