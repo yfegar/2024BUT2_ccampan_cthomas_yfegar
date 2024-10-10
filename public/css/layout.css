@@ -19,3 +19,7 @@ body {
   background-image: url(/img/accueil_fond.png);
   background-size:cover;
 }
+
+.footer_body {
+  filter: blur(50);
+}
