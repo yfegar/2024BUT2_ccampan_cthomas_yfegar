@@ -11,6 +11,6 @@ body {
     color : black;
 }
 
-.connect {
-  background-image: url(/public/img/greenbg.png);
+.connexion_background {
+  background-image: url(/img/greenbg.png);
 }
