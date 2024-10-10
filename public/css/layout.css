@@ -20,6 +20,8 @@ body {
   background-size:cover;
 }
 
-.footer_body {
-  filter: blur(50);
+.footer_background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

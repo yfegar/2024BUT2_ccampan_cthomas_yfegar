@@ -19,7 +19,10 @@
 
 .footer_background {
     color: #ffff;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
 }
+
 a{
     text-decoration : none;
     color : black;
