@@ -1,16 +1,106 @@
 <%- include("header") -%>
-<body class="index_body"> 
-    <main>
-        <div id="text-accueil" > 
-            <h1>Boostez votre capital séduction</h1>
-            <h1>en travaillant à la maison</h1>
-            <button id="bouton_accueil">
-                Découvrez
-                <img src="/img/arrow_right.png" alt="fleche vers la droite">
-            </button>
-        </div>
+
+    <body class="index_body">
+        <main>
+            <div id="text-accueil">
+                <h1>Boostez votre capital séduction</h1>
+                <h1>en travaillant à la maison</h1>
+                <button id="bouton_accueil">
+                    Découvrez
+                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                </button>
+                <div id="reseaux_sociaux">
+
+                    <ul>
+                        <li>
+                            <a href=""></a><img src="/img/Instagram.png" alt="Instagram"></a>
+                        </li>
+                        <li>
+                            <a href=""></a><img src="/img/TwitterX.png" alt="Twitter"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div id="informations">
+                    <ul>
+                        <li>
+                            <img src="/img/info_icon.png" alt="info">
+                            <p></p>
+                        </li>
+                        <li>
+                            <img src="/img/info_icon.png" alt="info">
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="images_accueil">
+                <a href=""><img src="/img/cyclebench_acc.png" alt=""></a>
+                <a href=""><img src="/img/ellipticalbench_acc.png" alt=""></a>
+                <a href=""><img src="/img/myrunbench_acc.png" alt=""></a>
+            </div>
+
+            <div>
+                <form action="catalogue.ejs" method="post">
+                    <ul>
+                        <li>
+                            <label for="materiel">Matériel</label>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            <label for="prix">Prix</label>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            <label for="duree">Durée</label>
+                            <input type="number" placeholder="Semaines" : />
+                        </li>
+                        <button type="submit">Rechercher<img src="/img/arrow_right.png"
+                                alt="fleche vers la droite"></button>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label for="filtre">Filtres</label>
+                            <div>Filtres1</div>
+                            <div>Filtre2</div>
+                            <div>Filtre3</div>
+                            <div>Filtre4</div>
+                            <div>Enlever le filtre</div>
+
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div id="fonctionnement">
+                <ul>
+                    <li>
+                        <img src="/img/altere_icon.png" alt="altère">
+                        <p>Choisissez le matériel</p>
+                        <p>qui vous convient</p>
+                    </li>
+                    <li>
+                        <img src="/img/calendrier_icon.png" alt="calendrier">
+                        <p>Déterminez la durée</p>
+                        <p>de votre location</p>
+                    </li>
+                    <li>
+                        <img src="/img/camion_icon.png" alt="camion">
+                        <p>Choisissez la date et</p>
+                        <p>le lieu de la livraison</p>
+                    </li>
+                    <li>
+                        <img src="/img/coche_icon.png" alt="coche">
+                        <p>Faites-vous livrer</p>
+                        <p>votre matériel !</p>
+                    </li>
+                </ul>
+
+            </div>
 
 
-    </main>  
+        </main>
 
-<%- include("footer") -%>
+        <%- include("footer") -%>
