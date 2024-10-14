@@ -227,16 +227,23 @@ main {
     text-align: center;
 }
 
+.white {
+    color: white;
+
+}
+
+/* --- page catalogue --- */
+
 #preference {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 
 #preference p {
     padding: 0;
     margin: 0;
-    width: 20%;
+    width: 17%;
 }
 
 #catalogue_filtre {
@@ -250,13 +257,9 @@ main {
     margin: 0;
 }
 
-#catalogue_filtre form {
-    margin-left: 50%;
-}
-
 #boutons_filtre {
     margin-left: 2%;
-    width: 100%;
+    width: 75%;
 }
 
 #boutons_preference {
@@ -269,13 +272,46 @@ main {
 }
 
 #catalogue_acc h3 {
-    margin-bottom: 2%;
+    margin-bottom: 3%;
+    font-weight: 400;
+    font-size : 1.3rem;
 }
 
 #catalogue_acc {
     margin-bottom: 4%;
 }
 
+
+
+
+button {
+    background-color: #B4C061;
+    opacity: 0.7;
+    border: none;
+    color: white;
+    padding: 1.5%;
+    padding-top : 0.5%;
+    padding-bottom : 0.5%;
+    border-radius: 8px;
+}
+
+button:hover {
+    opacity : 1;
+}
+
+/*barre de recherche*/
+
+#catalogue_filtre form input{
+    background-color: #EAEAEA;
+    border-radius: 10px;
+    border : none;
+    padding : 3%;
+    padding-right : 0;
+    padding-left : 10%;
+    font-size : 1rem;
+}
+
+/* boite produit */
 
 #collection {
     margin-left: 4%;
@@ -323,25 +359,9 @@ main {
     margin-left: 19%;
     margin-bottom: 7%;
     margin-top: 2%;
+    color: black;
 }
 
-.white {
-    color: white;
 
-}
 
-#boutons_filtre button {
-    background-color: #B4C061;
-    opacity: 0.7;
-    border: none;
-    color: white;
-    padding: 1.4%;
-}
 
-#boutons_preference button {
-    background-color: #B4C061;
-    opacity: 0.7;
-    border: none;
-    color: white;
-    padding: 1.4%;
-}
