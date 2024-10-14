@@ -1,6 +1,28 @@
 <%- include("header") -%>
 
-<body>
-<h1>Catalogue</h1>
+    <body>
+        <main>
+            <div id="catalogue_acc">
+                <h3> Nos produits</h3>
+                <div id="preference">
+                    <p>Affichage du prix par...</p>
+                    <button>Jour</button>
+                    <button>Semaine</button>
+                    <button>Mois</button>
+                </div>
+                <div id="catalogue_filtre">
+                    <p>Filtres</p>
+                    <button>Altères</button>
+                    <button>Machines à câble</button>
+                    <button>Poids libres</button>
+                    <button>Vélos d'exercice</button>
+                </div>
+                <form action="barre_recherche">
+                    <label>Rechercher...</label>
+                    <input type="search" name="search">
+                </form>
 
-<%- include("footer") -%>
+
+        </main>
+
+        <%- include("footer") -%>
