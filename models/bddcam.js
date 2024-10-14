@@ -12,7 +12,7 @@ connection.connect(function (err){
 if(err){
     throw err;
 }
-console.log("connecté à la base de donnée mysql");
+console.log('connecté à la base de donnée mysql');
 });
 
 module.exports = connection ;
