@@ -42,7 +42,7 @@ main {
 }
 
 footer {
-  width: 90%;
+  width: auto;
   margin-top: 10%;
   background-color: #B3C162;
 }
