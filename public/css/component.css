@@ -74,9 +74,9 @@ li a {
     display: block;
 }
 
-ul li {
-    list-style-type: none;
-    padding-right: 2%;
+ul li{
+    list-style-type : none;
+    padding-right : 4%;
     float: left;
 }
 
@@ -87,15 +87,13 @@ ul li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 0.5%;
-
-
+    margin-right : 0.5%;
 }
 
-.right {
-
-    float: right;
-    z-index: 1;
+.right{
+   
+    float : right ; 
+    z-index : 1;
 }
 
 .left {
@@ -104,14 +102,15 @@ ul li {
     padding-top: 1.5%;
 }
 
-.locfit {
-    margin-top: -4%;
-    left: 50%;
-    transform: translate(1150%);
-    padding: 0;
-    z-index: 10;
+.locfit{
+    margin-top : -4%;
+    text-align: center;
+    /*left : 50%;*/
+    /*transform: translate(1150%);*/
+    padding : 0; 
+    z-index : 10;
     font-family: "Anton", sans-serif;
-    font-size: 1.5em;
+    font-size: 2.4em;
 }
 
 nav {
@@ -324,6 +323,10 @@ main {
     margin-left: 19%;
     margin-bottom: 7%;
     margin-top: 2%;
+}
+
+.white {
+    color: white;
 
 }
 
