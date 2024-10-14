@@ -6,27 +6,35 @@
                 <h3> Nos produits</h3>
                 <div id="preference">
                     <p>Affichage du prix par...</p>
-                    <button>Jour</button>
-                    <button>Semaine</button>
-                    <button>Mois</button>
+                    <div id="boutons_preference">
+                        <button>Jour</button>
+                        <button>Semaine</button>
+                        <button>Mois</button>
+                    </div>
                 </div>
                 <div id="catalogue_filtre">
                     <p>Filtres</p>
-                    <button>Altères</button>
-                    <button>Machines à câble</button>
-                    <button>Poids libres</button>
-                    <button>Vélos d'exercice</button>
+                    <div id="boutons_filtre">
+                        <button>Altères</button>
+                        <button>Machines à câble</button>
+                        <button>Poids libres</button>
+                        <button>Vélos d'exercice</button>
+                    </div>
+                    <form action="barre_recherche">
+                        <input type="search" name="search" placeholder="Rechercher...">
+                    </form>
                 </div>
-                <form action="barre_recherche">
-                        <input type="search" name="search"  placeholder="Rechercher...">
-                </form>
+
             </div>
             <div id="collection">
                 <div class="box" id="box1">
                     <img src="/img/equipement_sport/altere.png" alt="">
                     <h4>Modèle</h4>
-                    <p id="prix">45€/mois</p>
-                    <button>En savoir plus</button>
+                    <div id="catalogue_prix">
+                        <p id="prix">45€ </p>
+                        <p> /mois</p>
+                    </div>
+                    <button id="savoir_plus">En savoir plus</button>
                 </div>
             </div>
 
@@ -35,4 +43,3 @@
         <footer>
             <%- include("footer") -%>
         </footer>
-
