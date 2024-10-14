@@ -285,7 +285,7 @@ main {
 
 
 
-button {
+#boutons_preference button{
     background-color: #B4C061;
     opacity: 0.7;
     border: none;
@@ -295,6 +295,20 @@ button {
     padding-bottom : 0.5%;
     border-radius: 8px;
 }
+
+
+#boutons_filtre button{
+    background-color: #B4C061;
+    opacity: 0.7;
+    border: none;
+    color: white;
+    padding: 1.5%;
+    padding-top : 0.5%;
+    padding-bottom : 0.5%;
+    border-radius: 8px;
+
+}
+
 
 button:hover {
     opacity : 1;
