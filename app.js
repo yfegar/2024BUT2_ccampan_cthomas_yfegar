@@ -21,6 +21,10 @@ app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
 app.get('/catalogue', (req, res) => {
     res.render("catalogue");
 });
+
+app.get('/inscription', (req, res) => {
+    res.render("inscription");
+});
 app.get('/apropos', (req, res) => {
     res.render("apropos");
 });
