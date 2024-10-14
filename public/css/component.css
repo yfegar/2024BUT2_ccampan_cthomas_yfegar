@@ -1,3 +1,5 @@
+ /* --- footer --- */
+ 
 .footer_categories {
     display: flex;
     flex-direction: row;
@@ -65,6 +67,12 @@
     margin-top: 15%;
 }
 
+.footer_cta p{
+    width : 110%;
+}
+
+/* --- Header --- */
+
 a {
     text-decoration: none;
     color: black;
@@ -125,6 +133,7 @@ nav {
     width: 50%;
 }
 
+
 #inscription {
     background-color: #7E8645;
     border-radius: 20px;
@@ -142,6 +151,8 @@ nav {
 #login {
     padding-top: 1.5%;
 }
+
+/* --- index --- */
 
 
 #bouton_accueil {
