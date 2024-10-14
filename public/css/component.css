@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    padding-top: 0;
+    margin-left: 25%;
 }
 
 .footer_categories li {
@@ -17,6 +19,7 @@
 
 .footer_categories div {
     margin: 5%;
+    margin-top: 0;
     width: 70%;
 }
 
@@ -26,7 +29,10 @@
     align-items:baseline;
     flex-wrap: nowrap;
     padding-left: 0;
-    padding-left: 10%;
+}
+
+.footer_categories h2 {
+    font-size: 1.1rem;
 }
 
 .footer_background {
@@ -35,7 +41,13 @@
     backdrop-filter: blur(50px);
     padding-left: 5%;
     padding-right: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     font-weight: 300;
+}
+
+.footer_background div:first-child {
+    margin-left: 3%;
 }
 
 .footer_locfit {
@@ -188,14 +200,19 @@ main{
 }
 
 #fonctionnement_boite {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: white;
     border-radius : 10px;
-    justify-content : center; 
+    justify-content : space-evenly; 
+    margin-top: 20%;
+    padding: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+
 }
 
-#fonctionnement_boite ul li{
-padding-left: 5%;
-}
 
 #fonctionnement_boite img {
     width : 60%;
