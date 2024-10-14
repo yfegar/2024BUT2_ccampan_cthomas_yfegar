@@ -209,3 +209,12 @@ padding-left: 5%;
     text-align: center;
 }
 
+#preference{
+    display: flex; 
+    flex-direction: row;
+}
+
+#catalogue_filtre{
+    display: flex; 
+    flex-direction: row;
+}
