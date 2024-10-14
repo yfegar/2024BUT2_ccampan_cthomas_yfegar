@@ -181,22 +181,22 @@ main{
     width : 60%;
 }
 
-#fonctionnement {
+#fonctionnement_boite {
     background-color: white;
     border-radius : 10px;
     justify-content : center; 
 }
-#fonctionnement ul li{
+
+#fonctionnement_boite ul li{
 padding-left: 5%;
 }
-
-#fonctionnement img {
+#fonctionnement_boite img {
     width : 60%;
     padding-left : 20%;
     padding-bottom : 8%;
 }
 
-#fonctionnement p {
+#fonctionnement_boite p {
     padding : 0;
     margin : 0;
     text-align: center;
