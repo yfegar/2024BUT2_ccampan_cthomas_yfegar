@@ -44,6 +44,7 @@
     padding-top: 4%;
     padding-bottom: 4%;
     font-weight: 300;
+    z-index: 1;
 }
 
 .footer_background div:first-child {
@@ -180,15 +181,17 @@ nav {
 
 main {
     margin-bottom: 10%;
+    z-index: 5;
 }
 
 .images_accueil img {
-    width: 100%;
+    width: 90%;
 }
 
 .images_accueil {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 #reseaux_sociaux {
@@ -230,7 +233,10 @@ main {
 
 .white {
     color: white;
+}
 
+.bas_vert_index {
+    padding-top: 5%;
 }
 
 /* --- page catalogue --- */

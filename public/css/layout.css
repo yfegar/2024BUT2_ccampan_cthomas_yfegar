@@ -17,6 +17,7 @@ body, html {
 
 main {
   height: 100%;
+  margin-bottom: 0;
 }
 
 .connexion_body {
@@ -33,18 +34,12 @@ main {
 .footer_background {
   display: flex;
   flex-direction: row;
-  margin-top: 5%;
-}
-
-.bas_vert_index {
-  background-color: #B3C162;
-  padding-top: 0;
 }
 
 footer {
+  margin-top: 0;
   width: auto;
-  margin-top: 10%;
-  background-color: #B3C162;
+  background-image: url(/img/tapisvert.png);
 }
 
 .images_accueil {
