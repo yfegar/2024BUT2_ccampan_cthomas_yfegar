@@ -197,7 +197,8 @@ main {
 }
 
 #reseaux_sociaux img {
-    width: 60%;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 #fonctionnement_boite {
