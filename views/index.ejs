@@ -4,47 +4,45 @@
 
     <body class="index_body">
         <main>
-            
+
 
             <div id="text-accueil">
                 <% user.forEach(function(element){ %>
                     <%= element.login %>
-                <% }); %>
+                        <% }); %>
 
-                <h1>Boostez votre capital séduction</h1>
-                <h1>en travaillant à la maison</h1>
-                <button id="bouton_accueil">
-                    Découvrez
-                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
-                </button>
-                <div id="reseaux_sociaux">
+                            <div id="accueil_titre">
+                                <h1>Boostez votre capital séduction</h1>
+                                <h1>en travaillant à la maison</h1>
+                                <button id="bouton_accueil">
+                                    Découvrez
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                            </div>
 
-                    <ul>
-                        <li>
-                            <a href=""></a><img src="/img/Instagram.png" alt="Instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""></a><img src="/img/TwitterX.png" alt="Twitter"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
-                        </li>
-                    </ul>
-
-                </div>
-                <div id="informations">
-                    <ul>
-                        <li>
-                            <img src="/img/info_icon.png" alt="info">
-                            <p></p>
-                        </li>
-                        <li>
-                            <img src="/img/info_icon.png" alt="info">
-                            <p></p>
-                        </li>
-                    </ul>
-                </div>
+                            <div id="reseaux_sociaux">
+                                <div>
+                                    <a href=""></a><img src="/img/Instagram.png" alt="Instagram"></a>
+                                </div>
+                                <div>
+                                    <a href=""></a><img src="/img/TwitterX.png" alt="Twitter"></a>
+                                </div>
+                                <div>
+                                    <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
+                                </div>
+                            </div>
             </div>
+            <div id="informations">
+                    <div>
+                        <img src="/img/info_icon.png" alt="info">
+                        <p></p>
+                    </div>
+                    <div>
+                        <img src="/img/info_icon.png" alt="info">
+                        <p></p>
+                    </div>
+            </div>
+
             <div class="images_accueil">
                 <a href=""><img src="/img/cyclebench_acc.png" alt=""></a>
                 <a href=""><img src="/img/ellipticalbench_acc.png" alt=""></a>
@@ -83,7 +81,9 @@
                 </form>
             </div>
 
-            <div id="fonctionnement_boite">
+            <div class="bas_vert_index">
+
+                <div id="fonctionnement_boite">
                     <div>
                         <img src="/img/altere_icon.png" alt="altère">
                         <p>Choisissez le matériel</p>
@@ -104,8 +104,8 @@
                         <p>Faites-vous livrer</p>
                         <p>votre matériel !</p>
                     </div>
+                </div>
             </div>
-
         </main>
 
         <%- include("footer") -%>

@@ -17,7 +17,6 @@ body, html {
 
 main {
   height: 100%;
-  padding-bottom: 5%;
 }
 
 .connexion_body {
@@ -26,7 +25,7 @@ main {
 
 .index_body {
   background-image: url(/img/accueil_fond.png);
-  background-size:cover;
+  background-size:contain;
   background-repeat: no-repeat;
   width: 100%;
 }
@@ -34,12 +33,20 @@ main {
 .footer_background {
   display: flex;
   flex-direction: row;
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+.bas_vert_index {
+  background-color: #B3C162;
+  padding-top: 0;
 }
 
 footer {
   width: 90%;
   margin-top: 10%;
-
+  background-color: #B3C162;
 }
 
+.images_accueil {
+  margin-top: 5%;
+}
