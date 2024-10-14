@@ -1,4 +1,4 @@
-const bdd = require("./database.js");
+const bdd = require("./bddcam.js");
 
 async function getUserById (id) {
     sql = "SELECT * FROM utilisateur WHERE id = ?";  // ? sert de paramètre 
