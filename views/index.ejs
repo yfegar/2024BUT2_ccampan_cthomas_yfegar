@@ -12,46 +12,49 @@
                     <%= element.login %>
                         <% }); %>
                 -->
-                            <div id="accueil_titre">
-                                <h1>Boostez votre capital séduction en travaillant à la maison</h1>
-                                <button id="bouton_accueil">
-                                    Découvrez
-                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
-                                </button>
-                            </div>
+                <div id="accueil_titre">
+                    <h1>Boostez votre capital séduction en travaillant à la maison</h1>
+                    <button id="bouton_accueil">
+                        Découvrez
+                        <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                    </button>
+                </div>
 
-                            <div id="reseaux_sociaux">
-                                <div>
-                                    <a href=""></a><img src="/img/Instagram.png" alt="Instagram"></a>
-                                </div>
-                                <div>
-                                    <a href=""></a><img src="/img/TwitterX.png" alt="Twitter"></a>
-                                </div>
-                                <div>
-                                    <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
-                                </div>
-                            </div>
+                <div id="reseaux_sociaux">
+                    <div>
+                        <a href=""></a><img src="/img/Instagram.png" alt="Instagram"></a>
+                    </div>
+                    <div>
+                        <a href=""></a><img src="/img/TwitterX.png" alt="Twitter"></a>
+                    </div>
+                    <div>
+                        <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
+                    </div>
+                </div>
             </div>
             <div id="informations">
-                    <div>
-                        <img src="/img/info_icon.png" alt="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ligula sit amet </p>
-                    </div>
-                    <div>
-                        <img src="/img/info_icon.png" alt="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ligula sit amet </p>
-                    </div>
+                <div>
+                    <img src="/img/info_icon.png" alt="info">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ligula sit amet </p>
+                </div>
+                <div>
+                    <img src="/img/info_icon.png" alt="info">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ligula sit amet </p>
+                </div>
             </div>
 
-            <div class="images_accueil">
-                <div><a href="/catalogue"><img src="/img/cyclebench_acc.png" alt=""></a></div>
-                <div><a href="/catalogue"><img src="/img/ellipticalbench_acc.png" alt=""></a></div>
-                <div><a href="/catalogue"><img src="/img/myrunbench_acc.png" alt=""></a></div>
+            <div class="nouveautes_index">
+                <h1>Nos nouveautés</h1>
+                <div class="images_accueil">
+                    <div><a href="/catalogue"><img src="/img/cyclebench_acc.png" alt=""></a></div>
+                    <div><a href="/catalogue"><img src="/img/ellipticalbench_acc.png" alt=""></a></div>
+                    <div><a href="/catalogue"><img src="/img/myrunbench_acc.png" alt=""></a></div>
+                </div>
             </div>
 
             <div class="recherche_produit_index">
                 <form action="/catalogue" method="post">
-                    <h2>Vous recherchez un produit ?</h2>
+                    <h1>Vous recherchez un produit ?</h1>
 
                     <div class="boite_formulaire">
                         <div>
@@ -66,21 +69,18 @@
                             <label for="duree">Durée</label>
                             <input type="number" placeholder="Semaines" : />
                         </div>
-                        <button type="submit">Rechercher<img src="/img/arrow_right.png"
-                                alt="fleche vers la droite">
+                        <button type="submit">Rechercher<img src="/img/arrow_right.png" alt="fleche vers la droite">
                         </button>
                     </div>
-                    <ul>
-                        <li>
-                            <label for="filtre">Filtres</label>
-                            <div>Filtres1</div>
-                            <div>Filtre2</div>
-                            <div>Filtre3</div>
-                            <div>Filtre4</div>
-                            <div>Enlever le filtre</div>
-
-                        </li>
-                    </ul>
+                    <div>
+                        <p>Filtres</p>
+                        <div id="boutons_filtre">
+                            <button>Altères</button>
+                            <button>Machines à câble</button>
+                            <button>Poids libres</button>
+                            <button>Vélos d'exercice</button>
+                        </div>
+                    </div>
                 </form>
             </div>
 
