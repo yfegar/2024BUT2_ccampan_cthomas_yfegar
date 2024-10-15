@@ -205,6 +205,15 @@ main {
     justify-content: center;
 }
 
+.images_accueil img {
+    margin: 1%;
+}
+
+.images_accueil a{
+    margin: 0;
+    padding: 0;
+}
+
 #reseaux_sociaux {
     display: flex;
     flex-direction: column;

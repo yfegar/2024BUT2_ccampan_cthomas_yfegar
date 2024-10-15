@@ -17,7 +17,7 @@ body, html {
 
 main {
   height: 100%;
-  margin-bottom: 0;
+  margin-bottom: 5%;
 }
 
 .connexion_body {
@@ -44,4 +44,5 @@ footer {
 
 .images_accueil {
   margin-top: 5%;
+  margin-left: 3%;
 }

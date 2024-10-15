@@ -1,4 +1,6 @@
 const express = require('express');
+const session = require('express-session');
+const md5 = require('md5'); // à utiliser seulement pour les projets qui restent sur nos PC
 const app = express();
 const userModel = require("./models/user.js");
 
@@ -6,8 +8,20 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
+app.use(express.urlencoded({ extended: false})); // permet de récupérer les éléments du formulaire
+
+app.use(session({
+    secret: 'bnoobesobus', // clé de session
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
+    /*
+    if (!req.session.userId) { // en javascript, false = undefined
+        return res.redirect("/login");
+    }
+*/
     try { // code toujous exécuté
         const user = await userModel.getUserById(1); // await présent car getUserById est une Promise
         res.render('index', { user });
@@ -16,7 +30,6 @@ app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
-
 
 app.get('/catalogue', (req, res) => {
     res.render("catalogue");
@@ -31,12 +44,27 @@ app.get('/apropos', (req, res) => {
 app.get('/faq', (req, res) => {
     res.render("faq");
 });
-app.get('/connexion', (req, res) => {
-    res.render("connexion");
+
+app.get('/connexion', function (req, res) {
+    res.render("connexion", {error : null});
 });
-app.get('/connexion', (req, res) => {
-    res.render("connexion.ejs");
+
+app.post('/connexion', async function (req, res) {
+    const login = req.body.login;
+    const mdp = req.body.password;
+
+    const user = await userModel.checkLogin(login);
+
+    if (user != false && user.password == md5(mdp)){
+        // on démarre la session
+        req.session.userId = user.id; // on décide de userId
+        req.session.role = user.type_utilisateur; // on décide de userId
+        // on charge une page appropriée
+        return res.redirect("/"); // res.redirect != res.render
+    }
+    // res.render('connexion', {error : "Erreur dans le login/mdp"});
 });
+
 app.get('/locations', (req, res) => {
     res.render("locations");
 });
