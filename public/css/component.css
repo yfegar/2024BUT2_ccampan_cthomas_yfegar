@@ -214,6 +214,38 @@ main {
     padding: 0;
 }
 
+.recherche_produit_index {
+    background-color: #F3F3F3;
+    border-radius: 24px;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 3%;
+    padding-top: 6%;
+}
+
+.recherche_produit_index form div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.boite_formulaire div {
+    display: flex;
+    flex-direction: column;
+}
+
+.recherche_produit_index input {
+    border: none;
+    background: #ffff;
+    border-radius: 24px;
+    padding: 6%;
+    margin: 1%;
+}
+
+
+
 #reseaux_sociaux {
     display: flex;
     flex-direction: column;

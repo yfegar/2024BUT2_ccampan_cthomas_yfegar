@@ -7,10 +7,11 @@
 
 
             <div id="text-accueil">
+                <!--
                 <% user.forEach(function(element){ %>
                     <%= element.login %>
                         <% }); %>
-
+                -->
                             <div id="accueil_titre">
                                 <h1>Boostez votre capital séduction</h1>
                                 <h1>en travaillant à la maison</h1>
@@ -49,24 +50,25 @@
                 <div><a href="/catalogue"><img src="/img/myrunbench_acc.png" alt=""></a></div>
             </div>
 
-            <div>
+            <div class="recherche_produit_index">
                 <form action="/catalogue" method="post">
-                    <ul>
-                        <li>
+                    <div class="boite_formulaire">
+                        <div>
                             <label for="materiel">Matériel</label>
                             <input type="text" />
-                        </li>
-                        <li>
+                        </div>
+                        <div>
                             <label for="prix">Prix</label>
                             <input type="text" />
-                        </li>
-                        <li>
+                        </div>
+                        <div>
                             <label for="duree">Durée</label>
                             <input type="number" placeholder="Semaines" : />
-                        </li>
+                        </div>
                         <button type="submit">Rechercher<img src="/img/arrow_right.png"
-                                alt="fleche vers la droite"></button>
-                    </ul>
+                                alt="fleche vers la droite">
+                        </button>
+                    </div>
                     <ul>
                         <li>
                             <label for="filtre">Filtres</label>
