@@ -12,6 +12,18 @@ async function getUserById (id) {
     });
 };
 
+async function checkLogin (login) {
+    sql = "SELECT * FROM utilisateur WHERE login = ?";  // ? sert de paramètre 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, login, (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results[0]);
+        });
+    });
+};
+
 async function getUserByName (name) {
 
 }
@@ -28,4 +40,6 @@ async function promoteUser () {
 
 }
 
-module.exports = { getUserById };
+
+
+module.exports = { getUserById, checkLogin };
