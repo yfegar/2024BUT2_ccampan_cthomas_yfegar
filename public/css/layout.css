@@ -26,7 +26,7 @@ main {
 
 .index_body {
   background-image: url(/img/accueil_fond.png);
-  background-size:contain;
+  background-size: 105%;
   background-repeat: no-repeat;
   width: 100%;
 }
