@@ -305,13 +305,13 @@ main {
     width: 17%;
 }
 
-#catalogue_filtre {
+#filtre {
     display: flex;
     flex-direction: row;
 
 }
 
-#catalogue_filtre p {
+#filtre p {
     padding: 0;
     margin: 0;
 }
@@ -374,7 +374,7 @@ button:hover {
 
 /*barre de recherche*/
 
-#catalogue_filtre form input{
+#filtre form input{
     background-color: #EAEAEA;
     border-radius: 10px;
     border : none;
@@ -382,6 +382,11 @@ button:hover {
     padding-right : 0;
     padding-left : 10%;
     font-size : 1rem;
+  
+}
+
+#filtre ::placeholder{
+    color: #9E9E9E;
 }
 
 /* boite produit */
@@ -434,6 +439,85 @@ button:hover {
     margin-top: 2%;
     color: black;
 }
+
+/* --- locations --- */
+
+#boutons_filtre button:hover{
+    opacity : 1;
+}
+
+.liste {
+    display : flex;
+    justify-content : center;
+}
+
+.case img {
+    width : 15%;
+    padding-left : 2%;
+}
+
+.case {
+    background-color:#F3F3F3 ;
+    display : flex; 
+    flex-direction: row;
+    width : 93%;
+    border-radius : 10px ;
+    margin-bottom : 2%;
+}
+
+.text-info{
+    display : flex; 
+    flex-direction: row;
+    width : 100%;
+    
+}
+
+.liste-gauche, .liste-milieu, .liste-gauche{
+    display: flex; 
+    flex-direction: column;
+    width : 35%;
+}
+
+.liste-droit{
+    display : flex;
+    justify-content: right;
+    flex-direction : column;
+    text-align : center;
+    padding-left : 0;
+}
+
+.etat-loc{
+    background-color: #7E8645;
+    color : white;
+    border-radius : 5px;
+    padding : 2%;
+    padding-top : 4%;
+    padding-bottom : 4%;
+    margin-top : 10%;
+    margin-bottom : 50%;
+
+}
+
+.liste-droit button{
+    background-color: white;
+    border : none; 
+    color : black;
+    border-radius: 10px;
+    padding: 13%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-size: 1rem;
+}
+
+.liste-milieu{
+    padding: 1%;
+}
+
+.liste-milieu li{
+    padding-bottom: 6%;
+}
+
+
 
 
 

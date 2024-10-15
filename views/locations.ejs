@@ -2,68 +2,44 @@
 
     <body>
         <main>
-
-            <h1></h1>
-            <section class="filtre">
-                <p>Filtres</p>
-                <ul class="list-filtre">
-                    <li>Passé</li>
-                    <li>En cours</li>
-                    <li>En retard</li>
-                    <li>Problème</li>
-                </ul>
-                <input type="text" name="Recherche ..." />
-            </section>
-
+            <div id="catalogue_acc">
+                <h3>Mes locations</h3>
+                <div id="filtre">
+                    <p>Filtres</p>
+                    <div id="boutons_filtre">
+                        <button>Altères</button>
+                        <button>Machines à câble</button>
+                        <button>Poids libres</button>
+                        <button>Vélos d'exercice</button>
+                    </div>
+                    <form action="barre_recherche">
+                        <input type="search" name="search" placeholder="Rechercher...">
+                    </form>
+                </div>
+            </div>
             <section class="liste">
 
                 <div class="case">
-                    <img>
+                    <img src="/img/equipement_sport/banc.png" alt="">
                     <div class="text-info">
-                        <ul class="liste-haut" id="gauche">
-                            <li>00 € /mois</li>
-                            <li>Modèle</li>
-                            <li>date début</li>
-                            <li>date fin</li>
-                        </ul>
-                        <ul class="liste-haut" id="droit">
-                            <li>date début</li>
-                            <li>date fin</li>
-                        </ul>
-                        <p>Loué par : </p>
-
-                        <div class="infos-droit">
-                            <p class="etat-loc"> en cours</p>
-                            <button>en savoir plus</button>
+                        <div class="liste-gauche" id="gauche">
+                            <div id="prix-par">
+                                <p><p id="prix-loc">00 €</p>/mois</p>
+                            </div>
+                            <p>Modèle</p>
+                            <p>Loué par :</p>
+                        </div>
+                        <div class="liste-milieu" id="milieu">
+                            <p>Date de début : </p>
+                            <p>Date de fin : </p>
+                        </div>
+                        <div class="liste-droit" id="droit">
+                            <p class="etat-loc">En cours</p>
+                            <button>En savoir plus</button>
                         </div>
                     </div>
 
                 </div>
-
-
-                <div class="case">
-                    <img>
-                    <div class="text-info">
-                        <ul class="liste-haut" id="gauche">
-                            <li>00 € /mois</li>
-                            <li>Modèle</li>
-                            <li>date début</li>
-                            <li>date fin</li>
-                        </ul>
-                        <ul class="liste-haut" id="droit">
-                            <li>date début</li>
-                            <li>date fin</li>
-                        </ul>
-                        <p>Loué par : </p>
-
-                        <div class="infos-droit">
-                            <p class="etat-loc"> en cours</p>
-                            <button>en savoir plus</button>
-                        </div>
-                    </div>
-
-                </div>
-
             </section>
 
         </main>
