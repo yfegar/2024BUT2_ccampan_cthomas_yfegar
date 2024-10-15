@@ -18,6 +18,7 @@ body, html {
 main {
   height: 100%;
   margin-bottom: 5%;
+  margin-top: 7%;
 }
 
 .connexion_body {
@@ -26,7 +27,7 @@ main {
 
 .index_body {
   background-image: url(/img/accueil_fond.png);
-  background-size: 105%;
+  background-size: 1920px, 1080px;
   background-repeat: no-repeat;
   width: 100%;
 }
@@ -45,4 +46,13 @@ footer {
 .images_accueil {
   margin-top: 5%;
   margin-left: 3%;
+}
+
+#accueil_titre {
+  width: 100% auto;
+  margin-top: -10%;
+}
+
+#informations {
+  margin-top: 5%;
 }
