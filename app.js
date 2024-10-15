@@ -37,6 +37,9 @@ app.get('/connexion', (req, res) => {
 app.get('/connexion', (req, res) => {
     res.render("connexion.ejs");
 });
+app.get('/locations', (req, res) => {
+    res.render("locations");
+});
 app.use(function(req, res){
     res.status(404).render('404');
 });
