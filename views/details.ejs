@@ -29,11 +29,37 @@
                 <button>Mois</button>
             </div>
         </div>
+        <main class="det">
+            <section class="location">
+                <h2 class="titre-loc"> Vous voulez louer le **type** **modèle** de la marque **marque** à
+                    **prix**/**jour** ? </h2>
+                <form class="">
+                    <input type="date">
+                    <input type="date">
 
-        <section class="location">
+                    <div class="question">
+                        <p>Avez-vous déjà un compte client ?
+                            <input type="radio" id="oui" name="choix" value="oui">
+                            <label for="oui">Oui</label>
 
-            
-        </section>
+                            <input type="radio" id="non" name="choix" value="non">
+                            <label for="non">Non</label>
+                        </p>
+                    </div>
+                    <div id="form-loc">
+                        <div id="haut">
+                            <input type="text" name="nom" placeholder="votre nom">
+                            <input type="text" name="prenom" placeholder="votre prénom">
+                        </div>
+                        <div id="bas">
+                            <input type="email" placeholder="votre mail">
+                            <input type="tel" placeholder="votre numéro de téléphone">
+                        </div>
+                    </div>
+                    <input type="submit" value="Louer">
 
 
+            </section>
+
+        </main>
         <%- include("footer") -%>
