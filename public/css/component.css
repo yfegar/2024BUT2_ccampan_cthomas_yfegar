@@ -33,16 +33,15 @@
     padding-left: 0;
 }
 
- .right {
+.right {
      float: right;
      z-index: 1;
  }
 
- .left {
+.left {
      z-index: 1;
      padding-top: 1.5%;
- }
-
+}
 
 .footer_categories h2 {
     font-size: 1.1rem;
