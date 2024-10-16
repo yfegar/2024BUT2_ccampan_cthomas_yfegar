@@ -26,13 +26,11 @@
  }
 
  .right {
-
      float: right;
      z-index: 1;
  }
 
  .left {
-
      z-index: 1;
      padding-top: 1.5%;
  }
@@ -47,7 +45,6 @@
      font-family: "Anton", sans-serif;
      font-size: 2.4em;
  }
-
 
  nav {
      width: 100%;
@@ -81,377 +78,8 @@
      padding-top: 1.5%;
  }
 
- /* --- index --- */
-
-
- #bouton_accueil {
-     display: flex;
-     flex-direction: row;
-     background-color: white;
-     border: solid white;
-     border-radius: 18px;
-     font-size: 1.3em;
-     margin-left: 3%;
-     padding: 0.8%;
-     padding-left: 2%;
-     padding-right: 1%;
- }
-
-
- #bouton_accueil img {
-     padding-top: 6%;
-     padding-left: 8%;
-     width: 15%;
- }
-
- #text-accueil h1 {
-     font-size: 2.5rem;
-     font-family: "Inter";
-     font-weight: 350;
-     letter-spacing: 1.3px;
-     color: white;
-     margin-left: 3%;
-     padding-left: 0;
- }
-
- #text-accueil {
-     padding-top: 20%;
- }
-
- main {
-     margin-bottom: 10%;
-     z-index: 5;
- }
-
- .images_accueil img {
-     width: 90%;
- }
-
- .images_accueil {
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
- }
-
- .images_accueil img {
-     margin: 1%;
- }
-
- .images_accueil a {
-     margin: 0;
-     padding: 0;
- }
-
- #reseaux_sociaux {
-     display: flex;
-     flex-direction: column;
- }
-
- #reseaux_sociaux img {
-     max-width: 50px;
-     max-height: 50px;
- }
-
- #fonctionnement_boite {
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     background-color: white;
-     border-radius: 10px;
-     justify-content: space-evenly;
-     margin-top: 20%;
-     padding: 2%;
-     margin-left: 4%;
-     margin-right: 4%;
-
- }
-
-
- #fonctionnement_boite img {
-     width: 60%;
-     padding-left: 20%;
-     padding-bottom: 8%;
- }
-
- #fonctionnement_boite p {
-     padding: 0;
-     margin: 0;
-     text-align: center;
- }
-
- .white {
-     color: white;
- }
-
- .bas_vert_index {
-     padding-top: 5%;
- }
-
- /* --- page catalogue --- */
-
- #preference {
-     display: flex;
-     flex-direction: row;
-     margin-bottom: 2%;
- }
-
- #preference p {
-     padding: 0;
-     margin: 0;
-     width: 17%;
- }
-
- #filtre {
-     display: flex;
-     flex-direction: row;
-
- }
-
- #filtre p {
-     padding: 0;
-     margin: 0;
- }
-
- #boutons_filtre {
-     margin-left: 2%;
-     width: 75%;
- }
-
- #boutons_preference {
-     width: 100%;
- }
-
- #catalogue_acc {
-     margin-top: 10%;
-     padding-left: 4%;
- }
-
- #catalogue_acc h3 {
-     margin-bottom: 3%;
-     font-weight: 400;
-     font-size: 1.3rem;
- }
-
- #catalogue_acc {
-     margin-bottom: 4%;
- }
-
-
-
-
- #boutons_preference button {
-     background-color: #B4C061;
-     opacity: 0.7;
-     border: none;
-     color: white;
-     padding: 1.5%;
-     padding-top: 0.5%;
-     padding-bottom: 0.5%;
-     border-radius: 8px;
- }
-
-
- #boutons_filtre button {
-     background-color: #B4C061;
-     opacity: 0.7;
-     border: none;
-     color: white;
-     padding: 1.5%;
-     padding-top: 0.5%;
-     padding-bottom: 0.5%;
-     border-radius: 8px;
-
- }
-
-
- button:hover {
-     opacity: 1;
- }
-
- /*barre de recherche*/
-
- #filtre form input {
-     background-color: #EAEAEA;
-     border-radius: 10px;
-     border: none;
-     padding: 3%;
-     padding-right: 0;
-     padding-left: 10%;
-     font-size: 1rem;
-
- }
-
- #filtre ::placeholder {
-     color: #9E9E9E;
- }
-
- /* boite produit */
-
- #collection {
-     margin-left: 4%;
- }
-
- .box {
-     width: 20%;
-     background-color: #F3F3F3;
-     border-radius: 20px;
- }
-
- .box h4 {
-     padding-left: 10%;
-     padding-bottom: 0;
-     margin-bottom: 0;
- }
-
- #prix {
-     padding-left: 10%;
-     color: #89914B;
-     font-size: 1.5rem;
-     font-weight: bold;
-     margin-top: 4%;
-     margin-right: 1%;
-
- }
-
- .box img {
-     width: 100%;
- }
-
- #catalogue_prix {
-     display: flex;
-     flex-direction: row;
- }
-
- #savoir_plus {
-     background-color: white;
-     border: none;
-     border-radius: 10px;
-     padding: 10%;
-     padding-bottom: 5%;
-     padding-top: 5%;
-     font-size: 1.1rem;
-     margin-left: 19%;
-     margin-bottom: 7%;
-     margin-top: 2%;
-     color: black;
- }
-
- /* --- locations --- */
-
- #boutons_filtre button:hover {
-     opacity: 1;
- }
-
- .liste {
-     display: flex;
-     justify-content: center;
- }
-
- .case img {
-     width: 15%;
-     padding-left: 2%;
- }
-
- .case {
-     background-color: #F3F3F3;
-     display: flex;
-     flex-direction: row;
-     width: 93%;
-     border-radius: 10px;
-     margin-bottom: 2%;
- }
-
- .text-info {
-     display: flex;
-     flex-direction: row;
-     width: 100%;
-
- }
-
- .liste-gauche,
- .liste-milieu,
- .liste-gauche {
-     display: flex;
-     flex-direction: column;
-     width: 35%;
- }
-
- .liste-droit {
-     display: flex;
-     justify-content: right;
-     flex-direction: column;
-     text-align: center;
-     padding-left: 0;
- }
-
- .etat-loc {
-     background-color: #7E8645;
-     color: white;
-     border-radius: 5px;
-     padding: 2%;
-     padding-top: 4%;
-     padding-bottom: 4%;
-     margin-top: 20%;
-     margin-bottom: 55%;
-
- }
-
- .liste-droit button {
-     background-color: white;
-     border: none;
-     color: black;
-     border-radius: 10px;
-     padding: 13%;
-     padding-bottom: 5%;
-     padding-top: 5%;
-     font-size: 1rem;
- }
-
- .liste-milieu {
-     padding: 1%;
-     margin-right : 25%;
- }
-
- .liste-milieu li {
-     padding-bottom: 6%;
- }
-
- .liste-milieu p{
-    margin-bottom : 0;
- }
-
- .liste-gauche{
-    margin-left : 5%;
-    width : 20%;
- }
-
-
- #prix-par {
-     display: flex;
-     flex-direction: row
- }
-
- #prix-loc{
-    font-size : 1.8rem;
-    margin-bottom : 0;
-    margin-top : 8%;
- }
-
- #par-mois {
-    padding-top :4.5%;
-    padding-left : 4.5%;
-    margin-bottom : 0;
-
-}
-
-#modele{
-    margin-top : 1%;
-    margin-bottom : 25%;
-}
-
-/* --- FAQ --- */
-
-/* --- index --- */
+ 
+  /* --- index --- */
 
 
 #bouton_accueil {
@@ -667,6 +295,268 @@ main {
 .bas_vert_index {
     padding-top: 5%;
 }
+
+ /* --- page catalogue --- */
+
+ #preference {
+     display: flex;
+     flex-direction: row;
+     margin-bottom: 2%;
+ }
+
+ #preference p {
+     padding: 0;
+     margin: 0;
+     width: 17%;
+ }
+
+ #filtre {
+     display: flex;
+     flex-direction: row;
+
+ }
+
+ #filtre p {
+     padding: 0;
+     margin: 0;
+ }
+
+ #boutons_filtre {
+     margin-left: 2%;
+     width: 75%;
+ }
+
+ #boutons_preference {
+     width: 100%;
+ }
+
+ #catalogue_acc {
+     margin-top: 10%;
+     padding-left: 4%;
+ }
+
+ #catalogue_acc h3 {
+     margin-bottom: 3%;
+     font-weight: 400;
+     font-size: 1.3rem;
+ }
+
+ #catalogue_acc {
+     margin-bottom: 4%;
+ }
+
+ #boutons_preference button {
+     background-color: #B4C061;
+     opacity: 0.7;
+     border: none;
+     color: white;
+     padding: 1.5%;
+     padding-top: 0.5%;
+     padding-bottom: 0.5%;
+     border-radius: 8px;
+ }
+
+
+ #boutons_filtre button {
+     background-color: #B4C061;
+     opacity: 0.7;
+     border: none;
+     color: white;
+     padding: 1.5%;
+     padding-top: 0.5%;
+     padding-bottom: 0.5%;
+     border-radius: 8px;
+
+ }
+
+
+ button:hover {
+     opacity: 1;
+ }
+
+ /*barre de recherche*/
+
+ #filtre form input {
+     background-color: #EAEAEA;
+     border-radius: 10px;
+     border: none;
+     padding: 3%;
+     padding-right: 0;
+     padding-left: 10%;
+     font-size: 1rem;
+
+ }
+
+ #filtre ::placeholder {
+     color: #9E9E9E;
+ }
+
+ /* boite produit */
+
+ #collection {
+     margin-left: 4%;
+ }
+
+ .box {
+     width: 20%;
+     background-color: #F3F3F3;
+     border-radius: 20px;
+ }
+
+ .box h4 {
+     padding-left: 10%;
+     padding-bottom: 0;
+     margin-bottom: 0;
+ }
+
+ #prix {
+     padding-left: 10%;
+     color: #89914B;
+     font-size: 1.5rem;
+     font-weight: bold;
+     margin-top: 4%;
+     margin-right: 1%;
+
+ }
+
+ .box img {
+     width: 100%;
+ }
+
+ #catalogue_prix {
+     display: flex;
+     flex-direction: row;
+ }
+
+ #savoir_plus {
+     background-color: white;
+     border: none;
+     border-radius: 10px;
+     padding: 10%;
+     padding-bottom: 5%;
+     padding-top: 5%;
+     font-size: 1.1rem;
+     margin-left: 19%;
+     margin-bottom: 7%;
+     margin-top: 2%;
+     color: black;
+ }
+
+ /* --- locations --- */
+
+ #boutons_filtre button:hover {
+     opacity: 1;
+ }
+
+ .liste {
+     display: flex;
+     justify-content: center;
+ }
+
+ .case img {
+     width: 15%;
+     padding-left: 2%;
+ }
+
+ .case {
+     background-color: #F3F3F3;
+     display: flex;
+     flex-direction: row;
+     width: 93%;
+     border-radius: 10px;
+     margin-bottom: 2%;
+ }
+
+ .text-info {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+
+ }
+
+ .liste-gauche,
+ .liste-milieu,
+ .liste-gauche {
+     display: flex;
+     flex-direction: column;
+     width: 35%;
+ }
+
+ .liste-droit {
+     display: flex;
+     justify-content: right;
+     flex-direction: column;
+     text-align: center;
+     padding-left: 0;
+ }
+
+ .etat-loc {
+     background-color: #7E8645;
+     color: white;
+     border-radius: 5px;
+     padding: 2%;
+     padding-top: 4%;
+     padding-bottom: 4%;
+     margin-top: 20%;
+     margin-bottom: 55%;
+
+ }
+
+ .liste-droit button {
+     background-color: white;
+     border: none;
+     color: black;
+     border-radius: 10px;
+     padding: 13%;
+     padding-bottom: 5%;
+     padding-top: 5%;
+     font-size: 1rem;
+ }
+
+ .liste-milieu {
+     padding: 1%;
+     margin-right : 25%;
+ }
+
+ .liste-milieu li {
+     padding-bottom: 6%;
+ }
+
+ .liste-milieu p{
+    margin-bottom : 0;
+ }
+
+ .liste-gauche{
+    margin-left : 5%;
+    width : 20%;
+ }
+
+
+ #prix-par {
+     display: flex;
+     flex-direction: row
+ }
+
+ #prix-loc{
+    font-size : 1.8rem;
+    margin-bottom : 0;
+    margin-top : 8%;
+ }
+
+ #par-mois {
+    padding-top :4.5%;
+    padding-left : 4.5%;
+    margin-bottom : 0;
+
+}
+
+#modele{
+    margin-top : 1%;
+    margin-bottom : 25%;
+}
+
+/* --- FAQ --- */
+
 
 /* --- page catalogue --- */
 
@@ -884,10 +774,11 @@ button:hover {
     display: none;
   }
   
-  input {
+  .faq_input {
     display: none;
   }
-  input:checked + .reponse {
+
+  .faq_input:checked + .reponse {
     background: rgb(255, 255, 255);
     display: block;
   }
