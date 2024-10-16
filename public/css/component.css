@@ -586,8 +586,6 @@ main {
     margin-right: 0;
 }
 
-
-
 .recherche_produit_index input {
     border: none;
     background: #ffff;
@@ -625,7 +623,6 @@ main {
     padding-left: 8%;
     width: 15%;
 }
-
 
 #reseaux_sociaux {
     display: flex;
