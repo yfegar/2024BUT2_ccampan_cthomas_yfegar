@@ -1,10 +1,65 @@
 <%- include("header") -%>
-<body>
-<section class="detail"></section>
 
-<section class="filtre" ></section>
+    <body>
+        <section class="detail">
+            <img class="img-detail" src="/img/equipement_sport/altere.png" alt="">
+            <div class="text">
+                <ul class="ul-detail">
+                    <li class="li-detail" id="titre-detail">Modèle Altère</li>
+                    <li class="li-detail">Type</li>
+                    <li class="li-detail">Marque</li>
+                    <li class="li-detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae ea voluptates
+                        neque minima quia
+                        dolorum, aliquid doloremque, tenetur, rem quam nobis laudantium vero fuga expedita quidem
+                        obcaecati
+                        soluta non totam.</li>
+                </ul>
+                <div class="bas">
+                    <p>etat</p>
+                    <p class="prilo">45€</p>
+                </div>
+            </div>
+        </section>
 
-<section class="location"></section>
+        <div class="marg" id="preference">
+            <p>Affichage du prix par...</p>
+            <div id="boutons_preference">
+                <button>Jour</button>
+                <button>Semaine</button>
+                <button>Mois</button>
+            </div>
+        </div>
+        <main class="det">
+            <section class="location">
+                <h2 class="titre-loc"> Vous voulez louer le **type** **modèle** de la marque **marque** à
+                    **prix**/**jour** ? </h2>
+                <form class="">
+                    <input type="date">
+                    <input type="date">
+
+                    <div class="question">
+                        <p>Avez-vous déjà un compte client ?
+                            <input type="radio" id="oui" name="choix" value="oui">
+                            <label for="oui">Oui</label>
+
+                            <input type="radio" id="non" name="choix" value="non">
+                            <label for="non">Non</label>
+                        </p>
+                    </div>
+                    <div id="form-loc">
+                        <div id="haut">
+                            <input type="text" name="nom" placeholder="votre nom">
+                            <input type="text" name="prenom" placeholder="votre prénom">
+                        </div>
+                        <div id="bas">
+                            <input type="email" placeholder="votre mail">
+                            <input type="tel" placeholder="votre numéro de téléphone">
+                        </div>
+                    </div>
+                    <input type="submit" value="Louer">
 
 
-<%- include("footer") -%>
+            </section>
+
+        </main>
+        <%- include("footer") -%>

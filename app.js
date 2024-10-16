@@ -41,6 +41,11 @@ app.get('/inscription', (req, res) => {
 app.get('/apropos', (req, res) => {
     res.render("apropos");
 });
+
+app.get('/details', (req, res) => {
+    res.render("details");
+});
+
 app.get('/faq', (req, res) => {
     res.render("faq");
 });
