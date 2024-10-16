@@ -284,6 +284,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-end;
 }
 
 .boite_formulaire div {
@@ -328,16 +329,22 @@ main {
     border-radius: 24px;
     font-size: 1.2em;
     margin-left: 3%;
-    padding: 0;
+    padding: 5%;
     padding-left: 2%;
     padding-right: 1%;
-    width: auto;
+    width: 200px;
 }
 
 .recherche_produit_index img {
     padding-top: 6%;
     padding-left: 8%;
     width: 15%;
+}
+
+.boite_filtres {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
 }
 
 /* fin de l'ajout */
@@ -1019,7 +1026,7 @@ button:hover {
  .faq_input {
    display: none;
  }
- 
+
  .faq_input:checked + .reponse {
    background: rgb(255, 255, 255);
    display: block;
