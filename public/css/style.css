@@ -221,10 +221,11 @@ input[type="radio"]:checked + label {
 
 section.location{
     background-color: #F3F3F3;
-    height: 300px;
+    height: 350px;
     width: 800px;
  display: flex;
  flex-direction: column;
+ padding: 20px;
  
  margin: 5%;
 }
@@ -233,3 +234,17 @@ main.det{
     display: flex;
     justify-content: center;
 }
+
+#bas{
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+}
+
+#haut{
+    display: flex;
+    justify-content: space-around;
+    margin: 3%;
+    height: 35px;
+}
+
