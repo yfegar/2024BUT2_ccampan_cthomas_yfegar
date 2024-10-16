@@ -556,9 +556,9 @@ button:hover {
    display: none;
  }
  
- input {
+ /*input {
    display: none;
- }
+ }*/
  input:checked + .reponse {
    background: rgb(255, 255, 255);
    display: block;

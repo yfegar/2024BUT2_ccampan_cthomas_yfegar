@@ -221,13 +221,14 @@ input[type="radio"]:checked + .label_details {
 
 section.location{
     background-color: #F3F3F3;
-    height: 350px;
+    border-radius: 20px;
+    height: 400px;
     width: 800px;
  display: flex;
  flex-direction: column;
  padding: 20px;
  
- margin: 5%;
+ 
 }
 
 main.det{
@@ -245,6 +246,53 @@ main.det{
     display: flex;
     justify-content: space-around;
     margin: 3%;
-    height: 35px;
+    
 }
 
+#inp-loc{
+    height: 35px;
+    width: 170px;
+border-radius: 10px;
+border: solid #CBD391;
+
+}
+
+
+#inp-sub{
+    display: flex;
+    justify-content: end;
+    margin-left: 75%;
+    margin-top: 5%;
+    width: 140px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #7E8645;
+    color: #F3F3F3;
+}
+
+.dat{
+    display: flex;
+    justify-content: space-around;
+}
+
+.dat label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.date-input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.date-input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
