@@ -1,0 +1,145 @@
+/* --- page catalogue --- */
+
+#preference {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+}
+
+#preference p {
+    padding: 0;
+    margin: 0;
+    width: 17%;
+}
+
+#filtre {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#filtre p {
+    padding: 0;
+    margin: 0;
+}
+
+#boutons_filtre {
+    margin-left: 2%;
+    width: 75%;
+}
+
+#boutons_preference {
+    width: 100%;
+}
+
+#catalogue_acc {
+    margin-top: 10%;
+    padding-left: 4%;
+}
+
+#catalogue_acc h3 {
+    margin-bottom: 3%;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+#catalogue_acc {
+    margin-bottom: 4%;
+}
+
+#boutons_preference button {
+    background-color: #B4C061;
+    opacity: 0.7;
+    border: none;
+    color: white;
+    padding: 1.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 8px;
+}
+
+
+#boutons_filtre button {
+    background-color: #B4C061;
+    opacity: 0.7;
+    border: none;
+    color: white;
+    padding: 1.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 8px;
+
+}
+
+
+button:hover {
+    opacity: 1;
+}
+
+/*barre de recherche*/
+
+#filtre form input {
+    background-color: #EAEAEA;
+    border-radius: 10px;
+    border: none;
+    padding: 3%;
+    padding-right: 0;
+    padding-left: 10%;
+    font-size: 1rem;
+
+}
+
+#filtre ::placeholder {
+    color: #9E9E9E;
+}
+
+/* boite produit */
+
+#collection {
+    margin-left: 4%;
+}
+
+.box {
+    width: 20%;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+}
+
+.box h4 {
+    padding-left: 10%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#prix {
+    padding-left: 10%;
+    color: #89914B;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 4%;
+    margin-right: 1%;
+
+}
+
+.box img {
+    width: 100%;
+}
+
+#catalogue_prix {
+    display: flex;
+    flex-direction: row;
+}
+
+#savoir_plus {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-size: 1.1rem;
+    margin-left: 19%;
+    margin-bottom: 7%;
+    margin-top: 2%;
+    color: black;
+}

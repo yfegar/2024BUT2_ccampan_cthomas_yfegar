@@ -1,0 +1,83 @@
+ /* --- footer --- */
+
+ .footer_categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 0;
+    margin-left: 25%;
+}
+
+.footer_categories li {
+    list-style-type: none;
+}
+
+.footer_categories li a {
+    text-decoration: none;
+    color: #ffff;
+    margin-bottom: 3%;
+    width: 200px;
+}
+
+.footer_categories div {
+    margin: 5%;
+    margin-top: 0;
+    width: 70%;
+}
+
+.footer_categories ul {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    padding-left: 0;
+}
+
+.right {
+     float: right;
+     z-index: 1;
+ }
+
+.left {
+     z-index: 1;
+     padding-top: 1.5%;
+}
+
+.footer_categories h2 {
+    font-size: 1.1rem;
+}
+
+.footer_background {
+    color: #ffff;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-weight: 300;
+    z-index: 1;
+}
+
+.footer_background div:first-child {
+    margin-left: 3%;
+}
+
+.footer_locfit {
+    font-family: "Anton";
+    font-weight: 300;
+}
+
+.footer_catalogue {
+    width: 300px;
+}
+
+.footer_logos img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-top: 15%;
+}
+
+.footer_cta p {
+    width: 110%;
+}
