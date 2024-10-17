@@ -12,4 +12,6 @@ if(currentLocation == 'http://localhost:3000/' || currentLocation == 'http://loc
      }
 }
 
+
+
 console.log(window.location.href);
