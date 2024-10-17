@@ -323,3 +323,11 @@ div.is{
     height: 200px;
     
 }
+
+bf{
+    .boite_filtres {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+    }
+}
