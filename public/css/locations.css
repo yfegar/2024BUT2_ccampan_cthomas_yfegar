@@ -27,7 +27,6 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-
 }
 
 .liste-gauche,
@@ -55,7 +54,6 @@
     padding-bottom: 4%;
     margin-top: 20%;
     margin-bottom: 55%;
-
 }
 
 .liste-droit button {
@@ -103,7 +101,6 @@
    padding-top :4.5%;
    padding-left : 4.5%;
    margin-bottom : 0;
-
 }
 
 #modele{
