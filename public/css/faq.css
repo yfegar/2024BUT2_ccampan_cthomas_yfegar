@@ -48,3 +48,21 @@
   .faq-question{
     cursor: pointer;
   }
+
+  #quest-img{
+    display : flex; 
+    flex-direction : row;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-bottom : 0.3%;
+    padding-top : 0.8%;
+   
+  }
+ 
+  #quest-img img{
+    padding-top : 2%;
+   
+  }
+
+  .faq_input {
+   display: none;
+ }
