@@ -17,6 +17,11 @@
     color: #ffff;
     margin-bottom: 3%;
     width: 200px;
+    font-size: 1.1rem;
+}
+
+.footer_categories li a:hover {
+    text-decoration: underline;
 }
 
 .footer_categories div {
@@ -80,4 +85,6 @@
 
 .footer_cta p {
     width: 110%;
+    font-size: 1.4rem;
 }
+
