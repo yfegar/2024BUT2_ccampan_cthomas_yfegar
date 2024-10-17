@@ -21,9 +21,9 @@
             </div>
         </section>
 
-        <div class="marg" id="preference">
-            <p>Affichage du prix par...</p>
-            <div id="boutons_preference">
+        <div class="boite_filtres marg">
+            <div>Filtres</div>
+            <div id="boutons_filtre">
                 <button>Jour</button>
                 <button>Semaine</button>
                 <button>Mois</button>
@@ -61,10 +61,15 @@
                             <input id="inp-loc" type="tel" placeholder=" téléphone">
                         </div>
                     </div>
-                    <input id="inp-sub" type="submit" value="Louer">
-
+                    <div class="is">
+                    <input id="inp-sub" class="but-con" type="submit" value="Louer">
+                </div>
 
             </section>
 
+          
+
         </main>
+
+     
         <%- include("footer") -%>
