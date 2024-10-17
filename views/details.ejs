@@ -34,9 +34,14 @@
                 <h2 class="titre-loc"> Vous voulez louer le **type** **modèle** de la marque **marque** à
                     **prix**/**jour** ? </h2>
                 <form class="">
-                    <input type="date">
-                    <input type="date">
-
+                    <div class="dat">
+                        <label>date de début
+                            <input class="date-input" type="date">
+                        </label>
+                        <label>date de fin
+                            <input class="date-input" type="date">
+                        </label>
+                    </div>
                     <div class="question">
                         <p>Avez-vous déjà un compte client ?
                             <input type="radio" id="oui" name="choix" value="oui">
@@ -48,15 +53,15 @@
                     </div>
                     <div id="form-loc">
                         <div id="haut">
-                            <input type="text" name="nom" placeholder="votre nom">
-                            <input type="text" name="prenom" placeholder="votre prénom">
+                            <input id="inp-loc" type="text" name="nom" placeholder="  votre nom">
+                            <input id="inp-loc" type="text" name="prenom" placeholder="  votre prénom">
                         </div>
                         <div id="bas">
-                            <input type="email" placeholder="votre mail">
-                            <input type="tel" placeholder="votre numéro de téléphone">
+                            <input id="inp-loc" type="email" placeholder="  votre mail">
+                            <input id="inp-loc" type="tel" placeholder=" téléphone">
                         </div>
                     </div>
-                    <input type="submit" value="Louer">
+                    <input id="inp-sub" type="submit" value="Louer">
 
 
             </section>

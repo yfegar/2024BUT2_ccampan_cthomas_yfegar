@@ -370,11 +370,10 @@ button:hover {
    display: none;
  }
  
- .faq_input {
+ /*input {
    display: none;
- }
-
- .faq_input:checked + .reponse {
+ }*/
+ input:checked + .reponse {
    background: rgb(255, 255, 255);
    display: block;
  }
