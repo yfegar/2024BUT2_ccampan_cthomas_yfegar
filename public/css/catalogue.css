@@ -112,6 +112,20 @@ button:hover {
 
 }
 
+.box img { 
+    margin: 1%;
+    width: 90%;
+    display: block;
+    -webkit-transition: 200ms ease 100ms;
+    -moz-transition: 200ms ease 100ms;
+    transition: 200ms ease 100ms;
+}
+
+.box img:hover {
+    transform: scale(1.05);
+ 
+}
+
 .box h4 {
     padding-left: 10%;
     padding-bottom: 0;
