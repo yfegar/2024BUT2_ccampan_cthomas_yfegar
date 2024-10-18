@@ -6,7 +6,11 @@ a {
     transition: 0.2s;
 }
 
-a:hover {
+.left a:hover {
+    text-decoration: underline;
+}
+
+.right a:hover {
     text-decoration: underline;
 }
 

@@ -28,10 +28,14 @@
             </div>
             <div id="collection">
                 <div class="box" id="box1">
-                    <img src="/img/equipement_sport/altere.png" alt="">
-                    <h4>Modèle</h4>
+                    <img src="/img/equipement_sport/<%- produit.id -%>.jpg" alt="">
+                    
+                    
+                    <h4><%= produit.modele %></h4>
+                    <h5><%= produit.marque %></h5>
+
                     <div id="catalogue_prix">
-                        <p id="prix">45€ </p>
+                        <p id="prix"><%= produit.prix_location %> €</p>
                         <p> /mois</p>
                     </div>
                     <button id="savoir_plus">En savoir plus</button>

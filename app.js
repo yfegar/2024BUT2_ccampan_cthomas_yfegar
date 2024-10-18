@@ -3,6 +3,8 @@ const session = require('express-session');
 const md5 = require('md5'); // à utiliser seulement pour les projets qui restent sur nos PC
 const app = express();
 const userModel = require("./models/user.js");
+const productModel = require("./models/produits.js");
+
 
 app.set('view engine', 'ejs');
 
@@ -31,8 +33,14 @@ app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
     }
 });
 
-app.get('/catalogue', (req, res) => {
-    res.render("catalogue");
+app.get('/catalogue', async function (req, res) {
+    try { // code toujous exécuté
+        const produit = await productModel.getProductById(1); // await présent car getUserById est une Promise
+        res.render('catalogue', { produit });
+    } catch (err) { // code exécuté seulement si il y a une exception dans le try
+        console.log(err);
+        res.status(500).send('Erreur lors de la récupération des données');
+    }
 });
 
 app.get('/inscription', (req, res) => {
