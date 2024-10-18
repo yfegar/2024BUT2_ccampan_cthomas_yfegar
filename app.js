@@ -36,7 +36,8 @@ app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
 app.get('/catalogue', async function (req, res) {
     try { // code toujous exécuté
         const produit = await productModel.getProductById(1); // await présent car getUserById est une Promise
-        res.render('catalogue', { produit });
+        const listeProduits = await productModel.getAllProducts();
+        res.render('catalogue', { produit, listeProduits });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');

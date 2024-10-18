@@ -27,20 +27,23 @@
 
             </div>
             <div id="collection">
+                <% listeProduits.forEach(function(element){ %>
+                
                 <div class="box" id="box1">
-                    <img src="/img/equipement_sport/<%- produit.id -%>.jpg" alt="">
+                    <img src="/img/equipement_sport/<%- element.id -%>.jpg" alt="">
                     
                     
-                    <h4><%= produit.modele %></h4>
-                    <h5><%= produit.marque %></h5>
+                    <h4><%= element.modele %></h4>
+                    <h5><%= element.marque %></h5>
 
                     <div id="catalogue_prix">
-                        <p id="prix"><%= produit.prix_location %> €</p>
+                        <p id="prix"><%= element.prix_location %> €</p>
                         <p> /mois</p>
                     </div>
                     <button id="savoir_plus">En savoir plus</button>
                 </div>
             </div>
+            <%}); %>
 
             <div id="fonctionnement_boite">
                 <div>

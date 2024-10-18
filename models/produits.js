@@ -13,4 +13,17 @@ async function getProductById (id) {
     });
 };
 
-module.exports = { getProductById };
+async function getAllProducts () {
+    sql = "SELECT * FROM produit";  // ? sert de paramètre 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results);
+        });
+    });
+};
+
+
+module.exports = { getProductById, getAllProducts };
