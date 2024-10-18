@@ -126,6 +126,8 @@ button:hover {
     padding-bottom: 0;
     margin-bottom: 0;
     margin-top: 2%;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 #prix {
@@ -145,6 +147,7 @@ button:hover {
 #catalogue_prix {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
 }
 
 #savoir_plus {
@@ -155,8 +158,10 @@ button:hover {
     padding-bottom: 5%;
     padding-top: 5%;
     font-size: 1.1rem;
-    margin-left: 19%;
     margin-bottom: 7%;
     margin-top: 2%;
     color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
