@@ -2,21 +2,17 @@
 
     <body>
         <section class="detail">
-            <img class="img-detail" src="/img/equipement_sport/1.jpg" alt="">
+            <img class="img-detail" src="/img/equipement_sport/<%= produit.id %>.jpg" alt="">
             <div class="text">
-                <div class="info-detail">
-                    <h1 id="titre-detail">Modèle</h1>
-                    <h2>Type</h2>
-                    <h2>Marque</h2>
-                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae ea voluptates
-                        neque minima quia
-                        dolorum, aliquid doloremque, tenetur, rem quam nobis laudantium vero fuga expedita quidem
-                        obcaecati
-                        soluta non totam.</h3>
+                <div class="ul-detail">
+                    <h1 id="titre-detail"> <%= produit.modele %></h1>
+                    <h2><%= produit.type %></h2>
+                    <h2><%= produit.marque %></h2>
+                    <h3><%= produit.description %></h3>
                     </div>
-                <div class="etat-detail">
-                    <p>Etat</p>
-                    <p class="prix-detail">45€</p>
+                <div class="bas">
+                    <p><%= produit.etat %></p>
+                    <p class="prilo"><%= produit.prix_location %> € </p>
                 </div>
             </div>
         </section>
@@ -31,8 +27,8 @@
         </div>
         <main class="det">
             <section class="location">
-                <h2 class="titre-loc"> Vous voulez louer le **type** **modèle** de la marque **marque** à
-                    **prix**/**jour** ? </h2>
+                <h2 class="titre-loc"> Vous voulez louer le produit <b><%= produit.modele %></b> de la marque <b><%= produit.marque %></b> à
+                    <b><%= produit.prix_location %> €</b> par mois ? </h2>
                 <form class="">
                     <div class="dat">
                         <label>date de début
