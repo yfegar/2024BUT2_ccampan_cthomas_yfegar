@@ -18,44 +18,57 @@
     margin-left: -40%;
 }
 
-.ul-detail{
+.info-detail{
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-top : 7%;
+    padding-right : 3%;
 }
 
-.ul-detail {
-    margin: 3%;
+.info-detail h2{
+    margin : 0;
+    font-weight: 400;
+    padding-bottom : 1%;
+}
+
+.info-detail h3{
+    margin : 0;
+    font-weight: 400;
+    font-size : 1.2rem;
+    padding-top : 3%;
+    padding-bottom : 3%;
+}
+
+#titre-detail{
+    font-size: 2rem;
+    padding-bottom: 1%;
+    margin : 0;
+}
+
+
+.info-detail {
+    margin-top: 3%;
    font-size: 1.2rem;
 }
 
-.text{
-    display: flex;
-    flex-direction: column; 
-    margin-top: 5%;  
-}
-
-div.bas{
+div.etat-detail{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     margin-right: 5.5%;
-    margin-left: 5.5%;
+
 }
 
-.bas p {
-    width: 100%;
-}
-
-.prilo{
+.prix-detail{
     background-color: #7E8645;
     color: #FFFFFF;
     text-align: center;
     font-size: 1.2rem;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
     border-radius: 10px;
     width: 100%;
     height: 35%;
@@ -64,8 +77,8 @@ div.bas{
 .marg {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2%;
     margin-left: 5%;
+    margin-top : -2%;
 }
 
 #titre-detail{
@@ -85,6 +98,7 @@ div.bas{
 }
 
 
+/* Formulaire detail */
 
 
 .question p {
@@ -146,9 +160,10 @@ section.location{
 main.det{
     display: flex;
     justify-content: center;
+    margin-top : 11%;
 }
 
-#bas{
+.etat-detail{
     display: flex;
     justify-content: space-around;
     margin-top: 3%;
@@ -221,8 +236,3 @@ div.is{
     
 }
 
-.boite_filtres {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5%;
-}
