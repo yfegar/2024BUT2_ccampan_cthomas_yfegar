@@ -35,14 +35,28 @@ app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
 
 app.get('/catalogue', async function (req, res) {
     try { // code toujous exécuté
-        const produit = await productModel.getProductById(1); // await présent car getUserById est une Promise
+        // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
         const listeProduits = await productModel.getAllProducts();
-        res.render('catalogue', { produit, listeProduits });
+        res.render('catalogue', { listeProduits });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
+
+app.get('/details/:id', async function (req, res) {
+    try {
+        const id = req.params.id;
+        const produit = await productModel.getProductById(id);
+        console.log(id, produit);
+        res.render("details", { id, produit});
+    }  catch (err) { // code exécuté seulement si il y a une exception dans le try
+        console.log(err);
+        console.log(id, produit);
+        res.status(500).send('Erreur lors de la récupération des données');
+    }
+});
+
 
 app.get('/inscription', (req, res) => {
     res.render("inscription");
@@ -51,9 +65,6 @@ app.get('/apropos', (req, res) => {
     res.render("apropos");
 });
 
-app.get('/details', (req, res) => {
-    res.render("details");
-});
 
 app.get('/faq', (req, res) => {
     res.render("faq");
