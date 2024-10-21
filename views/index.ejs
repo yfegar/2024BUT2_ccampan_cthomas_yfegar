@@ -7,7 +7,7 @@
 
 
             <div id="text-accueil">
-                
+
                 <div id="accueil_titre">
                     <h1>Boostez votre capital séduction en travaillant à la maison</h1>
                     <button id="bouton_accueil">
@@ -42,40 +42,40 @@
             <div class="nouveautes_index">
                 <h1>Nos nouveautés</h1>
                 <div class="images_accueil">
-                    
-                        <div class="images_accueil_container">
-                            <img class="img_nouveautes" src="/img/cyclebench_acc.png" alt="">
-                            <a class="lien_nouveautes" href="/catalogue">Vélo + Banc Technogym</a>
-                            <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
-                        </div>
-                    
-                        <div class="images_accueil_container">
-                            <img class="img_nouveautes" src="/img/ellipticalbench_acc.png" alt="">
-                            <a class="lien_nouveautes" href="/catalogue">Elliptique + Banc Technogym </a>
-                            <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
-                        </div>
-                    
-                        <div class="images_accueil_container">
-                            <img class="img_nouveautes" src="/img/myrunbench_acc.png" alt="">
-                            <a class="lien_nouveautes" href="/catalogue">Tapis + Banc Technogym </a>
-                            <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
-                        </div>
-                    
+
+                    <div class="images_accueil_container">
+                        <img class="img_nouveautes" src="/img/cyclebench_acc.png" alt="">
+                        <a class="lien_nouveautes" href="/catalogue">Vélo + Banc Technogym</a>
+                        <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
+                    </div>
+
+                    <div class="images_accueil_container">
+                        <img class="img_nouveautes" src="/img/ellipticalbench_acc.png" alt="">
+                        <a class="lien_nouveautes" href="/catalogue">Elliptique + Banc Technogym </a>
+                        <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
+                    </div>
+
+                    <div class="images_accueil_container">
+                        <img class="img_nouveautes" src="/img/myrunbench_acc.png" alt="">
+                        <a class="lien_nouveautes" href="/catalogue">Tapis + Banc Technogym </a>
+                        <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
+                    </div>
+
                 </div>
             </div>
 
             <div class="recherche_produit_index">
-                <form action="/catalogue" method="post">
+                <form action="/catalogue" method="post" id="form-recherche-acc">
                     <h1>Vous recherchez un produit ?</h1>
 
                     <div class="boite_formulaire">
                         <div>
                             <label for="materiel">Matériel</label>
-                            <input id="materiel_form" type="text"/>
+                            <input id="materiel_form" type="text" />
                         </div>
                         <div>
                             <label for="prix">Prix</label>
-                            <input id="prix_form" type="text"/>
+                            <input id="prix_form" type="text" />
                         </div>
                         <div>
                             <label for="duree">Durée</label>
@@ -86,6 +86,27 @@
                             </button>
                         </div>
                     </div>
+
+                    <script>
+
+                        const form = document.getElementById('form-recherche-acc');
+
+                        form.addEventListener('submit', (event) => {
+                            // Valider le formulaire ici
+                            event.preventDefault(); // Empêcher la soumission par défaut
+                        });
+
+                        function maFonction(){
+                            var materiel = document.querySelector("#materiel_form").value;
+                            var prix = document.querySelector("#prix_form").value;
+                            var duree = document.querySelector("#duree_form").value;
+                        }
+
+                    </script>
+
+
+
+
                     <div class="boite_filtres">
                         <div>Filtres</div>
                         <div id="boutons_filtre">
