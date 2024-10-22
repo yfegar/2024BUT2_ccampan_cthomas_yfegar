@@ -5,6 +5,7 @@
     width: 450px;
     margin: 5%;
     margin-right: 8%;
+    margin-left: 10%;
     border-radius: 10px;
 }
 
@@ -48,7 +49,7 @@
 
 
 .info-detail {
-    margin-top: 5%;
+    margin-top: 3%;
    font-size: 1.2rem;
 }
 
@@ -68,8 +69,8 @@ div.etat-detail{
     text-align: center;
     font-size: 1.2rem;
     padding: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     border-radius: 10px;
     width: 100%;
     height: 35%;
@@ -155,7 +156,6 @@ main.det{
     display: flex;
     justify-content: space-around;
     margin-top: 3%;
-    margin-right: 50%;
 }
 
 #haut{
