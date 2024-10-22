@@ -1,8 +1,8 @@
 /* composant details */
 
 .img-detail{
-    height: 450px;
-    width: 450px;
+    height: 350px;
+
     margin: 5%;
     margin-right: 8%;
     margin-left: 10%;
@@ -12,19 +12,14 @@
 .detail{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    background-color: #F3F3F3;
     margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: -40%;
 }
 
-.info-detail{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-top : 7%;
-    padding-right : 3%;
+
+.info-detail {
+    margin-top: 3%;
+    margin-top: 5%;
+   font-size: 1.2rem;
 }
 
 .info-detail h2{
@@ -54,12 +49,18 @@
 }
 
 div.etat-detail{
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     margin-right: 5.5%;
     margin-top : 13%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 10px;
+    width: 10%;
+    height: 35%;
 
 }
 
