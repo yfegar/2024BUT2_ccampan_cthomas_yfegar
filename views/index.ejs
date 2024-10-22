@@ -92,15 +92,22 @@
                         const form = document.getElementById('form-recherche-acc');
 
                         form.addEventListener('submit', (event) => {
-                            // Valider le formulaire ici
                             event.preventDefault(); // Empêcher la soumission par défaut
                         });
 
-                        function maFonction(){
-                            var materiel = document.querySelector("#materiel_form").value;
-                            var prix = document.querySelector("#prix_form").value;
-                            var duree = document.querySelector("#duree_form").value;
+                        function ValeursFormAcc() {
+                            var materiel = document.querySelector("#materiel_form").value.toLowerCase();
+                            var prix = document.querySelector("#prix_form").value.toLowerCase();
+                            var duree = document.querySelector("#duree_form").value.toLowerCase();
                         }
+
+                        const filters = {
+                            materiel: materiel_form,
+                            prix: prix_form,
+                            duree: duree_form,
+                
+                        };
+
 
                     </script>
 

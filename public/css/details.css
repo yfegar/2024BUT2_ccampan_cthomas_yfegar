@@ -42,7 +42,7 @@
 
 
 .info-detail {
-    margin-top: 3%;
+    margin-top: 5%;
    font-size: 1.2rem;
 }
 
@@ -51,6 +51,7 @@ div.etat-detail{
     flex-direction: row;
     justify-content: space-between;
     margin-right: 5.5%;
+    margin-top : 13%;
 
 }
 
@@ -60,8 +61,8 @@ div.etat-detail{
     text-align: center;
     font-size: 1.2rem;
     padding: 1%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
     border-radius: 10px;
     width: 10%;
     height: 35%;
@@ -72,6 +73,10 @@ div.etat-detail{
     flex-direction: row;
     margin-left: 5%;
     margin-top : -2%;
+}
+
+.table{
+    border: solid black 1px;
 }
 
 /* Formulaire detail */
@@ -211,4 +216,3 @@ div.is{
     height: 200px;
     
 }
-
