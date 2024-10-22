@@ -48,11 +48,9 @@ app.get('/details/:id', async function (req, res) {
     try {
         const id = req.params.id;
         const produit = await productModel.getProductById(id);
-        console.log(id, produit);
         res.render("details", { id, produit});
     }  catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
-        console.log(id, produit);
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
@@ -83,7 +81,7 @@ app.post('/connexion', async function (req, res) {
     if (user != false && user.password == md5(mdp)){
         // on démarre la session
         req.session.userId = user.id; // on décide de userId
-        req.session.role = user.type_utilisateur; // on décide de userId
+        req.session.role = user.type_utilisateur; // on décide de role
         // on charge une page appropriée
         return res.redirect("/"); // res.redirect != res.render
     }
