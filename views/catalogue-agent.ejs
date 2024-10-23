@@ -24,25 +24,6 @@
                         <input type="search" name="search" placeholder="Rechercher...">
                     </form>
                 </div>
-                <script>
-
-                    const searchInput = document.querySelector("#search")
-                    const serachResult = document.querySelectorAll(".box")
-                    const allProducts = document.querySelectorAll("#modele-elem")
-
-                    searchInput.addEventListener("input", filterData)
-
-                    function filterData(e) {
-
-                        searchResult.innerHTML = ""
-                        const searchedString = e.target.value.toLowerCase();
-
-                        const filteredArr = Object.values(dataArray).filter(element => element.allProducts && element.allProducts.first.toLowerCase().includes(searchedString))
-
-                        createProductList(filteredArr);
-                    }
-
-                </script>
             </div>
             <div id="collection">
                 <% listeProduits.forEach(function(element){ %>
@@ -51,13 +32,20 @@
                         <a href="/details/<%- element.id -%>">
                             <img src="/img/equipement_sport/<%- element.id -%>.jpg" alt="">
 
+                            <div id="info-catalogue-agent">
+                                <div id="text-info-catalogue-agent">
+                                    <h4 id="modele-elem">
+                                        <%= element.modele %>
+                                    </h4>
+                                    <h5>
+                                        <%= element.marque %>
+                                    </h5>
+                                </div>
 
-                            <h4 id="modele-elem">
-                                <%= element.modele %>
-                            </h4>
-                            <h5>
-                                <%= element.marque %>
-                            </h5>
+                                <button id="poubelle">
+                                    <img src="/img/bin.png" alt="poubelle de supression">
+                                </button>
+                            </div>
 
                             <div id="catalogue_prix">
                                 <p id="prix">
@@ -65,7 +53,8 @@
                                 </p>
                                 <p> /mois</p>
                             </div>
-                            <button id="savoir_plus">En savoir plus</button>
+
+                            <button id="savoir_plus">Modifier</button>
                         </a>
                     </div>
                     <%}); %>
