@@ -305,6 +305,9 @@ div.etat-detail-agent p{
 }
 #poubelle-detail-agent img{
     width : 50%;
-    
     float : right ;
+}
+
+#poubelle-detail-agent img:hover{
+    transform: scale(1.03);
 }
