@@ -45,10 +45,10 @@ async function checkEmail (email) {
 };
 
 
-async function registerUser (surname, firstname, email, hashedpassword) {
-    sql = "INSERT INTO `utilisateur`(`id`, `login`, `password`, `nom`, `prenom`, `ddn`, `email`, `type_utilisateur`) VALUES (default, 'nvlogin', ?, ?, ?,'1999-99-99', ?,'client')";  // ? sert de paramètre 
+async function registerUser (login, surname, firstname, ddn, email, hashedpassword) {
+    sql = "INSERT INTO `utilisateur`(`id`, `login`, `password`, `nom`, `prenom`, `ddn`, `email`, `type_utilisateur`) VALUES (default, ?, ?, ?, ?, ?, ?,'client')";  // ? sert de paramètre 
     return new Promise((resolve, reject) => {
-        bdd.query(sql, [surname, firstname, email, hashedpassword], (err, results) => {
+        bdd.query(sql, [login, hashedpassword, surname, firstname, ddn, email, ], (err, results) => {
             if (err) {
                 return reject(err);
             } else {
