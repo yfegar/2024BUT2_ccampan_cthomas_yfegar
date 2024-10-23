@@ -117,7 +117,7 @@ app.post('/connexion', async function (req, res) {
         req.session.userId = user.id; // on décide de userId
         req.session.role = user.type_utilisateur; // on décide de role
         // on charge une page appropriée
-        return res.redirect("/"); // res.redirect != res.render
+        return res.redirect("/index"); // res.redirect != res.render
     }
     // res.render('connexion', {error : "Erreur dans le login/mdp"});
 });
