@@ -258,5 +258,53 @@ div.is {
 
 }
 
+/* details agent */ 
+
+#modifier-details-agent{
+    border : none; 
+    background : none ; 
+    text-align : right;
+    margin-bottom : 0;
+    margin-top : 3%;
+    margin-right : 7%;
+}
+
+#modifier-details-agent:hover{
+   text-decoration: underline;
+}
+
+ 
+
+div.etat-detail-agent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5.5%;
+
+}
+
+div.etat-detail-agent p{
+    margin-top : 0;
+
+}
+
+#detail-poubelle-titre{
+    display : flex ; 
+    flex-direction: row;
+
+    justify-content : space-between;
 
 
+}
+
+#poubelle-detail-agent{
+    border : none ;
+    background: none;
+
+
+}
+#poubelle-detail-agent img{
+    width : 50%;
+    
+    float : right ;
+}

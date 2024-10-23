@@ -182,18 +182,18 @@ button:hover {
 
 /* catalogue-agent */
 
-#poubelle{
+#poubelle-agent{
     border : none ;
     background: none;
     width : 20%;
+    margin-left : 27%;
+    margin-top : -20%;
 }
 
-#info-catalogue-agent{
-    display : flex; 
-    flex-direction : row;
+#modele-elem{
+    width : 100%;
 }
 
-#text-info-catalogue-agent{
-    display : flex; 
-    flex-direction : column;
+#catalogue_prix{
+    width : 100%;
 }

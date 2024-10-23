@@ -68,6 +68,17 @@ app.get('/details/:id', async function (req, res) {
     }
 });
 
+
+app.get('/details-agent/:id', async function (req, res) {
+    try {
+        const id = req.params.id;
+        const produit = await productModel.getProductById(id);
+        res.render("details-agent", { id, produit});
+    }  catch (err) { // code exécuté seulement si il y a une exception dans le try
+        console.log(err);
+        res.status(500).send('Erreur lors de la récupération des données');
+    }
+});
 app.get('/apropos', (req, res) => {
     res.render("apropos");
 });

@@ -1,0 +1,115 @@
+<%- include("header") -%>
+
+    <body>
+        <section class="detail">
+            <img class="img-detail" src="/img/equipement_sport/<%= produit.id %>.jpg" alt="">
+            <div class="text">
+                <div class="info-detail">
+                    <div id="detail-poubelle-titre">
+                        <h1 id="titre-detail">
+                            <%= produit.modele %>
+                        </h1>
+                        <button id="poubelle-detail-agent">
+                            <img src="/img/bin.png" alt="poubelle de supression">
+                        </button>
+                    </div>
+                    <h2>
+                        <%= produit.type %>
+                    </h2>
+                    <h2>
+                        <%= produit.marque %>
+                    </h2>
+                    <h3>
+                        <%= produit.description %>
+                    </h3>
+                    <table>
+
+                        <tr class="ligne-apparente">
+                            <td class="colonne-apparente">Unité</td>
+                            <td class="colonne-apparente">Mm (ouvert)</td>
+                            <td>Mm (fermé)</td>
+                        </tr>
+
+                        <tr>
+                            <td class="colonne-apparente">LxlxH</td>
+                            <td class="colonne-apparente">150x60x180</td>
+                            <td>150x60x180</td>
+                        </tr>
+
+                    </table>
+                    <button id="modifier-details-agent">Modifier</button>
+                </div>
+
+
+
+                <div class="etat-detail-agent">
+
+                    <p>
+                        <%= produit.etat %>
+                    </p>
+                    <p class="prix-detail">
+                        <%= produit.prix_location %> €
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="bf marg">
+            <div>Affichage du prix par...</div>
+            <div id="boutons_filtre">
+                <button>Jour</button>
+                <button>Semaine</button>
+                <button>Mois</button>
+            </div>
+        </div>
+        <main class="det">
+            <section class="location">
+                <h2 class="titre-loc"> Vous voulez louer le produit <b>
+                        <%= produit.modele %>
+                    </b> de la marque <b>
+                        <%= produit.marque %>
+                    </b> à
+                    <b>
+                        <%= produit.prix_location %> €
+                    </b> par mois ?
+                </h2>
+                <form class="">
+                    <div class="dat">
+                        <label>Date de début
+                            <input class="date-input" type="date">
+                        </label>
+                        <label>Date de fin
+                            <input class="date-input" type="date">
+                        </label>
+                    </div>
+                    <div class="question">
+                        <p>Avez-vous déjà un compte client ?
+                            <input type="radio" id="oui" name="choix" value="oui">
+                            <label class="label_details" for="oui">Oui</label>
+
+                            <input type="radio" id="non" name="choix" value="non">
+                            <label class="label_details" for="non">Non</label>
+                        </p>
+                    </div>
+                    <div id="form-loc">
+                        <div id="haut">
+                            <input id="inp-loc" type="text" name="nom" placeholder="  Votre nom">
+                            <input id="inp-loc" type="text" name="prenom" placeholder="  Votre prénom">
+                        </div>
+                        <div id="bas">
+                            <input id="inp-loc" type="email" placeholder="  Votre mail">
+                            <input id="inp-loc" type="tel" placeholder=" Téléphone">
+                        </div>
+                    </div>
+                    <div class="is">
+                        <input id="inp-sub" class="but-con" type="submit" value="Louer">
+                    </div>
+
+            </section>
+
+
+
+        </main>
+
+
+        <%- include("footer") -%>
