@@ -5,18 +5,20 @@ const app = express();
 const userModel = require("./models/user.js");
 const productModel = require("./models/produits.js");
 
-
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: false})); // permet de récupérer les éléments du formulaire
 
+app.use(express.json());
+
 app.use(session({
     secret: 'bnoobesobus', // clé de session
     resave: false,
     saveUninitialized: false
 }));
+
 
 app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
     /*
@@ -26,7 +28,7 @@ app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
 */
     try { // code toujous exécuté
         const user = await userModel.getUserById(1); // await présent car getUserById est une Promise
-        res.render('index', { user });
+        res.render('index',   { user });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');
@@ -66,18 +68,28 @@ app.get('/details/:id', async function (req, res) {
     }
 });
 
-
-app.get('/inscription', (req, res) => {
-    res.render("inscription");
-});
 app.get('/apropos', (req, res) => {
     res.render("apropos");
 });
 
+app.get('/indexadmin', (req, res) => {
+    res.render("indexadmin");
+});
 
 app.get('/faq', (req, res) => {
     res.render("faq");
 });
+
+
+// Define routes
+app.get('/inscription', require('./routes/pages'));
+app.use('/auth', require('./routes/auth'));
+
+
+/*
+app.get('/inscription', function (req, res) {
+    res.render("inscription", {error : null});
+});*/
 
 app.get('/connexion', function (req, res) {
     res.render("connexion", {error : null});
@@ -98,6 +110,7 @@ app.post('/connexion', async function (req, res) {
     }
     // res.render('connexion', {error : "Erreur dans le login/mdp"});
 });
+
 
 app.get('/locations', (req, res) => {
     res.render("locations");

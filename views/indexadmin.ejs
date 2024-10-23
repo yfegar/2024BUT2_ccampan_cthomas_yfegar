@@ -1,13 +1,12 @@
 <%- include("header") -%>
 
+
+
     <body class="index_body">
         <main>
 
-           
+
             <div id="text-accueil">
-                <% if(locals.isAuth){ %>
-                    <%= locals.id %>
-                    <% }; %>
 
                 <div id="accueil_titre">
                     <h1>Boostez votre capital séduction en travaillant à la maison</h1>
@@ -40,53 +39,51 @@
                 </div>
             </div>
 
-            <div class="nouveautes_index">
-                <h1>Nos nouveautés</h1>
-                <div class="images_accueil">
 
-                    <div class="images_accueil_container">
-                        <img class="img_nouveautes" src="/img/cyclebench_acc.png" alt="">
-                        <a class="lien_nouveautes" href="/details/3">Vélo + Banc Technogym</a>
-                        <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
-                    </div>
-
-                    <div class="images_accueil_container">
-                        <img class="img_nouveautes" src="/img/ellipticalbench_acc.png" alt="">
-                        <a class="lien_nouveautes" href="/details/2">Elliptique + Banc Technogym </a>
-                        <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
-                    </div>
-
-                    <div class="images_accueil_container">
-                        <img class="img_nouveautes" src="/img/myrunbench_acc.png" alt="">
-                        <a class="lien_nouveautes" href="/details/1">Tapis + Banc Technogym </a>
-                        <img class="svg_nouveautes" src="/img/right-arrow-svg.svg" alt="fleche vers la droite">
-                    </div>
-
-                </div>
             </div>
 
-            <div class="recherche_produit_index">
-                <form action="/catalogue" method="post" id="form-recherche-acc">
-                    <h1>Vous recherchez un produit ?</h1>
+            <div class="ajout_produit_index">
+                <form action="/catalogue" method="post" id="form-ajout-acc">
+                    <h1>Vous souhaitez ajouter un produit ?</h1>
 
-                    <div class="boite_formulaire">
+                    <div class="boite_ajout_objt">
+<div class="boite_ajout_1">
                         <div>
-                            <label for="materiel">Matériel</label>
-                            <input id="materiel_form" type="text" />
+                            <label for="type">Type</label>
+                            <input id="" type="text" placeholder="Type"/>
                         </div>
+
                         <div>
-                            <label for="prix">Prix</label>
-                            <input id="prix_form" type="text" />
-                        </div>
-                        <div>
-                            <label for="duree">Durée</label>
-                            <input id="duree_form" type="number" placeholder="Semaines" : />
-                        </div>
-                        <div>
-                            <button type="submit">Rechercher<img src="/img/arrow_right.png" alt="fleche vers la droite">
-                            </button>
+                            <label for="type">Modèle</label>
+                            <input id="" type="text" />
                         </div>
                     </div>
+                        <div>
+                            <label for="prix">Prix</label>
+                            <input id="" type="number" />
+                        </div>
+                    
+                        <div>
+                            <label for="type">Marque</label>
+                            <input id="" type="text" />
+                        </div>
+
+                        <div>
+                            <label for="type">Etat</label>
+                            <input id="" type="text" />
+                        </div>
+
+                        <div>
+                            <label for="type">Description</label>
+                            <input id="ajout_desc" type="text" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit">Rechercher<img src="/img/arrow_right.png" alt="fleche vers la droite">
+                        </button>
+                    </div>
+
 
                     <script>
 
@@ -106,10 +103,8 @@
                             materiel: materiel_form,
                             prix: prix_form,
                             duree: duree_form,
-                
+
                         };
-
-
 
 
                     </script>
