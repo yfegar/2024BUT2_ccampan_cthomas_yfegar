@@ -8,7 +8,8 @@ exports.inscription = (req, res) => {
     if(userModel.checkEmail(email)) {
         let hashedpassword = md5(password);
         userModel.registerUser(login, surname, firstname, ddn, email, hashedpassword);
+        res.redirect("/");
     };
 
-    res.send("Formulaire envoyé.");
+    
 }
