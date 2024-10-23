@@ -61,6 +61,9 @@ app.get('/apropos', (req, res) => {
     res.render("apropos");
 });
 
+app.get('/indexadmin', (req, res) => {
+    res.render("indexadmin");
+});
 
 app.get('/faq', (req, res) => {
     res.render("faq");
