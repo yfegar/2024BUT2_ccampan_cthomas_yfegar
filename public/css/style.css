@@ -48,6 +48,7 @@ input.con {
     border-radius: 20px;
     height: 40px;
     width: 150px;
+    margin-bottom: 3%;
     color: #FFFFFF;
     border: none;
 }
@@ -102,4 +103,11 @@ form.insc {
     width: 150px;
     color: #FFFFFF;
     border: none;
+}
+
+.nom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
