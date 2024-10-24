@@ -179,3 +179,21 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* catalogue-agent */
+
+#poubelle-agent{
+    border : none ;
+    background: none;
+    width : 20%;
+    margin-left : 27%;
+    margin-top : -20%;
+}
+
+#modele-elem{
+    width : 100%;
+}
+
+#catalogue_prix{
+    width : 100%;
+}

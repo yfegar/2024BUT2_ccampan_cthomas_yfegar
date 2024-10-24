@@ -26,6 +26,38 @@ async function checkLogin (login) {
     });
 };
 
+async function checkEmail (email) {
+    sql = "SELECT email FROM utilisateur WHERE email = ?";  // ? sert de paramètre 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, email, (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            if (results.length > 0) {
+                return resolve('inscription', {
+                    message: 'Cette adresse e-mail est déjà utilisée.'
+                });               
+            } else {
+                return true;
+            }
+        });
+    });
+};
+
+
+async function registerUser (login, surname, firstname, ddn, email, hashedpassword) {
+    sql = "INSERT INTO `utilisateur`(`id`, `login`, `password`, `nom`, `prenom`, `ddn`, `email`, `type_utilisateur`) VALUES (default, ?, ?, ?, ?, ?, ?,'client')";  // ? sert de paramètre 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, [login, hashedpassword, surname, firstname, ddn, email, ], (err, results) => {
+            if (err) {
+                return reject(err);
+            } else {
+                console.log(results);
+            }
+        });
+    });
+};
+
 async function getUserByName (name) {
 
 }
@@ -44,4 +76,4 @@ async function promoteUser () {
 
 
 
-module.exports = { getUserById, checkLogin };
+module.exports = { getUserById, checkLogin, checkEmail, registerUser };

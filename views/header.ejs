@@ -7,7 +7,7 @@
     <title>Locfit - Accueil</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/layout.css">
-    
+
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/index.css">
@@ -44,6 +44,19 @@
                 <li class="right" id="login"><a class="nav_lien" href="/connexion" alt="">Se connecter</a></li>
             </div>
         </ul>
+        <script>
+            const currentPage = window.location.pathname;
+
+            // Récupérer tous les liens du menu
+            const menuLinks = document.querySelectorAll('nav ul li a');
+
+            // Parcourir chaque lien et comparer avec l'URL
+            menuLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        </script>
 
         <div id="locfit">
             <a id="locfit_titre" href="/" alt="Accueil">Locfit</a>

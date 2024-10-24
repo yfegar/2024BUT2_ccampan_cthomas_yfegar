@@ -4,7 +4,7 @@ app.use(function(req, res, next) {
         req.locals.isAuth = true; //local accessible dans les vues
         req.locals.id = req.session.userID;
     } else {
-        req.local.isAuth = false;
+        req.locals.isAuth = false;
     }
     next(); 
 })

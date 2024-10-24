@@ -7,15 +7,18 @@
                     <h1> Créer un compte client </h1>
                 </section>
 
-                <form class="insc">
+                <form class="insc" action="/auth/inscription" method="POST">
                     <div class="nom">
-                        <input class="con" type="text" name="name" placeholder="   Nom"/>
-                        <input class="con" type="text" name="nicknam" placeholder="   Prénom"/>
+                        <input class="con" type="text" name="surname" placeholder="   Nom"/>
+                        <input class="con" type="text" name="firstname" placeholder="   Prénom"/>
+                        <input class="con" type="date" name="ddn" placeholder="   Date de naissance (aaaa-mm-jj)"/>
+                        <input class="con" type="text" name="login" placeholder="   Login"/>
+
                     </div>
 
                     <div class="compte">
-                        <input class="con" type="text" name="Email" placeholder="   Email" class="mail"/>
-                        <input class="con" type="text" name="MP" placeholder="   Mot de passe..."/>
+                        <input class="con" type="text" name="email" placeholder="   Email" class="mail"/>
+                        <input class="con" type="password" name="password" placeholder="   Mot de passe..."/>
                     </div>
                     <input class="but-con" type="submit" name="MP" value="inscription"/>
                 </form>

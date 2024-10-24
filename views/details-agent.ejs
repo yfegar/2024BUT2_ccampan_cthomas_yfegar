@@ -5,9 +5,14 @@
             <img class="img-detail" src="/img/equipement_sport/<%= produit.id %>.jpg" alt="">
             <div class="text">
                 <div class="info-detail">
-                    <h1 id="titre-detail">
-                        <%= produit.modele %>
-                    </h1>
+                    <div id="detail-poubelle-titre">
+                        <h1 id="titre-detail">
+                            <%= produit.modele %>
+                        </h1>
+                        <button id="poubelle-detail-agent">
+                            <img src="/img/bin.png" alt="poubelle de supression">
+                        </button>
+                    </div>
                     <h2>
                         <%= produit.type %>
                     </h2>
@@ -32,9 +37,13 @@
                         </tr>
 
                     </table>
+                    <button id="modifier-details-agent">Modifier</button>
                 </div>
 
-                <div class="etat-detail">
+
+
+                <div class="etat-detail-agent">
+
                     <p>
                         <%= produit.etat %>
                     </p>
