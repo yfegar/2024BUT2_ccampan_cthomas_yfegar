@@ -71,3 +71,33 @@ form{
     display: flex;
     flex-direction: row;
 }
+
+#bouton_accueil_admin img {
+    padding-top: 5%;
+    padding-left: 8%;
+    width: 10%;
+}
+
+#bouton_accueil_admin {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: solid white;
+    border-radius: 30px;
+    margin-left: 3%;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom:1%; 
+    width : 50%;
+    
+}
+
+#bouton_accueil_admin p {
+    font-size: 1.6em;
+    text-align : left;
+    width : 100%;
+    margin :3.5%;
+
+}
+

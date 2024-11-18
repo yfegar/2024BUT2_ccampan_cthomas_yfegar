@@ -44,20 +44,6 @@
                 <li class="right" id="login"><a class="nav_lien" href="/connexion" alt="">Se connecter</a></li>
             </div>
         </ul>
-        <script>
-            const currentPage = window.location.pathname;
-
-            // Récupérer tous les liens du menu
-            const menuLinks = document.querySelectorAll('nav ul li a');
-
-            // Parcourir chaque lien et comparer avec l'URL
-            menuLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-        </script>
-
         <div id="locfit">
             <a id="locfit_titre" href="/" alt="Accueil">Locfit</a>
         </div>
