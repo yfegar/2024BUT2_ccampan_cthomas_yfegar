@@ -1,0 +1,48 @@
+<%- include("header") -%>
+
+    <body>
+        <main>
+            <div id="catalogue_acc">
+                <h3>Liste des locations</h3>
+                <div id="filtre">
+                    <p>Filtres</p>
+                    <div id="boutons_filtre">
+                        <button>En cours</button>
+                        <button>En retard</button>
+                        <button>Problème</button>
+                    </div>
+                    <form action="barre_recherche">
+                        <input type="search" name="search" placeholder="Rechercher...">
+                    </form>
+                </div>
+            </div>
+            <section class="liste">
+
+                <div class="case">
+                    <img src="/img/equipement_sport/banc.png" alt="">
+                    <div class="text-info">
+                        <div class="liste-gauche" id="gauche">
+                            <div id="prix-par">
+                                <p id="prix-loc">00 €</p>
+                                <p id="par-mois">/mois</p>
+                            </div>
+                            <p id="modele">Modèle</p>
+                            <p>Loué par :</p>
+                        </div>
+                        <div class="liste-milieu" id="milieu">
+                            <p>Date de début : </p>
+                            <p>Date de fin : </p>
+                        </div>
+                        <div class="liste-droit" id="droit">
+                            <p class="etat-loc">En cours</p>
+                            <button class="savoir-plus">En savoir plus</button>
+                            <button id="valider">Valider la reservation</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <%- include("footer") -%>

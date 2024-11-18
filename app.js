@@ -79,6 +79,7 @@ app.get('/details-agent/:id', async function (req, res) {
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
+
 app.get('/apropos', (req, res) => {
     res.render("apropos");
 });
@@ -125,6 +126,10 @@ app.post('/connexion', async function (req, res) {
 
 app.get('/locations', (req, res) => {
     res.render("locations");
+});
+
+app.get('/locations-agent', (req, res) => {
+    res.render("locations-agent");
 });
 app.use(function(req, res){
     res.status(404).render('404');
