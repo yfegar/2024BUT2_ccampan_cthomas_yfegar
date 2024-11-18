@@ -32,27 +32,29 @@
                         <a href="/details/<%- element.id -%>">
                             <img src="/img/equipement_sport/<%- element.id -%>.jpg" alt="">
 
-                            <div id="info-catalogue-agent">
-                                <div id="text-info-catalogue-agent">
+   
                                     <h4 id="modele-elem">
                                         <%= element.modele %>
                                     </h4>
                                     <h5>
                                         <%= element.marque %>
                                     </h5>
-                                </div>
-
-                                <button id="poubelle">
-                                    <img src="/img/bin.png" alt="poubelle de supression">
-                                </button>
-                            </div>
 
                             <div id="catalogue_prix">
                                 <p id="prix">
                                     <%= element.prix_location %> €
                                 </p>
                                 <p> /mois</p>
+                                
+                                <button id="poubelle-agent">
+                                    <img src="/img/bin.png" alt="poubelle de supression">
+                                </button>
+                            
+                            
                             </div>
+
+
+                    
 
                             <button id="savoir_plus">Modifier</button>
                         </a>

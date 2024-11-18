@@ -1,44 +1,103 @@
 .ajout_produit_index {
     background-color: #F3F3F3;
     border-radius: 24px;
-    margin-top: 15%;
-    margin-left: 6%;
-    margin-right: 6%;
-    padding: 1% 3%;
-}
-
-
-.boite_ajout_objt{
-    width: 40%;
-    
-    background-color: bisque;
-}
-
-.ajout_produit_index input {
-    border: none;
-    background: #ffff;
-    border-radius: 24px;
-
-    
-    
-}
-
-
-.ajout_produit_index label {
-    padding-left: 10%;
-}
-
-.ajout_produit_index div {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding: 2% 3%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px;
 }
 
-.boite_ajout_1{
-margin: 10px;
-display: flex;
-justify-content: center;
-flex-direction: row;
+.boite_ajout_objt {
+    background-color: #E8E8E8;
+    padding: 20px;
+    border-radius: 12px;
+    
+    min-width: 300px; 
+}
 
+
+
+.boite_ajout_1 {
+    display: flex; 
+    margin-bottom: 15px;
+}
+
+.boite_ajout_1 div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+
+.boite_ajout_1 label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.ajout_produit_index input,
+.ajout_produit_index select,
+#ajout_desc {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.ajout_produit_index input::placeholder,
+#ajout_desc::placeholder {
+    color: #aaa;
+}
+
+.etat_field {
+    flex: 0.4; /* Réduire la largeur de l'état */
+}
+
+.description_area {
+    margin-top: 10px;
+}
+
+#ajout_desc {
+    height: 100px;
+    resize: none;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+}
+
+#bouton_accueil_admin img {
+    padding-top: 5%;
+    padding-left: 8%;
+    width: 10%;
+}
+
+#bouton_accueil_admin {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: solid white;
+    border-radius: 30px;
+    margin-left: 3%;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom:1%; 
+    width : 50%;
+    
+}
+
+#bouton_accueil_admin p {
+    font-size: 1.6em;
+    text-align : left;
+    width : 100%;
+    margin :3.5%;
 
 }
+

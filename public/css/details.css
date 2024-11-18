@@ -1,5 +1,8 @@
 /* composant details */
 
+
+
+
 .img-detail {
     height: 350px;
     margin: 5%;
@@ -103,6 +106,21 @@ table {
 
 /* Formulaire detail */
 
+section.location {
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    height: auto;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin-top: -100px;
+}
+
+.form-det {
+    display: flex;
+    flex-direction: column;
+}
 
 .question p {
     font-family: "inter";
@@ -148,20 +166,10 @@ input[type="radio"]:checked+.label_details {
 }
 
 
-section.location {
-    background-color: #F3F3F3;
-    border-radius: 20px;
-    height: 500px;
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-
-    margin-top: -50px;
-}
 
 main.det {
     display: flex;
+
     justify-content: center;
     margin-top: 11%;
 }
@@ -198,24 +206,60 @@ main.det {
 
 }
 
-#inp-sub {
+/* Style pour le conteneur principal */
+.btn-box {
     display: flex;
-    justify-content: end;
-    margin-left: 75%;
-    margin-top: 2.5%;
-    width: 140px;
-    height: 35px;
-    border-radius: 10px;
+
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+/* Style pour le btn */
+.btn-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4A4A4A;
+    margin-bottom: 15px;
+}
+
+.button {
+    width: 180px;
+    height: 40px;
+    border-radius: 8px;
     border: none;
     background-color: #7E8645;
     color: #F3F3F3;
-    font-size: 1.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+/* Effet btn */
+.button:hover {
+    background-color: #6D763A;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+
 
 .dat {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     margin: 2%;
+    justify-content: center;
 }
 
 .dat label {
@@ -253,10 +297,62 @@ div.is {
     padding-left: 2%;
 }
 
-#form-loc{
-    margin-left : 2%;
+#form-loc {
+    margin-left: 2%;
 
+}
+
+/* details agent */
+
+#modifier-details-agent {
+    border: none;
+    background: none;
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 3%;
+    margin-right: 7%;
+}
+
+#modifier-details-agent:hover {
+    text-decoration: underline;
 }
 
 
 
+div.etat-detail-agent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5.5%;
+
+}
+
+div.etat-detail-agent p {
+    margin-top: 0;
+
+}
+
+#detail-poubelle-titre {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+
+}
+
+#poubelle-detail-agent {
+    border: none;
+    background: none;
+
+
+}
+
+#poubelle-detail-agent img {
+    width: 50%;
+    float: right;
+}
+
+#poubelle-detail-agent img:hover {
+    transform: scale(1.03);
+}
