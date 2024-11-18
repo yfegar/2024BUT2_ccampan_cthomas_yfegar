@@ -33,13 +33,7 @@ async function checkEmail (email) {
             if (err) {
                 return reject(err);
             }
-            if (results.length > 0) {
-                return resolve('inscription', {
-                    message: 'Cette adresse e-mail est déjà utilisée.'
-                });               
-            } else {
-                return true;
-            }
+            resolve(results);
         });
     });
 };
@@ -52,7 +46,7 @@ async function registerUser (login, surname, firstname, ddn, email, hashedpasswo
             if (err) {
                 return reject(err);
             } else {
-                console.log(results);
+                resolve(results);
             }
         });
     });
