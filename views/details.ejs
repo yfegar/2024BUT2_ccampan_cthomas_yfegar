@@ -64,7 +64,7 @@
                         <%= produit.prix_location %> €
                     </b> par mois ?
                 </h2>
-                <form class="">
+                <form class="form-det">
                     <div class="dat">
                         <label>Date de début
                             <input class="date-input" type="date">
@@ -73,6 +73,7 @@
                             <input class="date-input" type="date">
                         </label>
                     </div>
+
                     <div class="question">
                         <p>Avez-vous déjà un compte client ?
                             <input type="radio" id="oui" name="choix" value="oui">
@@ -92,9 +93,11 @@
                             <input id="inp-loc" type="tel" placeholder=" Téléphone">
                         </div>
                     </div>
-                    <div class="is">
-                        <input id="inp-sub" class="but-con" type="submit" value="Louer">
+                    <div class="btn-box">
+                        <p class="btn-text">Pour  <%= produit.prix_location %>€</p>
+                        <input id="inp-sub" class="button" type="submit" value="Louer pour 1 mois">
                     </div>
+                </form>   
 
             </section>
 
@@ -104,3 +107,5 @@
 
 
         <%- include("footer") -%>
+
+        
