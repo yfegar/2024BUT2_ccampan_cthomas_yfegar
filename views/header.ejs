@@ -40,9 +40,14 @@
                 <li class="left"><a class="nav_lien" href="/apropos" alt="">A propos</a></li>
             </div>
             <div id="position">
-                
+                            
+
+            <% if(isAuth) { %>
+                <li class="right" id="login"><a class="nav_lien" href="/auth/deconnexion" alt="">Se déconnecter</a></li>
+            <% } else { %>
                 <li class="right" id="inscription"><a class="nav_lien" href="/auth/inscription" alt="">S'inscrire</a></li>
                 <li class="right" id="login"><a class="nav_lien" href="/auth/connexion" alt="">Se connecter</a></li>
+            <% } %>
             </div>
         </ul>
         <div id="locfit">

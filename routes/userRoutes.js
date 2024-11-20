@@ -1,11 +1,11 @@
 const express = require('express');
 const productModel = require("../models/produits.js");
 const userModel = require("../models/user.js");
+const { isAuth } = require("../middlewares/authMiddleware.js");
 
 const router = express.Router();
 
 router.get('/index', async function(req, res){ // users/4 renverra le getUserById(4)
-
     /*
     if (!req.session.userId) { // en javascript, false = undefined
         return res.redirect("/connexion");
@@ -13,7 +13,8 @@ router.get('/index', async function(req, res){ // users/4 renverra le getUserByI
     */
     try { // code toujous exécuté
         const user = await userModel.getUserById(1); // await présent car getUserById est une Promise
-        res.render('index', { user });
+        const type_utilisateur = req.session.type_utilisateur;
+        res.render('index', { user, type_utilisateur });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');

@@ -19,6 +19,11 @@ app.use(session({
     saveUninitialized: false
 }));
 
+app.use((req, res, next) => {
+    res.locals.isAuth = req.session && req.session.token ? true : false;
+    next();
+});
+
 
 app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
     /*
@@ -94,9 +99,12 @@ app.get('/faq', (req, res) => {
 
 
 // Define routes
+
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/', userRoutes);
+
+
 
 
 /*
@@ -132,6 +140,7 @@ app.get('/locations', (req, res) => {
 app.get('/locations-agent', (req, res) => {
     res.render("locations-agent");
 });
+
 app.use(function(req, res){
     res.status(404).render('404');
 });

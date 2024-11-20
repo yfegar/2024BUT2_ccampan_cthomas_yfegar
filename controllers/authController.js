@@ -39,8 +39,10 @@ exports.connexion = async (req, res) => {
 
         // Enregistrer le token dans la session
         req.session.token = token;
+        req.session.type_utilisateur = user.type_utilisateur;
         // res.send({message: 'Connexion réussie.'});
-        return res.render('index');
+        console.log(user.type_utilisateur);
+        return res.render('index', {user} );
 
     } else {
         res.status(400).send('Mot de passe/login incorrect.');
