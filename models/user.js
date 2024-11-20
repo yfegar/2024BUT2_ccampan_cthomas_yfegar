@@ -5,7 +5,7 @@ const bdd = require("./database.js");
 async function getUserById (id) {
     sql = "SELECT * FROM utilisateur WHERE id = ?";  // ? sert de paramètre 
     return new Promise((resolve, reject) => {
-        bdd.query(sql, id, (err, results) => {
+        bdd.query(sql, [id], (err, results) => {
             if (err) {
                 return reject(err);
             }

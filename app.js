@@ -20,10 +20,10 @@ app.use(session({
 }));
 
 app.use((req, res, next) => {
+    console.log('isAuth:', req.session && req.session.token ? true : false);
     res.locals.isAuth = req.session && req.session.token ? true : false;
     next();
 });
-
 
 app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
     /*
