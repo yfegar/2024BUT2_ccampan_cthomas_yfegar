@@ -1,3 +1,4 @@
+/*
 const authenticate = (req, res, next) => {
     const token = req.session.token;
 
@@ -12,6 +13,16 @@ const authenticate = (req, res, next) => {
         }
 
         req.user = decoded; // Ajouter les infos utilisateur décodées à la requête
+        console.log(req.session.auth); 
         next();
     });
 };
+*/
+
+
+exports.isAuth = (req, res, next) => {
+    if (req.session && req.session.token) {
+        return next();
+    }
+    return res.redirect('/auth/connexion');
+}
