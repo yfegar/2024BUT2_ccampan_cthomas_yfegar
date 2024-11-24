@@ -30,9 +30,99 @@
                                 </button>
                         </div>
 
-                        <% }; %>
+                        <div class="ajout_produit_index">
+                            <h1>Vous souhaitez ajouter un produit ?</h1>
+            
+                            <form action="/catalogue" method="post" id="form-ajout-acc">
+                                
+                                <div class="boite_ajout_objt">
+                                    <!-- Première ligne avec Type, Modèle -->
+                                    <div class="boite_ajout_1">
+                                        <div>
+                                            <label for="type">Type</label>
+                                            <input id="type" type="text" placeholder="Type" />
+                                        </div>
+            
+                                        <div>
+                                            <label for="modele">Modèle</label>
+                                            <input id="modele" type="text" placeholder="Modèle" />
+                                        </div>
+            
+                                    </div>
+            
+                                    <!-- Deuxième ligne avec Prix, Marque et État -->
+                                    <div class="boite_ajout_1">
+                                        <div>
+                                            <label for="prix">Prix</label>
+                                            <input id="prix" type="number" placeholder="Prix" />
+                                        </div>
+            
+                                        <div>
+                                            <label for="marque">Marque</label>
+                                            <input id="marque" type="text" placeholder="Marque" />
+                                        </div>
+            
+                                        <div class="etat_field">
+                                            <label for="etat">État</label>
+                                            <select id="etat">
+                                                <option value="Très bon état">Très bon état</option>
+                                                <option value="Bon état">Bon état</option>
+                                                <option value="État moyen">État moyen</option>
+                                            </select>
+                                        </div>
+            
+                                    </div>
+            
+                                    <!-- Troisième ligne avec Description -->
+                                    <div class="description_area">
+                                        <label for="description">Description</label>
+                                        <textarea id="ajout_desc" placeholder="Description"></textarea>
+                                    </div>
+                                </div>
+            
+                                <div class="boite_ajout_img">
+                                    <div>
+                                        <label id="label-image" for="image">Image</label>
+                                        <input id="image" type="file" accept="image/*" />
+                                    </div>
+            
+                                    <div id="bouton-ajout-produit">
+                                        <button type="submit">Ajouter<img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                        </button>
+                                    </div>
+                                </div>
+            
+                            </form>
+                        </div>
+            
+            
+            
+                        <script>
+                            const form = document.getElementById('form-recherche-acc');
+            
+                            form.addEventListener('submit', (event) => {
+                                event.preventDefault(); // Empêcher la soumission par défaut
+                            });
+            
+                            function ValeursFormAcc() {
+                                var materiel = document.querySelector("#materiel_form").value.toLowerCase();
+                                var prix = document.querySelector("#prix_form").value.toLowerCase();
+                                var duree = document.querySelector("#duree_form").value.toLowerCase();
+                            }
+            
+                            const filters = {
+                                materiel: materiel_form,
+                                prix: prix_form,
+                                duree: duree_form,
+            
+                            };
+            
+                        </script>
+                        </form>
+                        </div>
+                <% }; %>
 
-                            <% if(user.type_utilisateur=='client' ){ %>
+                <%if(user.type_utilisateur=='client' ){ %>
 
                                 <!--Client-->
                                 <div id="accueil_titre">
@@ -54,8 +144,7 @@
                                             <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
                                         </div>
                                     </div>
-                                    <% }; %>
-                                        <!--Fin Client-->
+                
                                 </div>
 
                                 <div id="informations">
@@ -146,19 +235,12 @@
                                                 duree: duree_form,
 
                                             };
-
-
-
-
                                         </script>
-
-
-
 
                                         <div class="boite_filtres">
                                             <div>Filtres</div>
                                             <div id="boutons_filtre">
-                                                <button>Altères</button>
+                                                <button>Haltères</button>
                                                 <button>Machines à câble</button>
                                                 <button>Poids libres</button>
                                                 <button>Vélos d'exercice</button>
@@ -192,7 +274,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <% }; %>
+                <% }; %>
+                <!--Fin Client-->
+            <% }; %>
         </main>
 
         <%- include("footer") -%>

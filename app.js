@@ -1,6 +1,8 @@
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const userModel = require("./models/user.js");
+
 
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -32,8 +34,7 @@ app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
     }
 */
     try { // code toujous exécuté
-        const user = await userModel.getUserById(1); // await présent car getUserById est une Promise
-        res.render('index',   { user });
+        res.render('index',   { user:null });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');

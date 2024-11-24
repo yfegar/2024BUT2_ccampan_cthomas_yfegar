@@ -14,6 +14,7 @@ router.get('/index', async function(req, res){ // users/4 renverra le getUserByI
         // console.log('Session actuelle : ', req.session);
         const userId = req.session.userId;
         console.log(userId);
+        console.log("====")
         const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
         return res.render('index', { user });
         
