@@ -70,6 +70,11 @@ router.get('/indexadmin', (req, res) => {
     res.render("indexadmin");
 });
 
+router.get('/profil', (req, res) => {
+    res.render("profil");
+});
+
+
 
 module.exports = router;
 

@@ -135,40 +135,40 @@
 
         </script>
         <script>
+            
+                function calculerPrixLocation(duree, prix) {
+                    let prixTotal; 
+                    let prix = getPriceById();
+                    let duree = calculateDays();
 
-            function calculerPrixLocation(duree, prix) {
-                let prixTotal;
+                    // Vérifier si la durée est valide
+                    if (duree <= 0) {
+                        return "La durée doit être supérieure à zéro.";
+                    }
 
-                // Vérifier si la durée est valide
-                if (duree <= 0) {
-                    return "La durée doit être supérieure à zéro.";
+                    if (duree > 30) {
+                        return "La durée doit être inférieur à 30 jours.";
+                    }
+
+                    // Appliquer des tarifs dégressifs en fonction de la durée
+                    if (duree >= 3 && duree < 7) {
+                        prixTotal = prix * 0.4; // Prix standard pour une durée courte
+                    } else if (duree >= 7 && duree < 14) {
+                        prixTotal = prix * 0.2; // Réduction de 10% pour 4 à 7 jours
+                    } else if (duree >= 14 && duree < 30) {
+                        prixTotal = prix * 0.1; // Réduction de 10% pour 4 à 7 jours
+                    } else {
+                        prixTotal = 0; // Réduction de 20% pour plus de 7 jours
+                    }
+
+                    // Retourner le prix final 
+                    return prixTotal;
                 }
 
-                if (duree > 30) {
-                    return "La durée doit être inférieur à 30 jours.";
-                }
+                // Exemple d'utilisation
 
-                // Appliquer des tarifs dégressifs en fonction de la durée
-                if (duree >= 3 && duree < 7) {
-                    prixTotal = prix * 0.4; // Prix standard pour une durée courte
-                } else if (duree >= 7 && duree < 14) {
-                    prixTotal = prix * 0.2; // Réduction de 10% pour 4 à 7 jours
-                } else if (duree >= 14 && duree < 30) {
-                    prixTotal = prix * 0.1; // Réduction de 10% pour 4 à 7 jours
-                } else {
-                    prixTotal = 0; // Réduction de 20% pour plus de 7 jours
-                }
+                let prixFinal = calculerPrixLocation(duree, prix);
 
-                // Retourner le prix final 
-                return prixTotal;
-            }
-
-            // Exemple d'utilisation
-            let duree = 5; // Nombre de jours
-            let prix = 50; // Prix par jour en euros
-
-            let prixFinal = calculerPrixLocation(duree, prix);
-    
         </script>
 
 

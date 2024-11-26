@@ -1,0 +1,62 @@
+<%- include("header") -%>
+
+    <body>
+        <div class="zone-profil">
+            <div class="image_profil">
+                <img src="/img/femme_profil.jfif" alt="">
+            </div>
+            <div class="informations-profil">
+                <h1>Julie fegar</h1>
+                <h4 class="h4_profil"><strong>Date de naissance</strong> : 25 octobre 1970</h4>
+                <h4 class="h4_profil"><strong>Adresse mail</strong> : julie.fegar@gmail.com</h4>
+                <h4 class="h4_profil"><strong>Identifiant</strong> : juju34 </h4>
+                <h4 class="h4_profil"><strong>Mot de passe</strong> : ************</h4>
+            </div>
+            <div class="boutons_profil">
+                <button class="modifier_profil">Modifier les informations</button>
+                <button class="supprimer_profil"><img src="/img/Waste.png" alt="">
+                    <p>Supprimer le compte</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="change_profil">
+            <form action="" method="post" >
+                <ul>
+                    <li>
+                        <h3>Modifier les informations</h3>
+                    </li>
+                    <li>
+                        <label for="name">Nom </label>
+                        <input type="text" id="name" name="name"  placeholder="Fegar" />
+                        
+                    </li>
+                    <li>
+                        <label for="name">Prénom </label>
+                        <input type="text" id="firstname" name="firstname"  placeholder="Julie" />
+                    </li>
+                    <li>
+                        <label for="ddn">Date de naissance</label>
+                        <input type="text" id="ddn" name="ddn" placeholder="25 octobre 1970" />
+                    </li>
+                    <li>
+                        <label for="mail">E-mail </label>
+                        <input type="email" id="mail" name="user_mail" placeholder="julie.fegar@gmail.com" />
+                    </li>
+                    <li>
+                        <label for="passeword">Mot de passe actuel </label>
+                        <input type="passeword" name="passeword"></input>
+                    </li>
+                    <li>
+                        <label for="new_passeword">Nouveau mot de passe </label>
+                        <input type="new_passeword" name="new_passeword"></input>
+                    </li>
+                </ul>
+                <button class="modif-bouton-form"type="submit"><p>Modifier</p></button>
+            </form>
+
+        </div>
+
+    </body>
+
+    <%- include("footer") -%>

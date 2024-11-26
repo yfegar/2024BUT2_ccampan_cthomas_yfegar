@@ -13,6 +13,18 @@ async function getProductById (id) {
     });
 };
 
+async function getPriceById (id) {
+    sql = "SELECT prix_location FROM produit WHERE id = ?";  // ? sert de paramètre 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, id, (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results[0]);
+        });
+    });
+};
+
 async function getAllProducts () {
     sql = "SELECT * FROM produit";  // ? sert de paramètre 
     return new Promise((resolve, reject) => {
@@ -26,4 +38,4 @@ async function getAllProducts () {
 };
 
 
-module.exports = { getProductById, getAllProducts };
+module.exports = { getProductById, getAllProducts, getPriceById };
