@@ -38,6 +38,9 @@
                 <li class="left"><a class="nav_lien" href="/catalogue" alt="">Catalogue</a></li>
                 <li class="left"><a class="nav_lien" href="/faq" alt="">F.A.Q</a></li>
                 <li class="left"><a class="nav_lien" href="/apropos" alt="">A propos</a></li>
+                <% if(isAuth) { %>
+                    <li class="left"><a class="nav_lien" href="/locations" alt="">Locations</a></li>
+                <% }; %>
             </div>
             <div id="position">         
 
