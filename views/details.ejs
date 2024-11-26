@@ -66,6 +66,7 @@
                 </h2>
                 <form class="form-det" action="/products/rent" method="post">
                     <div class="dat">
+                        <input type="hidden" name="product_id" value="<%= produit.id%>">
                         <label>Date de début
                             <input class="date-input" name="start_date" id="start-date" type="date">
                         </label>

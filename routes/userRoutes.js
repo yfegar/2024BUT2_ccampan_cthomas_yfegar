@@ -41,6 +41,25 @@ router.get('/catalogue', async function (req, res) {
     }
 });
 
+router.get('/locations', async function (req, res) {
+    try { // code toujous exécuté
+        
+        const userId = req.session.userId;
+        console.log(userId);
+        console.log("====")
+        const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
+        // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
+        const listeLocations = await productModel.getRentedProductsForUser(userId);
+        res.render('locations', { listeLocations, user });
+    } catch (err) { // code exécuté seulement si il y a une exception dans le try
+        console.log(err);
+        res.status(500).send('Erreur lors de la récupération des données');
+    }
+});
+
+
+
+
 /*
 router.get('/catalogue-agent', async function (req, res) {
     try { // code toujous exécuté

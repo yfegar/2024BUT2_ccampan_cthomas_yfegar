@@ -27,7 +27,7 @@ exports.rentProduct = async(req, res) => {
 
     try {
         const userId = req.session.userId;
-        const product = await productModel.getProductById(2);
+        const product = await productModel.getProductById(product_id);
 
         if(!product) {
             console.error('Produit introuvable');

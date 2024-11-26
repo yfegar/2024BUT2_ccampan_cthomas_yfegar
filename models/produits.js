@@ -50,6 +50,17 @@ async function rentProduct (date_debut, date_retour_prevue, prix_total, utilisat
     });
 };
 
+async function getRentedProductsForUser (userId) {
+    sql = "SELECT * FROM produit join location join utilisateur WHERE (produit.id = location.produit_id) AND (location.utilisateur_id = utilisateur.id) AND (utilisateur.id = ?) "; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, userId, (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results);
+        });
+    });
+};
 
 
-module.exports = { getProductById, getAllProducts, addProduct, rentProduct};
+module.exports = { getProductById, getAllProducts, addProduct, rentProduct, getRentedProductsForUser};
