@@ -28,27 +28,32 @@ exports.inscription = (req, res) => {
 exports.connexion = async (req, res) => {
     const login = req.body.login;
     const mdp = req.body.password;
-    // console.log(login, md5(mdp));
+    
+    try {
+        const user = await userModel.checkLogin(login);
+        // console.log(user, user.password);
 
-    const user = await userModel.checkLogin(login);
-    // console.log(user, user.password);
+        if (user != false && user.password == md5(mdp)){
+            // Générer un token JWT
+            const token = jwt.sign({ id: user.id, role: user.role }, 'bnoobesobus', { expiresIn: '1h' });
 
-    if (user != false && user.password == md5(mdp)){
-        // Générer un token JWT
-        const token = jwt.sign({ id: user.id, role: user.role }, 'bnoobesobus', { expiresIn: '1h' });
+            // Enregistrer le token dans la session
+            req.session.user = user;
+            req.session.userId = user.id;
+            req.session.type_utilisateur = user.type_utilisateur;
+            req.session.token = token;
 
-        // Enregistrer le token dans la session
-        req.session.userId = user.id;
-        req.session.type_utilisateur = user.type_utilisateur;
-        req.session.token = token;
+            // res.send({message: 'Connexion réussie.'});
+            return res.redirect('/index');
 
-        // res.send({message: 'Connexion réussie.'});
-        console.log(req.session);
-        return res.redirect('/index');
-
-    } else {
-        res.status(400).send('Mot de passe/login incorrect.');
+        } else {
+            res.render('connexion', {error: 'Mot de passe/login incorrect.'});
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).send('Erreur serveur');
     }
+
 };
 
 exports.deconnexion = (req, res) => {
@@ -57,7 +62,7 @@ exports.deconnexion = (req, res) => {
             return res.status(500).send('Erreur serveur lors de la déconnexion.');
         }
         // res.send('Logged out successfully');
-        res.redirect('/index');
+        res.redirect('/auth/connexion');
     });
 };
 

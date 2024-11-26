@@ -24,11 +24,17 @@ router.get('/index', async function(req, res){ // users/4 renverra le getUserByI
     }
 });
 
+
 router.get('/catalogue', async function (req, res) {
     try { // code toujous exécuté
+        
+        const userId = req.session.userId;
+        console.log(userId);
+        console.log("====")
+        const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
         // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
         const listeProduits = await productModel.getAllProducts();
-        res.render('catalogue', { listeProduits });
+        res.render('catalogue', { listeProduits, user });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');
@@ -37,9 +43,14 @@ router.get('/catalogue', async function (req, res) {
 
 router.get('/catalogue-agent', async function (req, res) {
     try { // code toujous exécuté
+        
+        const userId = req.session.userId;
+        console.log(userId);
+        console.log("====")   
+        const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
         // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
         const listeProduits = await productModel.getAllProducts();
-        res.render('catalogue-agent', { listeProduits });
+        res.render('catalogue-agent', { listeProduits, user });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');

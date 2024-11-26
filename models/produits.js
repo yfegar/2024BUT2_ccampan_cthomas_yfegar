@@ -26,4 +26,17 @@ async function getAllProducts () {
 };
 
 
-module.exports = { getProductById, getAllProducts };
+async function addProduct (type, description, marque, modele, prix_location, etat) {
+    sql = "INSERT INTO produit (id, type, description, marque, modele, prix_location, etat) VALUES (default, ?)"; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql,[type, description, marque, modele, prix_location, etat], (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results);
+        });
+    });
+};
+
+
+module.exports = { getProductById, getAllProducts, addProduct};

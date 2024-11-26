@@ -4,10 +4,7 @@
         <main>
 
             <% if (isAuth) { %>
-                <h1>Bonjour <%=user.id%>
-                </h1>
-
-
+                
                 <% if (user.type_utilisateur=='admin') { %>
                     <div id="text-accueil">
                         <div id="accueil_titre">
@@ -32,20 +29,44 @@
 
                         <div class="ajout_produit_index">
                             <h1>Vous souhaitez ajouter un produit ?</h1>
+                        </div>
+                            
+                <% }; %>
+
+                <%if(user.type_utilisateur=='agent' ){ %>
+                    <div id="text-accueil">
+                        <div id="accueil_titre">
+                                <h1>Bienvenue dans la partie agent</h1>
+                                <button id="bouton_accueil_admin">
+                                    <p>Ajouter un produit</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                                <button id="bouton_accueil_admin">
+                                    <p>Supprimer un produit</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                                <button id="bouton_accueil_admin">
+                                    <p>Gérer les locations</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                        </div>
+
+                        <div class="ajout_produit_index">
+                            <h1>Vous souhaitez ajouter un produit ?</h1>
             
-                            <form action="/catalogue" method="post" id="form-ajout-acc">
+                            <form action="products/addproduct" method="post" id="form-ajout-acc">
                                 
                                 <div class="boite_ajout_objt">
                                     <!-- Première ligne avec Type, Modèle -->
                                     <div class="boite_ajout_1">
                                         <div>
                                             <label for="type">Type</label>
-                                            <input id="type" type="text" placeholder="Type" />
+                                            <input name="type" id="type" type="text" placeholder="Type" />
                                         </div>
             
                                         <div>
                                             <label for="modele">Modèle</label>
-                                            <input id="modele" type="text" placeholder="Modèle" />
+                                            <input name="modele" id="modele" type="text" placeholder="Modèle" />
                                         </div>
             
                                     </div>
@@ -54,17 +75,17 @@
                                     <div class="boite_ajout_1">
                                         <div>
                                             <label for="prix">Prix</label>
-                                            <input id="prix" type="number" placeholder="Prix" />
+                                            <input name="prix_location" id="prix" type="number" placeholder="Prix" />
                                         </div>
             
                                         <div>
                                             <label for="marque">Marque</label>
-                                            <input id="marque" type="text" placeholder="Marque" />
+                                            <input name="marque" id="marque" type="text" placeholder="Marque" />
                                         </div>
             
                                         <div class="etat_field">
                                             <label for="etat">État</label>
-                                            <select id="etat">
+                                            <select name="etat" id="etat">
                                                 <option value="Très bon état">Très bon état</option>
                                                 <option value="Bon état">Bon état</option>
                                                 <option value="État moyen">État moyen</option>
@@ -76,7 +97,7 @@
                                     <!-- Troisième ligne avec Description -->
                                     <div class="description_area">
                                         <label for="description">Description</label>
-                                        <textarea id="ajout_desc" placeholder="Description"></textarea>
+                                        <textarea name="description" id="ajout_desc" placeholder="Description"></textarea>
                                     </div>
                                 </div>
             
@@ -105,9 +126,9 @@
                             });
             
                             function ValeursFormAcc() {
-                                var materiel = document.querySelector("#materiel_form").value.toLowerCase();
-                                var prix = document.querySelector("#prix_form").value.toLowerCase();
-                                var duree = document.querySelector("#duree_form").value.toLowerCase();
+                                let materiel = document.querySelector("#materiel_form").value.toLowerCase();
+                                let prix = document.querySelector("#prix_form").value.toLowerCase();
+                                let duree = document.querySelector("#duree_form").value.toLowerCase();
                             }
             
                             const filters = {
@@ -120,6 +141,7 @@
                         </script>
                         </form>
                         </div>
+
                 <% }; %>
 
                 <%if(user.type_utilisateur=='client' ){ %>
@@ -216,7 +238,6 @@
                                         </div>
 
                                         <script>
-
                                             const form = document.getElementById('form-recherche-acc');
 
                                             form.addEventListener('submit', (event) => {

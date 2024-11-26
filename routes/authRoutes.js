@@ -11,5 +11,6 @@ router.post('/inscription', authController.inscription);
 router.post('/connexion', authController.connexion);
 router.post('/deconnexion', authController.deconnexion);
 
+
 module.exports = router;
 

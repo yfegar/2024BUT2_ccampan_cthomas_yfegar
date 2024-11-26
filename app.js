@@ -6,6 +6,8 @@ const userModel = require("./models/user.js");
 
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
+
 
 const app = express();
 
@@ -27,41 +29,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/', async function(req, res){ // users/4 renverra le getUserById(4)
-    /*
-    if (!req.session.userId) { // en javascript, false = undefined
-        return res.redirect("/login");
-    }
-*/
-    try { // code toujous exécuté
-        res.render('index',   { user:null });
-    } catch (err) { // code exécuté seulement si il y a une exception dans le try
-        console.log(err);
-        res.status(500).send('Erreur lors de la récupération des données');
-    }
-});
-
-app.get('/catalogue', async function (req, res) {
-    try { // code toujous exécuté
-        // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
-        const listeProduits = await productModel.getAllProducts();
-        res.render('catalogue', { listeProduits });
-    } catch (err) { // code exécuté seulement si il y a une exception dans le try
-        console.log(err);
-        res.status(500).send('Erreur lors de la récupération des données');
-    }
-});
-
-app.get('/catalogue-agent', async function (req, res) {
-    try { // code toujous exécuté
-        // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
-        const listeProduits = await productModel.getAllProducts();
-        res.render('catalogue-agent', { listeProduits });
-    } catch (err) { // code exécuté seulement si il y a une exception dans le try
-        console.log(err);
-        res.status(500).send('Erreur lors de la récupération des données');
-    }
-});
 
 app.get('/details/:id', async function (req, res) {
     try {
@@ -104,8 +71,7 @@ app.get('/faq', (req, res) => {
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/', userRoutes);
-
-
+app.use('/products', productRoutes);
 
 
 /*
@@ -149,7 +115,3 @@ app.use(function(req, res){
 app.listen(3000, function(){
     console.log('Server running on port 3000');
 });
-
-
-
-
