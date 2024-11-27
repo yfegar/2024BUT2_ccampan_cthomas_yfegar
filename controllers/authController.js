@@ -22,7 +22,7 @@ exports.inscription = (req, res) => {
     if (userModel.checkEmail(email).length > 0) {
         return res.render('/inscription', { error: 'Cette adresse mail est déjà utilisée.'});              
     }
-    return res.redirect('/user/index');
+    return res.render('index');
 };
 
 exports.connexion = async (req, res) => {

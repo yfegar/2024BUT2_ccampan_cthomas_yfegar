@@ -65,8 +65,30 @@ async function updateInfo (password, nom, prenom, ddn, email, id) {
     });
 };
 
-async function getUserByName (name) {
+async function checkRent (utilisateur_id) {
+    sql = "SELECT COUNT (*) FROM `location` WHERE utilisateur_id = ? AND date_retour_effective IS NULL"; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, utilisateur_id, (err, results) => {
+            if (err) {
+                return reject(err);
+            } else {
+                resolve(results[0]);
+            }
+        });
+    });
+}
 
+async function deleteAccount (utilisateur_id) {
+    sql = "DELETE FROM `utilisateur` WHERE id = ?"; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, [utilisateur_id], (err, results) => {
+            if (err) {
+                return reject(err);
+            } else {
+                resolve(results);
+            }
+        });
+    });
 }
 
 async function getAllUsers () {
@@ -81,4 +103,4 @@ async function promoteUser () {
 
 }
 
-module.exports = { getUserById, checkLogin, checkEmail, registerUser, updateInfo };
+module.exports = { getUserById, checkLogin, checkEmail, registerUser, updateInfo, deleteAccount, checkRent};
