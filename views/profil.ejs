@@ -14,15 +14,15 @@
             </div>
             <div class="boutons_profil">
                 <button class="deconnexion_profil">Se déconnecter</button>
-                <button class="modifier_profil">Modifier les informations</button>
+                <button id="modifier_profil">Modifier les informations</button>
                 <button class="supprimer_profil"><img src="/img/Waste.png" alt="">
                     <p>Supprimer le compte</p>
                 </button>
             </div>
         </div>
 
-        <div class="change_profil">
-            <form action="" method="post" >
+        <div id="change_profil" style="display: none;">
+            <form class="profil_form" action="" method="post" >
                 <ul>
                     <li>
                         <h3>Modifier les informations</h3>
@@ -57,6 +57,20 @@
             </form>
 
         </div>
+
+    <script>
+        // Afficher/Masquer le formulaire au clic
+        const showFormBtn = document.getElementById('modifier_profil');
+        const formContainer = document.getElementById('change_profil');
+
+        showFormBtn.addEventListener('click', () => {
+            if (formContainer.style.display === 'none' || formContainer.style.display === '') {
+                formContainer.style.display = 'block'; // Afficher le formulaire
+            } else {
+                formContainer.style.display = 'none'; // Masquer le formulaire
+            }
+        });
+    </script>
 
     </body>
 

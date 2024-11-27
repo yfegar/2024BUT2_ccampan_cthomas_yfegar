@@ -31,7 +31,7 @@
 }
 
 
-.modifier_profil {
+#modifier_profil {
     border: none;
     border-radius: 10px;
     padding: 5%;
@@ -47,10 +47,12 @@
 
 }
 
-.deconnexion_profil:hover, .modifier_profil:hover{
+.deconnexion_profil:hover, #modifier_profil:hover{
 border : solid black 1px;
 
 }
+
+
 
 .supprimer_profil {
     background-color: white;
@@ -76,13 +78,13 @@ border : solid black 1px;
 
 }
 
-.change_profil {
+#change_profil {
     width: 30%;
     margin: 0 auto;
     margin-bottom : 5%;
 }
 
-.change_profil form {
+#change_profil form {
     display: flex;
     flex-direction: column;
     width : 120%;
@@ -93,20 +95,20 @@ border : solid black 1px;
 
 }
 
-.change_profil form ul li label {
+#change_profil form ul li label {
     display: inline-block;
     width: 50%;
     text-align: left;
 }
 
-.change_profil form ul li h3 {
+#change_profil form ul li h3 {
     margin: 0 auto;
     padding-bottom : 5%;
     padding-top: 3%;
   
 }
 
-.change_profil form ul li  {
+#change_profil form ul li  {
     display: flex;
    flex-direction: row;
    width : 90%;
