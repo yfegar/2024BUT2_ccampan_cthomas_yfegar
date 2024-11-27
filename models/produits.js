@@ -51,9 +51,9 @@ async function addProduct (type, description, marque, modele, prix_location, eta
 
 
 async function deleteProduct (product_id) {
-    sql = "DELETE produit FROM produit LEFT JOIN location ON location.produit_id = produit.id AND CURRENT_DATE BETWEEN location.date_debut AND location.date_retour_prevue WHERE produit.id = ? AND location.produit_id IS NULL;"; 
+    sql = "DELETE FROM produit LEFT JOIN location ON location.produit_id = produit.id AND CURRENT_DATE BETWEEN location.date_debut AND location.date_retour_prevue WHERE produit.id = ? AND location.produit_id IS NULL;"; 
     return new Promise((resolve, reject) => {
-        bdd.query(sql,product_id, (err, results) => {
+        bdd.query(sql, product_id, (err, results) => {
             if (err) {
                 return reject(err);
             }

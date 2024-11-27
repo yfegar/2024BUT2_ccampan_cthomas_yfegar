@@ -129,9 +129,9 @@
 
 
                                     <script>
-                                        const form = document.getElementById('form-recherche-acc');
+                                        const form1 = document.getElementById('form-recherche-acc');
 
-                                        form.addEventListener('submit', (event) => {
+                                        form1.addEventListener('submit', (event) => {
                                             event.preventDefault(); // Empêcher la soumission par défaut
                                         });
 
@@ -141,7 +141,7 @@
                                             let duree = document.querySelector("#duree_form").value.toLowerCase();
                                         }
 
-                                        const filters = {
+                                        const filters1 = {
                                             materiel: materiel_form,
                                             prix: prix_form,
                                             duree: duree_form,

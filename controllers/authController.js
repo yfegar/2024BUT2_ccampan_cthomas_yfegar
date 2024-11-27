@@ -31,7 +31,6 @@ exports.connexion = async (req, res) => {
     
     try {
         const user = await userModel.checkLogin(login);
-        // console.log(user, user.password);
 
         if (user != false && user.password == md5(mdp)){
             // Générer un token JWT
@@ -43,7 +42,6 @@ exports.connexion = async (req, res) => {
             req.session.type_utilisateur = user.type_utilisateur;
             req.session.token = token;
 
-            // res.send({message: 'Connexion réussie.'});
             return res.redirect('/index');
 
         } else {
@@ -61,7 +59,6 @@ exports.deconnexion = (req, res) => {
         if (err) {
             return res.status(500).send('Erreur serveur lors de la déconnexion.');
         }
-        // res.send('Logged out successfully');
         res.redirect('/auth/connexion');
     });
 };

@@ -20,7 +20,11 @@ app.use(bodyParser.urlencoded({ extended: true})); // permet de récupérer les 
 app.use(session({
     secret: 'bnoobesobus', // clé de session
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+        secure: false,
+        maxAge: 1000 * 60 *60
+    }
 }));
 
 app.use((req, res, next) => {

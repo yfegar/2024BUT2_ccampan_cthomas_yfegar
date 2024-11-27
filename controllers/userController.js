@@ -32,7 +32,6 @@ exports.deleteAccount = async (req, res) => {
     const utilisateur_id = req.body.utilisateur_id;
     try {
         const checkRent = await userModel.checkRent(utilisateur_id);
-        console.log(checkRent);
         if (checkRent <= 0) {
             const user = await userModel.getUserById(utilisateur_id); 
             return res.status(400).render('profil', { user });
@@ -50,18 +49,4 @@ exports.deleteAccount = async (req, res) => {
         console.log('Erreur lors de la suppression du compte:', err);
         res.status(500).send('Erreur serveur');
     }
-    /*
-        if(userModel.checkRent(id)){
-            userModel.deleteAccount(id);
-        };
-        if(userModel.checkRent(id).length > 0){
-            return res.render('/profil', {error: 'Le compte ne peut pas être supprimé car des locations sont en cours.'});
-        }
-        console.log("Suppression du compte réussie.");
-        res.render('connexion');
-        } catch (err) {
-        console.error('Erreur lors de la modification des informations:', err);
-        res.status(500).send("Erreur serveur.");
-    }
-    */
 };

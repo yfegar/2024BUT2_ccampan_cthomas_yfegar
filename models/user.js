@@ -1,11 +1,9 @@
-// const bdd = require("./bddcam.js"); 
 const bdd = require("./database.js");
-
 
 async function getUserById (id) {
     sql = "SELECT * FROM utilisateur WHERE id = ?";  // ? sert de paramètre 
     return new Promise((resolve, reject) => {
-        bdd.query(sql, id, (err, results) => {
+        bdd.query(sql, [id], (err, results) => {
             if (err) {
                 return reject(err);
             }
@@ -89,18 +87,6 @@ async function deleteAccount (utilisateur_id) {
             }
         });
     });
-}
-
-async function getAllUsers () {
-
-}
-
-async function getAllUsersByRole (role) {
-
-}
-
-async function promoteUser () {
-
 }
 
 module.exports = { getUserById, checkLogin, checkEmail, registerUser, updateInfo, deleteAccount, checkRent};
