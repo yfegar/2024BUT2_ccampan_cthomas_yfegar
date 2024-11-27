@@ -6,10 +6,10 @@
                 <img src="/img/femme_profil.jfif" alt="">
             </div>
             <div class="informations-profil">
-                <h1>Julie fegar</h1>
-                <h4 class="h4_profil"><strong>Date de naissance</strong> : 25 octobre 1970</h4>
-                <h4 class="h4_profil"><strong>Adresse mail</strong> : julie.fegar@gmail.com</h4>
-                <h4 class="h4_profil"><strong>Identifiant</strong> : juju34 </h4>
+                <h1><%= user.prenom%> <%= user.nom%></h1>
+                <h4 class="h4_profil"><strong>Date de naissance</strong> : <%= formatDate(user.ddn)%></h4>
+                <h4 class="h4_profil"><strong>Adresse mail</strong> : <%= user.email%></h4>
+                <h4 class="h4_profil"><strong>Identifiant</strong> : <%= user.login%> </h4>
                 <h4 class="h4_profil"><strong>Mot de passe</strong> : ************</h4>
             </div>
             <div class="boutons_profil">
