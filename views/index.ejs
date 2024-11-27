@@ -3,191 +3,301 @@
     <body class="index_body">
         <main>
 
-        <% if (isAuth) { %>
-            <h1><%=user.type_utilisateur%></h1>
-        <% } %>
+            <% if (isAuth) { %>
+                
+                <% if (user.type_utilisateur=='admin') { %>
+                    <div id="text-accueil">
+                        <div id="accueil_titre">
+                                <h1>Bienvenue dans la partie admin</h1>
+                                <button id="bouton_accueil_admin">
+                                    <p>Ajouter un produit</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                                <button id="bouton_accueil_admin">
+                                    <p>Supprimer un produit</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                                <button id="bouton_accueil_admin">
+                                    <p>Gérer les locations</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                                <button id="bouton_accueil_admin">
+                                    <p>Ajouter un compte agent</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                        </div>
 
-            <div id="text-accueil">
-                <div id="accueil_titre">
-                    <% if(user.type_utilisateur=='admin' ){ %>
-                        <h1>Bienvenue dans la partie admin</h1>
-                        <button id="bouton_accueil_admin">
-                            <p>Ajouter un produit</p>
-                            <img src="/img/arrow_right.png" alt="fleche vers la droite">
-                        </button>
-                        <button id="bouton_accueil_admin">
-                            <p>Supprimer un produit</p>
-                            <img src="/img/arrow_right.png" alt="fleche vers la droite">
-                        </button>
-                        <button id="bouton_accueil_admin">
-                            <p>Gérer les locations</p>
-                            <img src="/img/arrow_right.png" alt="fleche vers la droite">
-                        </button>
-                        <button id="bouton_accueil_admin">
-                            <p>Ajouter un compte agent</p>
-                            <img src="/img/arrow_right.png" alt="fleche vers la droite">
-                        </button>
-                </div>
-
+                        <div class="ajout_produit_index">
+                            <h1>Vous souhaitez ajouter un produit ?</h1>
+                        </div>
+                            
                 <% }; %>
 
-                    <% if(user.type_utilisateur=='client' ){ %>
-
-                        <!--Client-->
+                <%if(user.type_utilisateur=='agent' ){ %>
+                    <div id="text-accueil">
                         <div id="accueil_titre">
-                            <h1>Boostez votre capital séduction en travaillant à la maison</h1>
-                            <button id="bouton_accueil">
-                                Découvrez
-                                <img src="/img/arrow_right.png" alt="fleche vers la droite">
-                            </button>
-
-
-                            <div id="reseaux_sociaux">
-                                <div>
-                                    <a href=""></a><img src="/img/Instagram.png" alt="Instagram"></a>
-                                </div>
-                                <div>
-                                    <a href=""></a><img src="/img/TwitterX.png" alt="Twitter"></a>
-                                </div>
-                                <div>
-                                    <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
-                                </div>
-                            </div>
-                            <% }; %>
-                                <!--Fin Client-->
-                        </div>
-                        
-                        <div id="informations">
-                            <div>
-                                <img src="/img/info_icon.png" alt="info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ligula sit
-                                    amet </p>
-                            </div>
-                            <div>
-                                <img src="/img/info_icon.png" alt="info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ligula sit
-                                    amet </p>
-                            </div>
+                                <h1>Bienvenue dans la partie agent</h1>
+                                <button id="bouton_accueil_admin">
+                                    <p>Ajouter un produit</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                                <button id="bouton_accueil_admin">
+                                    <p>Supprimer un produit</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
+                                <button id="bouton_accueil_admin">
+                                    <p>Gérer les locations</p>
+                                    <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                </button>
                         </div>
 
-                        <div class="nouveautes_index">
-                            <h1>Nos nouveautés</h1>
-                            <div class="images_accueil">
-
-                                <div class="images_accueil_container">
-                                    <img class="img_nouveautes" src="/img/cyclebench_acc.png" alt="">
-                                    <a class="lien_nouveautes" href="/details/3">Vélo + Banc Technogym</a>
-                                    <img class="svg_nouveautes" src="/img/right-arrow-svg.svg"
-                                        alt="fleche vers la droite">
-                                </div>
-
-                                <div class="images_accueil_container">
-                                    <img class="img_nouveautes" src="/img/ellipticalbench_acc.png" alt="">
-                                    <a class="lien_nouveautes" href="/details/2">Elliptique + Banc Technogym </a>
-                                    <img class="svg_nouveautes" src="/img/right-arrow-svg.svg"
-                                        alt="fleche vers la droite">
-                                </div>
-
-                                <div class="images_accueil_container">
-                                    <img class="img_nouveautes" src="/img/myrunbench_acc.png" alt="">
-                                    <a class="lien_nouveautes" href="/details/1">Tapis + Banc Technogym </a>
-                                    <img class="svg_nouveautes" src="/img/right-arrow-svg.svg"
-                                        alt="fleche vers la droite">
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="recherche_produit_index">
-                            <form action="/catalogue" method="post" id="form-recherche-acc">
-                                <h1>Vous recherchez un produit ?</h1>
-
-                                <div class="boite_formulaire">
-                                    <div>
-                                        <label for="materiel">Matériel</label>
-                                        <input id="materiel_form" type="text" />
+                        <div class="ajout_produit_index">
+                            <h1>Vous souhaitez ajouter un produit ?</h1>
+            
+                            <form action="products/addproduct" method="post" id="form-ajout-acc">
+                                
+                                <div class="boite_ajout_objt">
+                                    <!-- Première ligne avec Type, Modèle -->
+                                    <div class="boite_ajout_1">
+                                        <div>
+                                            <label for="type">Type</label>
+                                            <input name="type" id="type" type="text" placeholder="Type" />
+                                        </div>
+            
+                                        <div>
+                                            <label for="modele">Modèle</label>
+                                            <input name="modele" id="modele" type="text" placeholder="Modèle" />
+                                        </div>
+            
                                     </div>
-                                    <div>
-                                        <label for="prix">Prix</label>
-                                        <input id="prix_form" type="text" />
+            
+                                    <!-- Deuxième ligne avec Prix, Marque et État -->
+                                    <div class="boite_ajout_1">
+                                        <div>
+                                            <label for="prix">Prix</label>
+                                            <input name="prix_location" id="prix" type="number" placeholder="Prix" />
+                                        </div>
+            
+                                        <div>
+                                            <label for="marque">Marque</label>
+                                            <input name="marque" id="marque" type="text" placeholder="Marque" />
+                                        </div>
+            
+                                        <div class="etat_field">
+                                            <label for="etat">État</label>
+                                            <select name="etat" id="etat">
+                                                <option value="Très bon état">Très bon état</option>
+                                                <option value="Bon état">Bon état</option>
+                                                <option value="État moyen">État moyen</option>
+                                            </select>
+                                        </div>
+            
                                     </div>
-                                    <div>
-                                        <label for="duree">Durée</label>
-                                        <input id="duree_form" type="number" placeholder="Semaines" : />
+            
+                                    <!-- Troisième ligne avec Description -->
+                                    <div class="description_area">
+                                        <label for="description">Description</label>
+                                        <textarea name="description" id="ajout_desc" placeholder="Description"></textarea>
                                     </div>
+                                </div>
+            
+                                <div class="boite_ajout_img">
                                     <div>
-                                        <button type="submit">Rechercher<img src="/img/arrow_right.png"
-                                                alt="fleche vers la droite">
+                                        <label id="label-image" for="image">Image</label>
+                                        <input id="image" type="file" accept="image/*" />
+                                    </div>
+            
+                                    <div id="bouton-ajout-produit">
+                                        <button type="submit">Ajouter<img src="/img/arrow_right.png" alt="fleche vers la droite">
                                         </button>
                                     </div>
                                 </div>
-
-                                <script>
-
-                                    const form = document.getElementById('form-recherche-acc');
-
-                                    form.addEventListener('submit', (event) => {
-                                        event.preventDefault(); // Empêcher la soumission par défaut
-                                    });
-
-                                    function ValeursFormAcc() {
-                                        var materiel = document.querySelector("#materiel_form").value.toLowerCase();
-                                        var prix = document.querySelector("#prix_form").value.toLowerCase();
-                                        var duree = document.querySelector("#duree_form").value.toLowerCase();
-                                    }
-
-                                    const filters = {
-                                        materiel: materiel_form,
-                                        prix: prix_form,
-                                        duree: duree_form,
-
-                                    };
-
-
-
-
-                                </script>
-
-
-
-
-                                <div class="boite_filtres">
-                                    <div>Filtres</div>
-                                    <div id="boutons_filtre">
-                                        <button>Altères</button>
-                                        <button>Machines à câble</button>
-                                        <button>Poids libres</button>
-                                        <button>Vélos d'exercice</button>
-                                    </div>
-                                </div>
+            
                             </form>
                         </div>
-
-                        <div class="bas_vert_index">
-
-                            <div id="fonctionnement_boite">
-                                <div>
-                                    <img src="/img/altere_icon.png" alt="altère">
-                                    <p>Choisissez le matériel</p>
-                                    <p>qui vous convient</p>
-                                </div>
-                                <div>
-                                    <img src="/img/calendrier_icon.png" alt="calendrier">
-                                    <p>Déterminez la durée</p>
-                                    <p>de votre location</p>
-                                </div>
-                                <div>
-                                    <img src="/img/camion_icon.png" alt="camion">
-                                    <p>Choisissez la date et</p>
-                                    <p>le lieu de la livraison</p>
-                                </div>
-                                <div>
-                                    <img src="/img/coche_icon.png" alt="coche">
-                                    <p>Faites-vous livrer</p>
-                                    <p>votre matériel !</p>
-                                </div>
-                            </div>
+            
+            
+            
+                        <script>
+                            const form = document.getElementById('form-recherche-acc');
+            
+                            form.addEventListener('submit', (event) => {
+                                event.preventDefault(); // Empêcher la soumission par défaut
+                            });
+            
+                            function ValeursFormAcc() {
+                                let materiel = document.querySelector("#materiel_form").value.toLowerCase();
+                                let prix = document.querySelector("#prix_form").value.toLowerCase();
+                                let duree = document.querySelector("#duree_form").value.toLowerCase();
+                            }
+            
+                            const filters = {
+                                materiel: materiel_form,
+                                prix: prix_form,
+                                duree: duree_form,
+            
+                            };
+            
+                        </script>
+                        </form>
                         </div>
+
+                <% }; %>
+
+                <%if(user.type_utilisateur=='client' ){ %>
+
+                                <!--Client-->
+                                <div id="accueil_titre">
+                                    <h1>Boostez votre capital séduction en travaillant à la maison</h1>
+                                    <button id="bouton_accueil">
+                                        Découvrez
+                                        <img src="/img/arrow_right.png" alt="fleche vers la droite">
+                                    </button>
+
+
+                                    <div id="reseaux_sociaux">
+                                        <div>
+                                            <a href=""></a><img src="/img/Instagram.png" alt="Instagram"></a>
+                                        </div>
+                                        <div>
+                                            <a href=""></a><img src="/img/TwitterX.png" alt="Twitter"></a>
+                                        </div>
+                                        <div>
+                                            <a href=""><img src="/img/Facebook.png" alt="Facebook"></a>
+                                        </div>
+                                    </div>
+                
+                                </div>
+
+                                <div id="informations">
+                                    <div>
+                                        <img src="/img/info_icon.png" alt="info">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper
+                                            ligula sit
+                                            amet </p>
+                                    </div>
+                                    <div>
+                                        <img src="/img/info_icon.png" alt="info">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper
+                                            ligula sit
+                                            amet </p>
+                                    </div>
+                                </div>
+
+                                <div class="nouveautes_index">
+                                    <h1>Nos nouveautés</h1>
+                                    <div class="images_accueil">
+
+                                        <div class="images_accueil_container">
+                                            <img class="img_nouveautes" src="/img/cyclebench_acc.png" alt="">
+                                            <a class="lien_nouveautes" href="/details/3">Vélo + Banc Technogym</a>
+                                            <img class="svg_nouveautes" src="/img/right-arrow-svg.svg"
+                                                alt="fleche vers la droite">
+                                        </div>
+
+                                        <div class="images_accueil_container">
+                                            <img class="img_nouveautes" src="/img/ellipticalbench_acc.png" alt="">
+                                            <a class="lien_nouveautes" href="/details/2">Elliptique + Banc Technogym
+                                            </a>
+                                            <img class="svg_nouveautes" src="/img/right-arrow-svg.svg"
+                                                alt="fleche vers la droite">
+                                        </div>
+
+                                        <div class="images_accueil_container">
+                                            <img class="img_nouveautes" src="/img/myrunbench_acc.png" alt="">
+                                            <a class="lien_nouveautes" href="/details/1">Tapis + Banc Technogym </a>
+                                            <img class="svg_nouveautes" src="/img/right-arrow-svg.svg"
+                                                alt="fleche vers la droite">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="recherche_produit_index">
+                                    <form action="/catalogue" method="post" id="form-recherche-acc">
+                                        <h1>Vous recherchez un produit ?</h1>
+
+                                        <div class="boite_formulaire">
+                                            <div>
+                                                <label for="materiel">Matériel</label>
+                                                <input id="materiel_form" type="text" />
+                                            </div>
+                                            <div>
+                                                <label for="prix">Prix</label>
+                                                <input id="prix_form" type="text" />
+                                            </div>
+                                            <div>
+                                                <label for="duree">Durée</label>
+                                                <input id="duree_form" type="number" placeholder="Semaines" : />
+                                            </div>
+                                            <div>
+                                                <button type="submit">Rechercher<img src="/img/arrow_right.png"
+                                                        alt="fleche vers la droite">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            const form = document.getElementById('form-recherche-acc');
+
+                                            form.addEventListener('submit', (event) => {
+                                                event.preventDefault(); // Empêcher la soumission par défaut
+                                            });
+
+                                            function ValeursFormAcc() {
+                                                var materiel = document.querySelector("#materiel_form").value.toLowerCase();
+                                                var prix = document.querySelector("#prix_form").value.toLowerCase();
+                                                var duree = document.querySelector("#duree_form").value.toLowerCase();
+                                            }
+
+                                            const filters = {
+                                                materiel: materiel_form,
+                                                prix: prix_form,
+                                                duree: duree_form,
+
+                                            };
+                                        </script>
+
+                                        <div class="boite_filtres">
+                                            <div>Filtres</div>
+                                            <div id="boutons_filtre">
+                                                <button>Haltères</button>
+                                                <button>Machines à câble</button>
+                                                <button>Poids libres</button>
+                                                <button>Vélos d'exercice</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="bas_vert_index">
+
+                                    <div id="fonctionnement_boite">
+                                        <div>
+                                            <img src="/img/altere_icon.png" alt="altère">
+                                            <p>Choisissez le matériel</p>
+                                            <p>qui vous convient</p>
+                                        </div>
+                                        <div>
+                                            <img src="/img/calendrier_icon.png" alt="calendrier">
+                                            <p>Déterminez la durée</p>
+                                            <p>de votre location</p>
+                                        </div>
+                                        <div>
+                                            <img src="/img/camion_icon.png" alt="camion">
+                                            <p>Choisissez la date et</p>
+                                            <p>le lieu de la livraison</p>
+                                        </div>
+                                        <div>
+                                            <img src="/img/coche_icon.png" alt="coche">
+                                            <p>Faites-vous livrer</p>
+                                            <p>votre matériel !</p>
+                                        </div>
+                                    </div>
+                                </div>
+                <% }; %>
+                <!--Fin Client-->
+            <% }; %>
         </main>
 
         <%- include("footer") -%>

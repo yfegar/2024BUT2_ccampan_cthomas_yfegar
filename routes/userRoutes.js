@@ -1,7 +1,6 @@
 const express = require('express');
 const productModel = require("../models/produits.js");
 const userModel = require("../models/user.js");
-const { isAuth } = require("../middlewares/authMiddleware.js");
 
 const router = express.Router();
 
@@ -12,42 +11,81 @@ router.get('/index', async function(req, res){ // users/4 renverra le getUserByI
     } 
     */
     try { // code toujous exécuté
-        const user = await userModel.getUserById(1); // await présent car getUserById est une Promise
-        const type_utilisateur = req.session.type_utilisateur;
-        res.render('index', { user, type_utilisateur });
+        // console.log('Session actuelle : ', req.session);
+        const userId = req.session.userId;
+        console.log(userId);
+        console.log("====")
+        const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
+        return res.render('index', { user });
+        
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
+
 
 router.get('/catalogue', async function (req, res) {
     try { // code toujous exécuté
+        
+        const userId = req.session.userId;
+        console.log(userId);
+        console.log("====")
+        const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
         // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
         const listeProduits = await productModel.getAllProducts();
-        res.render('catalogue', { listeProduits });
+        res.render('catalogue', { listeProduits, user });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
 
+/*
 router.get('/catalogue-agent', async function (req, res) {
     try { // code toujous exécuté
+        
+        const userId = req.session.userId;
+        console.log(userId);
+        console.log("====")   
+        const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
         // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
         const listeProduits = await productModel.getAllProducts();
-        res.render('catalogue-agent', { listeProduits });
+        res.render('catalogue-agent', { listeProduits, user });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
+*/
 
 router.get('/details/:id', async function (req, res) {
     try {
+        const userId = req.session.userId;
+        console.log(userId);
+        console.log("====")   
+        const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
+
         const id = req.params.id;
         const produit = await productModel.getProductById(id);
-        res.render("details", { id, produit});
+        res.render("details", { id, produit, user});
+    }  catch (err) { // code exécuté seulement si il y a une exception dans le try
+        console.log(err);
+        res.status(500).send('Erreur lors de la récupération des données');
+    }
+});
+
+
+router.get('/details-agent/:id', async function (req, res) {
+    try {
+        const userId = req.session.userId;
+        console.log(userId);
+        console.log("====")   
+        const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
+        
+        const id = req.params.id;
+        const produit = await productModel.getProductById(id);
+        res.render("details-agent", { id, produit, user});
     }  catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');

@@ -9,7 +9,7 @@ async function getUserById (id) {
             if (err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(results[0]);
         });
     });
 };

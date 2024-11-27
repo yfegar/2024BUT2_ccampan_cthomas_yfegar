@@ -4,7 +4,7 @@ let nav = document.querySelectorAll(".nav_lien");
 
 let currentLocation = window.location.href
 
-if(currentLocation == 'http://localhost:3000/' || currentLocation == 'http://localhost:3000/indexadmin'|| currentLocation == 'http://localhost:3000/apropos' || currentLocation == 'http://localhost:3000/inscription' || currentLocation == 'http://localhost:3000/connexion' ) {
+if(currentLocation == 'http://localhost:3000/index' || currentLocation == 'http://localhost:3000/indexadmin'|| currentLocation == 'http://localhost:3000/apropos' || currentLocation == 'http://localhost:3000/inscription' || currentLocation == 'http://localhost:3000/connexion' ) {
     titre.classList.toggle("white");
     
     for (let i = 0; i < nav.length; ++i) {
