@@ -6,6 +6,8 @@ const userController = require('../controllers/userController.js');
 
 const router = express.Router();
 
+router.post('/update', userController.updateInfo);
+
 router.get('/index', async function(req, res){
     /*
     if (!req.session.userId) { // en javascript, false = undefined
@@ -163,7 +165,6 @@ router.get('/faq', (req, res) => {
     res.render("faq", currentLocation);
 });
 
-router.post('/update', userController.updateInfo);
 
 
 /*

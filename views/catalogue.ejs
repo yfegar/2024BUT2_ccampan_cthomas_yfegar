@@ -2,98 +2,107 @@
 
     <body>
         <main>
-            <div id="catalogue_acc">
-                <h3> Nos produits</h3>
-                <div id="preference">
-                    <p>Affichage du prix par...</p>
-                    <div id="boutons_preference">
-                        <button>Jour</button>
-                        <button>Semaine</button>
-                        <button>Mois</button>
-                    </div>
-                </div>
-                <div id="filtre">
-                    <p>Filtres</p>
-                    <div id="boutons_filtre">
-                        <button>Altères</button>
-                        <button>Machines à câble</button>
-                        <button>Poids libres</button>
-                        <button>Vélos d'exercice</button>
-                    </div>
-                    <form button="barre_recherche" id="search">
-                        <input type="search" name="search" placeholder="Rechercher...">
-                    </form>
-                </div>
-                <script>
-
-                    const searchInput = document.querySelector("#search")
-                    const serachResult = document.querySelectorAll(".box")
-                    const allProducts = document.querySelectorAll("#modele-elem")
-
-                    searchInput.addEventListener("input", filterData)
-
-                    function filterData(e) {
-
-                        searchResult.innerHTML = ""
-                        const searchedString = e.target.value.toLowerCase();
-
-                        const filteredArr = Object.values(dataArray).filter(element => element.allProducts && element.allProducts.first.toLowerCase().includes(searchedString))
-
-                        createProductList(filteredArr);
-                    }
-
-                </script>
-            </div>
-            <div id="collection">
-                <% listeProduits.forEach(function(element){ %>
-
-                    <div class="box" id="box1">
-                        <a href="/details/<%- element.id -%>">
-                            <img src="/img/equipement_sport/<%- element.id -%>.jpg" alt="">
 
 
-                            <h4 id="modele-elem">
-                                <%= element.modele %>
-                            </h4>
-                            <h5>
-                                <%= element.marque %>
-                            </h5>
-
-                            <div id="catalogue_prix">
-                                <p id="prix">
-                                    <%= element.prix_location %> €
-                                </p>
-                                <p> /mois</p>
+                    <div id="catalogue_acc">
+                        <h3> Nos produits</h3>
+                        <div id="preference">
+                            <p>Affichage du prix par...</p>
+                            <div id="boutons_preference">
+                                <button>Jour</button>
+                                <button>Semaine</button>
+                                <button>Mois</button>
                             </div>
-                            <button id="savoir_plus">En savoir plus</button>
-                        </a>
+                        </div>
+                        <div id="filtre">
+                            <p>Filtres</p>
+                            <div id="boutons_filtre">
+                                <button>Altères</button>
+                                <button>Machines à câble</button>
+                                <button>Poids libres</button>
+                                <button>Vélos d'exercice</button>
+                            </div>
+                            <form button="barre_recherche" id="search">
+                                <input type="search" name="search" placeholder="Rechercher...">
+                            </form>
+                        </div>
+                        <script>
+
+                            const searchInput = document.querySelector("#search")
+                            const serachResult = document.querySelectorAll(".box")
+                            const allProducts = document.querySelectorAll("#modele-elem")
+
+                            searchInput.addEventListener("input", filterData)
+
+                            function filterData(e) {
+
+                                searchResult.innerHTML = ""
+                                const searchedString = e.target.value.toLowerCase();
+
+                                const filteredArr = Object.values(dataArray).filter(element => element.allProducts && element.allProducts.first.toLowerCase().includes(searchedString))
+
+                                createProductList(filteredArr);
+                            }
+
+                        </script>
                     </div>
-                    <%}); %>
-            </div>
+                    <div id="collection">
+                        <% listeProduits.forEach(function(element){ %>
+
+                            <div class="box" id="box1">
+                                <a href="/details/<%- element.id -%>">
+                                    <img src="/img/equipement_sport/<%- element.id -%>.jpg" alt="">
 
 
-            <div id="fonctionnement_boite">
-                <div>
-                    <img src="/img/altere_icon.png" alt="altère">
-                    <p>Choisissez le matériel</p>
-                    <p>qui vous convient</p>
-                </div>
-                <div>
-                    <img src="/img/calendrier_icon.png" alt="calendrier">
-                    <p>Déterminez la durée</p>
-                    <p>de votre location</p>
-                </div>
-                <div>
-                    <img src="/img/camion_icon.png" alt="camion">
-                    <p>Choisissez la date et</p>
-                    <p>le lieu de la livraison</p>
-                </div>
-                <div>
-                    <img src="/img/coche_icon.png" alt="coche">
-                    <p>Faites-vous livrer</p>
-                    <p>votre matériel !</p>
-                </div>
-            </div>
+                                    <h4 id="modele-elem">
+                                        <%= element.modele %>
+                                    </h4>
+                                    <h5>
+                                        <%= element.marque %>
+                                    </h5>
+
+                                    <div id="catalogue_prix">
+                                        <p id="prix">
+                                            <%= element.prix_location %> €
+                                        </p>
+                                        <p> /mois</p>
+                                    </div>
+                                    <button id="savoir_plus">En savoir plus</button>
+                                    <% if (user.type_utilisateur=='agent' ) { %>
+                                        <!-- Bouton supprimer -->
+                                        <button id="poubelle-agent">
+                                            Supprimer
+                                            <img src="/img/bin.png" alt="poubelle de supression">
+                                        </button>
+                                    <% }; %>
+                                </a>
+                            </div>
+                            <%}); %>
+                    </div>
+
+
+                    <div id="fonctionnement_boite">
+                        <div>
+                            <img src="/img/altere_icon.png" alt="altère">
+                            <p>Choisissez le matériel</p>
+                            <p>qui vous convient</p>
+                        </div>
+                        <div>
+                            <img src="/img/calendrier_icon.png" alt="calendrier">
+                            <p>Déterminez la durée</p>
+                            <p>de votre location</p>
+                        </div>
+                        <div>
+                            <img src="/img/camion_icon.png" alt="camion">
+                            <p>Choisissez la date et</p>
+                            <p>le lieu de la livraison</p>
+                        </div>
+                        <div>
+                            <img src="/img/coche_icon.png" alt="coche">
+                            <p>Faites-vous livrer</p>
+                            <p>votre matériel !</p>
+                        </div>
+                    </div>
 
 
         </main>
