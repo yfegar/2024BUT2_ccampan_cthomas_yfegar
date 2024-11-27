@@ -1,6 +1,8 @@
 const express = require('express');
 const productModel = require("../models/produits.js");
 const userModel = require("../models/user.js");
+const userController = require('../controllers/userController.js');
+
 
 const router = express.Router();
 
@@ -37,7 +39,7 @@ router.get('/profil', async function(req, res){
             const day = date.toLocaleString('default', {day: '2-digit'});
           
             return [day, month, year].join('/');
-          }
+        }
 
         const currentLocation = req.url;
         const userId = req.session.userId;
@@ -73,6 +75,16 @@ router.get('/catalogue', async function (req, res) {
 router.get('/locations', async function (req, res) {
     try { // code toujous exécuté
         
+        function formatDate(date = new Date()) {
+            const year = date.toLocaleString('default', {year: 'numeric'});
+            const month = date.toLocaleString('default', {
+              month: '2-digit',
+            });
+            const day = date.toLocaleString('default', {day: '2-digit'});
+          
+            return [day, month, year].join('/');
+        }
+
         const currentLocation = req.url;
         const userId = req.session.userId;
         console.log(userId);
@@ -80,7 +92,7 @@ router.get('/locations', async function (req, res) {
         const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
         // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
         const listeLocations = await productModel.getRentedProductsForUser(userId);
-        res.render('locations', { listeLocations, user, currentLocation });
+        res.render('locations', { listeLocations, user, currentLocation, formatDate });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');
@@ -143,13 +155,15 @@ router.get('/details-agent/:id', async function (req, res) {
 
 router.get('/apropos', (req, res) => {
     const currentLocation = req.url;
-    res.render("apropos", { currentLocation });
+    res.render("apropos", currentLocation);
 });
 
 router.get('/faq', (req, res) => {
     const currentLocation = req.url;
-    res.render("faq", { currentLocation });
+    res.render("faq", currentLocation);
 });
+
+router.post('/update', userController.updateInfo);
 
 
 /*

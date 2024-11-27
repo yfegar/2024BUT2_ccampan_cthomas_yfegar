@@ -52,6 +52,19 @@ async function registerUser (login, surname, firstname, ddn, email, hashedpasswo
     });
 };
 
+async function updateInfo (new_password, nom, prenom, ddn, email, userId) {
+    sql = "UPDATE `utilisateur` SET `password`= ?,`nom`= ? ,`prenom`= ?,`ddn`= ?,`email`= ?, WHERE 'id' = ?"; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, [new_password, nom, prenom, ddn, email, userId], (err, results) => {
+            if (err) {
+                return reject(err);
+            } else {
+                resolve(results);
+            }
+        });
+    });
+};
+
 async function getUserByName (name) {
 
 }
@@ -70,4 +83,4 @@ async function promoteUser () {
 
 
 
-module.exports = { getUserById, checkLogin, checkEmail, registerUser };
+module.exports = { getUserById, checkLogin, checkEmail, registerUser, updateInfo };
