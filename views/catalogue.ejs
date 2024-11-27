@@ -66,10 +66,20 @@
                                 <p> /mois</p>
                             </div>
                             <button id="savoir_plus">En savoir plus</button>
+                            <form action="products/delete" method="post">
+                                <input type="hidden" name="product_id" value="<%= element.id %>">
+                                <button type="submit" id="poubelle-agent">
+                                    <img src="/img/bin.png" alt="poubelle de supression">
+                                </button>
+                            </form>
                         </a>
                     </div>
                     <%}); %>
             </div>
+
+            <script>
+
+            </script>
 
 
             <div id="fonctionnement_boite">
