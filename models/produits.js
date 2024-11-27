@@ -49,5 +49,29 @@ async function addProduct (type, description, marque, modele, prix_location, eta
     });
 };
 
+async function rentProduct (date_debut, date_retour_prevue, prix_total, utilisateur_id, produit_id) {
+    sql = "INSERT INTO location (id, date_debut, date_retour_prevue, date_retour_effective, prix_total, utilisateur_id, produit_id) VALUES (default, ?, ?, NULL, ?, ?, ?)"; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql,[date_debut, date_retour_prevue, prix_total, utilisateur_id, produit_id], (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results);
+        });
+    });
+};
 
-module.exports = { getProductById, getAllProducts, addProduct};
+async function getRentedProductsForUser (userId) {
+    sql = "SELECT * FROM produit join location join utilisateur WHERE (produit.id = location.produit_id) AND (location.utilisateur_id = utilisateur.id) AND (utilisateur.id = ?) "; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, userId, (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results);
+        });
+    });
+};
+
+
+module.exports = { getProductById, getAllProducts, addProduct, rentProduct, getRentedProductsForUser};

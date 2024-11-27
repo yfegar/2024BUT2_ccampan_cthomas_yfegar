@@ -263,3 +263,6 @@ main {
 
 /* index_admin */ 
 
+.ajout_produit_index h1 {
+    color: black;
+}

@@ -49,8 +49,8 @@ app.get('/faq', (req, res) => {
 
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
-app.use('/', userRoutes);
 app.use('/products', productRoutes);
+app.use('/', userRoutes);
 
 
 /*

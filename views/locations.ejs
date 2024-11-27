@@ -7,7 +7,7 @@
                 <div id="filtre">
                     <p>Filtres</p>
                     <div id="boutons_filtre">
-                        <button>Altères</button>
+                        <button>Haltères</button>
                         <button>Machines à câble</button>
                         <button>Poids libres</button>
                         <button>Vélos d'exercice</button>
@@ -19,29 +19,37 @@
             </div>
             <section class="liste">
 
-                <div class="case">
-                    <img src="/img/equipement_sport/banc.png" alt="">
-                    <div class="text-info">
-                        <div class="liste-gauche" id="gauche">
-                            <div id="prix-par">
-                                <p id="prix-loc">00 €</p>
-                                <p id="par-mois">/mois</p>
-                            </div>
-                            <p id="modele">Modèle</p>
-                            <p>Loué par :</p>
-                        </div>
-                        <div class="liste-milieu" id="milieu">
-                            <p>Date de début : </p>
-                            <p>Date de fin : </p>
-                        </div>
-                        <div class="liste-droit" id="droit">
-                            <p class="etat-loc">En cours</p>
-                            <button class="savoir-plus">En savoir plus</button>
-                            <button class="annul-location">Annuler la location</button>
-                        </div>
-                    </div>
+                <% listeLocations.forEach(function(element){ %>
 
-                </div>
+                    <div class="case">
+                        <img src="/img/equipement_sport/banc.png" alt="">
+                        <div class="text-info">
+                            <div class="liste-gauche" id="gauche">
+                                <div id="prix-par">
+                                    <p id="prix-loc">
+                                        <%= element.prix_location%> €
+                                    </p>
+                                    <p id="par-mois">/mois</p>
+                                </div>
+                                <p id="modele">
+                                    <%= element.modele%>
+                                </p>
+                                <p>Loué par :</p>
+                            </div>
+                            <div class="liste-milieu" id="milieu">
+                                <p>Date de début : <%= element.date_debut %>
+                                </p>
+                                <p>Date de fin : <%= element.date_retour_prevue %>
+                                </p>
+                            </div>
+                            <div class="liste-droit" id="droit">
+                                <p class="etat-loc">En cours</p>
+                                <button>En savoir plus</button>
+                            </div>
+                        </div>
+
+                    </div>
+                <% }); %>
             </section>
 
         </main>
