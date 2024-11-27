@@ -45,6 +45,7 @@
                             }
 
                         </script>
+                        
                     </div>
                     <div id="collection">
                         <% listeProduits.forEach(function(element){ %>
@@ -52,8 +53,9 @@
                             <div class="box" id="box1">
                                 <a href="/details/<%- element.id -%>">
                                     <img src="/img/equipement_sport/<%- element.id -%>.jpg" alt="">
+            <script>
 
-
+            </script>
                                     <h4 id="modele-elem">
                                         <%= element.modele %>
                                     </h4>
@@ -70,10 +72,13 @@
                                     <button id="savoir_plus">En savoir plus</button>
                                     <% if (user.type_utilisateur=='agent' ) { %>
                                         <!-- Bouton supprimer -->
-                                        <button id="poubelle-agent">
-                                            Supprimer
-                                            <img src="/img/bin.png" alt="poubelle de supression">
-                                        </button>
+                                        <button id="savoir_plus">En savoir plus</button>
+                                        <form action="products/delete" method="post">
+                                            <input type="hidden" name="product_id" value="<%= element.id %>">
+                                            <button type="submit" id="poubelle-agent">
+                                                <img src="/img/bin.png" alt="poubelle de supression">
+                                            </button>
+                                        </form>
                                     <% }; %>
                                 </a>
                             </div>

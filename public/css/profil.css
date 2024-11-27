@@ -35,24 +35,12 @@
     border: none;
     border-radius: 10px;
     padding: 5%;
-
-
 }
 
-.deconnexion_profil{
-    border: none;
-    border-radius: 10px;
-    padding: 5%;
-    margin-bottom : 2%;
+#modifier_profil:hover {
+    border: solid black 1px;
 
 }
-
-.deconnexion_profil:hover, #modifier_profil:hover{
-border : solid black 1px;
-
-}
-
-
 
 .supprimer_profil {
     background-color: white;
@@ -81,17 +69,17 @@ border : solid black 1px;
 #change_profil {
     width: 30%;
     margin: 0 auto;
-    margin-bottom : 5%;
+    margin-bottom: 5%;
 }
 
 #change_profil form {
     display: flex;
     flex-direction: column;
-    width : 120%;
+    width: 120%;
     background-color: rgb(245, 243, 243);
-    border-radius : 10px;
-    padding : 5%;
-    padding-top : 1%;
+    border-radius: 10px;
+    padding: 5%;
+    padding-top: 1%;
 
 }
 
@@ -103,36 +91,33 @@ border : solid black 1px;
 
 #change_profil form ul li h3 {
     margin: 0 auto;
-    padding-bottom : 5%;
+    padding-bottom: 5%;
     padding-top: 3%;
-  
+
 }
 
-#change_profil form ul li  {
+#change_profil form ul li {
     display: flex;
-   flex-direction: row;
-   width : 90%;
-   padding-bottom: 2%;
-   
+    flex-direction: row;
+    width: 90%;
+    padding-bottom: 2%;
+
 }
 
-.modif-bouton-form{
-    width : 45%;
+.modif-bouton-form {
+    width: 45%;
     margin: 0 auto;
-    border : none ; 
-    padding : 2%;
-    padding-top : 2%;
-    padding-bottom : 2%;
-    border-radius : 10px;
+    border: none;
+    padding: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
     background-color: white;
-  
+
 }
 
-.modif-bouton-form p{
+.modif-bouton-form p {
     font-size: 1rem;
-    margin : 0;
-  
+    margin: 0;
+
 }
-
-
-

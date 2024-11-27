@@ -11,6 +11,19 @@ exports.addProduct = async (req, res) => {
         console.error('Erreur lors de l\'ajout du produit:', err);
         res.status(500).send("Erreur serveur.");
     }
+}; 
+
+exports.deleteProduct = async (req, res) => {
+    const {product_id} = req.body;
+    try {
+        await productModel.deleteProduct({product_id});
+
+        console.log("Suppression du produit réussie.");
+        res.redirect('/catalogue');
+    } catch (err) {
+        console.error('Erreur lors de l\'ajout du produit:', err);
+        res.status(500).send("Erreur serveur.");
+    }
 };
 
 exports.rentProduct = async(req, res) => {

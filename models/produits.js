@@ -49,6 +49,19 @@ async function addProduct (type, description, marque, modele, prix_location, eta
     });
 };
 
+
+async function deleteProduct (product_id) {
+    sql = "DELETE produit FROM produit LEFT JOIN location ON location.produit_id = produit.id AND CURRENT_DATE BETWEEN location.date_debut AND location.date_retour_prevue WHERE produit.id = ? AND location.produit_id IS NULL;"; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql,product_id, (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results);
+        });
+    });
+};
+
 async function rentProduct (date_debut, date_retour_prevue, prix_total, utilisateur_id, produit_id) {
     sql = "INSERT INTO location (id, date_debut, date_retour_prevue, date_retour_effective, prix_total, utilisateur_id, produit_id) VALUES (default, ?, ?, NULL, ?, ?, ?)"; 
     return new Promise((resolve, reject) => {
@@ -74,4 +87,4 @@ async function getRentedProductsForUser (userId) {
 };
 
 
-module.exports = { getProductById, getAllProducts, addProduct, rentProduct, getRentedProductsForUser};
+module.exports = { getProductById, getAllProducts, addProduct, deleteProduct, rentProduct, getRentedProductsForUser};
