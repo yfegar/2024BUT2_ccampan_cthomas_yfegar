@@ -103,6 +103,22 @@ form{
 }
 
 
+#bouton_accueil_admin:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+#bouton_accueil_admin:disabled {
+    pointer-events: none;
+  }
+
+  #bouton_accueil_admin:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+
+
 #prix {
     margin-top : 0;
     padding-bottom : 7%;
