@@ -22,19 +22,19 @@
         </div>
 
         <div id="change_profil" style="display: none;">
-            <form class="profil_form" action="" method="post" >
+            <form class="profil_form" action="user/update" method="post">
                 <ul>
                     <li>
                         <h3>Modifier les informations</h3>
                     </li>
                     <li>
                         <label for="name">Nom </label>
-                        <input type="text" id="name" name="name"  placeholder="Fegar" />
+                        <input type="text" id="name" name="nom"  placeholder="Fegar" />
                         
                     </li>
                     <li>
                         <label for="name">Prénom </label>
-                        <input type="text" id="firstname" name="firstname"  placeholder="Julie" />
+                        <input type="text" id="firstname" name="prenom"  placeholder="Julie" />
                     </li>
                     <li>
                         <label for="ddn">Date de naissance</label>
@@ -42,15 +42,15 @@
                     </li>
                     <li>
                         <label for="mail">E-mail </label>
-                        <input type="email" id="mail" name="user_mail" placeholder="julie.fegar@gmail.com" />
+                        <input type="email" id="mail" name="email" placeholder="julie.fegar@gmail.com" />
                     </li>
                     <li>
                         <label for="passeword">Mot de passe actuel </label>
-                        <input type="passeword" name="passeword"></input>
+                        <input type="passeword" name="password"></input>
                     </li>
                     <li>
                         <label for="new_passeword">Nouveau mot de passe </label>
-                        <input type="new_passeword" name="new_passeword"></input>
+                        <input type="new_passeword" name="new_password"></input>
                     </li>
                 </ul>
                 <button class="modif-bouton-form"type="submit"><p>Modifier</p></button>
