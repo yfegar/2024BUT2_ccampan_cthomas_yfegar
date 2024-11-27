@@ -91,12 +91,11 @@ router.get('/locations', async function (req, res) {
 
         const currentLocation = req.url;
         const userId = req.session.userId;
-        console.log(userId);
-        console.log("====")
+        const listeAllLocations = await productModel.getRentedProducts();
         const user = await userModel.getUserById(userId); // await présent car getUserById est une Promise
         // const produit = await productModel.getProductById(id); // await présent car getUserById est une Promise
         const listeLocations = await productModel.getRentedProductsForUser(userId);
-        res.render('locations', { listeLocations, user, currentLocation, formatDate });
+        res.render('locations', { listeLocations, listeAllLocations, user, currentLocation, formatDate });
     } catch (err) { // code exécuté seulement si il y a une exception dans le try
         console.log(err);
         res.status(500).send('Erreur lors de la récupération des données');

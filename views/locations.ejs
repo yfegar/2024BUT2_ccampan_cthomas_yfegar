@@ -18,38 +18,80 @@
                 </div>
             </div>
             <section class="liste">
+                <% if (user.type_utilisateur=='agent') { %>
 
-                <% listeLocations.forEach(function(element){ %>
+                    <% listeAllLocations.forEach(function(element){ %>
 
-                    <div class="case">
-                        <img src="/img/equipement_sport/banc.png" alt="">
-                        <div class="text-info">
-                            <div class="liste-gauche" id="gauche">
-                                <div id="prix-par">
-                                    <p id="prix-loc">
-                                        <%= element.prix_location%> €
+                        <div class="case">
+                            <img src="/img/equipement_sport/banc.png" alt="">
+                            <div class="text-info">
+                                <div class="liste-gauche" id="gauche">
+                                    <div id="prix-par">
+                                        <p id="prix-loc">
+                                            <%= element.prix_location%> €
+                                        </p>
+                                        <p id="par-mois">/mois</p>
+                                    </div>
+                                    <p id="modele">
+                                        <%= element.modele%>
                                     </p>
-                                    <p id="par-mois">/mois</p>
+                                    <p>Loué par : <%= element.prenom%> <%= element.nom%> </p>
                                 </div>
-                                <p id="modele">
-                                    <%= element.modele%>
-                                </p>
-                                <p>Loué par :</p>
-                            </div>
-                            <div class="liste-milieu" id="milieu">
-                                <p>Date de début : <%= formatDate(element.date_debut) %>
-                                </p>
-                                <p>Date de fin : <%= formatDate(element.date_retour_prevue) %>
-                                </p>
-                            </div>
-                            <div class="liste-droit" id="droit">
-                                <p class="etat-loc">En cours</p>
-                                <button>En savoir plus</button>
+                                <div class="liste-milieu" id="milieu">
+                                    <p>Date de début : <%= formatDate(element.date_debut) %>
+                                    </p>
+                                    <p>Date de fin : <%= formatDate(element.date_retour_prevue) %>
+                                    </p>
+                                </div>
+                                <div class="liste-droit" id="droit">
+                                    <p class="etat-loc">En cours</p>
+                                    <button>En savoir plus</button>
+                                    <form action="commande/valider" method="post">
+                                        <button type="submit">Valider la location</button>
+                                    </form>
+
+                                </div>
                             </div>
                         </div>
+                        <% }); %>
+                    <% }; %>
 
-                    </div>
-                <% }); %>
+
+                <% if (user.type_utilisateur=='client') { %>
+
+                    <% listeLocations.forEach(function(element){ %>
+
+                        <div class="case">
+                            <img src="/img/equipement_sport/banc.png" alt="">
+                            <div class="text-info">
+                                <div class="liste-gauche" id="gauche">
+                                    <div id="prix-par">
+                                        <p id="prix-loc">
+                                            <%= element.prix_location%> €
+                                        </p>
+                                        <p id="par-mois">/mois</p>
+                                    </div>
+                                    <p id="modele">
+                                        <%= element.modele%>
+                                    </p>
+                                    <p>Loué par :</p>
+                                </div>
+                                <div class="liste-milieu" id="milieu">
+                                    <p>Date de début : <%= formatDate(element.date_debut) %>
+                                    </p>
+                                    <p>Date de fin : <%= formatDate(element.date_retour_prevue) %>
+                                    </p>
+                                </div>
+                                <div class="liste-droit" id="droit">
+                                    <p class="etat-loc">En cours</p>
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <% }); %>
+                <% }; %>
+
             </section>
 
         </main>

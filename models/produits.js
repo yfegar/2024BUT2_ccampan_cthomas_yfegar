@@ -86,5 +86,17 @@ async function getRentedProductsForUser (userId) {
     });
 };
 
+async function getRentedProducts (userId) {
+    sql = "SELECT * FROM produit join location on location.produit_id = produit.id join utilisateur on location.utilisateur_id = utilisateur.id"; 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, userId, (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results);
+        });
+    });
+};
 
-module.exports = { getProductById, getAllProducts, addProduct, deleteProduct, rentProduct, getRentedProductsForUser};
+
+module.exports = { getProductById, getAllProducts, addProduct, deleteProduct, rentProduct, getRentedProductsForUser, getRentedProducts};
