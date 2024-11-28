@@ -55,6 +55,9 @@ Locfit est un site web destiné à la location de matériel sportif.
 **Base de donnée :** 
 - MySQL
 
+**Extensions :**
+- md5 (hachage du mot de passe)
+-  jwt (token)
 
 ## 2. Base de données
 
