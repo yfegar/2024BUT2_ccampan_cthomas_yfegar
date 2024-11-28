@@ -4,6 +4,43 @@
 
 Locfit est un site web destiné à la location de matériel sportif. 
 
+#### Fonctionnalités ajoutées depuis ce matin 28/11/2024
+
+**Amélioration de la fonction inscription**
+- envoi direct vers page connexion suite à l'inscription
+
+**Ajout de la fonction inscription d'un agent**
+- L'admin accède au formulaire d'inscription pour promouvoir un agent
+- Il rentre les informations et soumet le formulaire : l'agent est ajouté à la base de données
+
+
+#### Contributions par membres du projet
+
+**Cyléa CAMPAN :**
+- pages 'A propos', F.A.Q.
+- page Catalogue
+- page Détails : description du produit
+- page Index
+- page Locations
+- page Profil
+- fonction 'Supprimer un compte'
+- tentatives : fonction 'Supprimer un produit', fonction 'Calcul du prix total de location'
+
+
+**Camille THOMAS :**
+- pages Inscription et Connexion
+- page Détails : formulaire de location
+- page Index
+- fonction 'Calcul des jours'
+
+**Youna FEGAR :**
+- page Footer
+- page Header
+- page Index
+- fonctions inscription et connexion
+- fonction ajout d'un produit
+- fonction louer un produit
+
 #### Les technologies utilisées
 
 **Front end :** 

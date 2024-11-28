@@ -1,6 +1,7 @@
 const userModel = require("../models/user.js");
 const md5 = require('md5'); 
 const jwt = require('jsonwebtoken');
+//const { use } = require("../routes/authRoutes.js");
 
 // afficher les pages connexion et inscription
 exports.showLoginPage = (req, res) => {
@@ -9,20 +10,48 @@ exports.showLoginPage = (req, res) => {
 exports.showRegisterPage = (req, res) => {
     res.render('inscription', {error : null});
 }
+exports.showRegisterPageForAgent = (req, res) => {
+    res.render('inscriptionagent');
+}
 
 // fonctions inscription, connexion, déconnexion
-exports.inscription = (req, res) => {
+exports.inscription = async (req, res) => {
+    const {login, surname, firstname, ddn, email, password} = req.body;
     console.log(req.body);
-   
-    const {login, surname, firstname, ddn, email, password} = req.body; 
-    if(userModel.checkEmail(email)) {
-        let hashedpassword = md5(password);
-        userModel.registerUser(login, surname, firstname, ddn, email, hashedpassword);
-    };  
-    if (userModel.checkEmail(email).length > 0) {
-        return res.render('/inscription', { error: 'Cette adresse mail est déjà utilisée.'});              
+
+    try {
+        const emailExists = await userModel.checkEmail(email);
+        if (emailExists.length > 0) {
+            return res.render('inscription', { error: 'Cette adresse mail est déjà utilisée.'});
+        }
+        const hashedpassword = md5(password);
+
+        await userModel.registerUser(login, surname, firstname, ddn, email, hashedpassword);
+
+        return res.redirect('/connexion');
+    } catch (err) {
+        console.error("Erreur lors de l\'inscription de l'user:", err);
+        return res.status(500).render('inscription', { error: 'Une erreur est survenue. Veuillez réessayer plus tard.'});
     }
-    return res.render('index');
+};
+
+exports.inscriptionAgent = async (req, res) => {  
+    const {login, surname, firstname, ddn, email, password} = req.body;
+
+    try {
+        const emailExists = await userModel.checkEmail(email);
+        if (emailExists.length > 0) {
+            return res.render('inscriptionagent', { error: 'Cette adresse mail est déjà utilisée.'});
+        }
+        const hashedpassword = md5(password);
+
+        await userModel.registerAgent(login, surname, firstname, ddn, email, hashedpassword);
+
+        return res.redirect('/index');
+    } catch (err) {
+        console.error("Erreur lors de l\'inscription de l'agent:", err);
+        return res.status(500).render('inscriptionagent', { error: 'Une erreur est survenue. Veuillez réessayer plus tard.'});
+    }
 };
 
 exports.connexion = async (req, res) => {

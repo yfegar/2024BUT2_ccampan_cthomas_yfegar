@@ -12,6 +12,18 @@ async function getUserById (id) {
     });
 };
 
+async function getUserByLogin (login) {
+    sql = "SELECT * FROM utilisateur WHERE login = ?";  // ? sert de paramètre 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, [login], (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(results[0]);
+        });
+    });
+};
+
 async function checkLogin (login) {
     sql = "SELECT * FROM utilisateur WHERE login = ?";  // ? sert de paramètre 
     return new Promise((resolve, reject) => {
@@ -25,7 +37,7 @@ async function checkLogin (login) {
 };
 
 async function checkEmail (email) {
-    sql = "SELECT email FROM utilisateur WHERE email = ?";  // ? sert de paramètre 
+    sql = "SELECT * FROM utilisateur WHERE email = ?";  // ? sert de paramètre 
     return new Promise((resolve, reject) => {
         bdd.query(sql, email, (err, results) => {
             if (err) {
@@ -40,7 +52,20 @@ async function checkEmail (email) {
 async function registerUser (login, surname, firstname, ddn, email, hashedpassword) {
     sql = "INSERT INTO `utilisateur`(`id`, `login`, `password`, `nom`, `prenom`, `ddn`, `email`, `type_utilisateur`) VALUES (default, ?, ?, ?, ?, ?, ?,'client')";  // ? sert de paramètre 
     return new Promise((resolve, reject) => {
-        bdd.query(sql, [login, hashedpassword, surname, firstname, ddn, email, ], (err, results) => {
+        bdd.query(sql, [login, hashedpassword, surname, firstname, ddn, email], (err, results) => {
+            if (err) {
+                return reject(err);
+            } else {
+                resolve(results);
+            }
+        });
+    });
+};
+
+async function registerAgent (login, surname, firstname, ddn, email, hashedpassword) {
+    sql = "INSERT INTO `utilisateur`(`id`, `login`, `password`, `nom`, `prenom`, `ddn`, `email`, `type_utilisateur`) VALUES (default, ?, ?, ?, ?, ?, ?,'agent')";  // ? sert de paramètre 
+    return new Promise((resolve, reject) => {
+        bdd.query(sql, [login, hashedpassword, surname, firstname, ddn, email], (err, results) => {
             if (err) {
                 return reject(err);
             } else {
@@ -89,4 +114,4 @@ async function deleteAccount (utilisateur_id) {
     });
 }
 
-module.exports = { getUserById, checkLogin, checkEmail, registerUser, updateInfo, deleteAccount, checkRent};
+module.exports = { getUserById, getUserByLogin, checkLogin, checkEmail, registerUser, registerAgent, updateInfo, deleteAccount, checkRent};

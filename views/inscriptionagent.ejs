@@ -1,0 +1,32 @@
+<%- include("header") -%>
+
+    <body class="connexion_body">
+        <main class="connect">
+            <div class="boite-insc">
+
+                    <section class="titre-connect">
+                        <h1> Créer un compte agent </h1>
+                    </section>
+    
+                    <form class="insc" action="/auth/inscriptionagent" method="POST">
+                        <div class="nom">
+                            <input class="con" type="text" name="surname" placeholder="   Nom"/>
+                            <input class="con" type="text" name="firstname" placeholder="   Prénom"/>
+                            <input class="con" type="date" name="ddn" placeholder="   Date de naissance (aaaa-mm-jj)"/>
+                            <input class="con" type="text" name="login" placeholder="   Login"/>
+    
+                        </div>
+    
+                        <div class="compte">
+                            <input class="con" type="text" name="email" placeholder="   Email" class="mail"/>
+                            <input class="con" type="password" name="password" placeholder="   Mot de passe..."/>
+                        </div>
+                        <input class="but-con" type="submit" name="MP" value="inscriptionagent"/>
+
+                    </form>
+            </div>
+        </main>
+
+        <%- include("footer") -%>
+
+    

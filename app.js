@@ -34,15 +34,10 @@ app.use((req, res, next) => {
 });
 
 
-
-
 app.get('/apropos', (req, res) => {
     res.render("apropos");
 });
 
-app.get('/indexadmin', (req, res) => {
-    res.render("indexadmin");
-});
 
 app.get('/faq', (req, res) => {
     res.render("faq");
@@ -50,17 +45,11 @@ app.get('/faq', (req, res) => {
 
 
 // Define routes
-
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/products', productRoutes);
 app.use('/', userRoutes);
 
-
-/*
-app.get('/inscription', function (req, res) {
-    res.render("inscription", {error : null});
-});*/
 
 app.get('/connexion', function (req, res) {
     res.render("connexion", {error : null});
@@ -85,10 +74,6 @@ app.post('/connexion', async function (req, res) {
 
 app.get('/locations', (req, res) => {
     res.render("locations");
-});
-
-app.get('/locations-agent', (req, res) => {
-    res.render("locations-agent");
 });
 
 app.use(function(req, res){

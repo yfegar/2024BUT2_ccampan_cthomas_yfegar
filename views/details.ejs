@@ -99,33 +99,37 @@
                             </div>
                         </div>
                         <div class="btn-box">
-                            <p class="btn-text">Pour <%= produit.prix_location %>€</p>
+            
+                            <p class="btn-text">Pour
+                                <script type="text/javascript">
+                                    document.write(calculerPrixLocation(duree, produit.id));
+                                </script>
+                            </p> 
                             <input id="inp-sub" class="button" type="submit" value="Louer pour 1 mois">
                         </div>
                     </form>
 
                 </section>
 
-
-
             </main>
+
             <script>
                 // récup des éléments
                 const startDateInput = document.getElementById('start-date');
                 const endDateInput = document.getElementById('end-date');
                 const submitButton = document.getElementById('inp-sub');
-
+        
                 // Fonction pour calculer les jours entre deux dates
                 function calculateDays() {
                     const startDate = new Date(startDateInput.value);
                     const endDate = new Date(endDateInput.value);
-
+        
                     // Calcul 
                     const differenceInTime = endDate - startDate;
-
+        
                     //jours
                     const jourloc = Math.ceil(differenceInTime / (1000 * 60 * 60 * 24));
-
+        
                     // Mise à jour du texte du bouton
                     if (jourloc > 0) {
                         submitButton.value = `Louer pour ${jourloc} jours`;
@@ -133,45 +137,44 @@
                         submitButton.value = "Louer pour "
                     }
                 }
-
+        
                 // Ajout d'écouteurs d'événements sur les champs de date
                 startDateInput.addEventListener('input', calculateDays);
                 endDateInput.addEventListener('input', calculateDays);
-
-            </script>
-            <script>
-
-                function calculerPrixLocation(duree, prix) {
+        
+</script>
+<script type="text/javascript">
+                function calculerPrixLocation(duree, id) {
                     let prixTotal;
-                    let prix = getPriceById();
+                    let prix = getPriceById(id);
                     let duree = calculateDays();
-
+                    console.log(prix, duree);
                     // Vérifier si la durée est valide
                     if (duree <= 0) {
                         return "La durée doit être supérieure à zéro.";
                     }
-
+        
                     if (duree > 30) {
-                        return "La durée doit être inférieur à 30 jours.";
+                        return "La durée doit être inférieure à 30 jours.";
                     }
-
+        
                     // Appliquer des tarifs dégressifs en fonction de la durée
                     if (duree >= 3 && duree < 7) {
-                        prixTotal = prix * 0.4; // Prix standard pour une durée courte
+                        prixTotal = prix * 0.96; // Prix standard pour une durée courte
                     } else if (duree >= 7 && duree < 14) {
-                        prixTotal = prix * 0.2; // Réduction de 10% pour 4 à 7 jours
+                        prixTotal = prix * 0.98; // Réduction de 10% pour 4 à 7 jours
                     } else if (duree >= 14 && duree < 30) {
-                        prixTotal = prix * 0.1; // Réduction de 10% pour 4 à 7 jours
+                        prixTotal = prix * 0.99; // Réduction de 10% pour 4 à 7 jours
                     } else {
-                        prixTotal = 0; // Réduction de 20% pour plus de 7 jours
+                        prixTotal = prix; // Réduction de 20% pour plus de 7 jours
                     }
-
+        
                     // Retourner le prix final 
                     return prixTotal;
                 }
-
-                let prixFinal = calculerPrixLocation(duree, prix);
-
+        
+                let prixFinal = calculerPrixLocation(duree, produit.id);
+        
             </script>
 
             <% }; %>
