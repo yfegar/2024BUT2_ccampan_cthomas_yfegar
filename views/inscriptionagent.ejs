@@ -21,7 +21,12 @@
                             <input class="con" type="text" name="email" placeholder="   Email" class="mail"/>
                             <input class="con" type="password" name="password" placeholder="   Mot de passe..."/>
                         </div>
-                        <input class="but-con" type="submit" name="MP" value="inscriptionagent"/>
+                        <input class="but-con" type="submit"/>
+                        <% if (error) { %>
+                            <div class="error-message">
+                                <p><%= error %></p>
+                            </div>
+                        <% } %>
 
                     </form>
             </div>

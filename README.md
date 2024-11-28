@@ -116,6 +116,9 @@ Contrôleur : authController.inscription
 
 **Connexion**
 
+Condition : 
+- L'utilisateur doit déjà posséder un compte pour se connecter
+
 Contrôleur : authController.connexion
 
 **Déconnexion**
@@ -128,6 +131,13 @@ Condition :
 - L'utilisateur doit être un client qui n'a pas de locations en cours pour supprimer son compte 
 
 Contrôleur : userController.deleteAccount
+
+**Inscrire un agent**
+
+Condition : 
+- L'utilisateur doit être identifié comme admin pour inscrire un utilisateur en tant qu'agent
+
+Contrôleur : authController.inscriptionAgent
 
 ### 3.2. Gestion des produits
 
@@ -197,6 +207,7 @@ Contrôleur : productController.validerRent
 │   ├── header.ejs
 │   ├── index.ejs
 │   ├── inscription.ejs
+│   ├── inscriptionagent.ejs
 │   ├── locations.ejs
 │   └── profil.ejs
 ├── .gitignore
